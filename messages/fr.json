@@ -1,0 +1,161 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "products": "Produits",
+    "about": "À propos",
+    "contact": "Contact"
+  },
+  "home": {
+    "hero": {
+      "title": "AGRISTEP",
+      "subtitle": "Le résultat qui vous satisfait !",
+      "cta": "Découvrir nos produits"
+    },
+    "presentation": {
+      "title": "Qui sommes-nous ?",
+      "text": "AGRISTEP est une entreprise spécialisée dans la commercialisation d'insectes auxiliaires pour la lutte intégrée et biologique, des bourdons pollinisateurs, du matériel pour Monitoring et des biostimulants. Basée à Chtouka-Ait Baha, nous œuvrons pour une agriculture durable et respectueuse de l'environnement.",
+      "link": "En savoir plus"
+    },
+    "categories": {
+      "title": "Nos Solutions",
+      "subtitle": "Découvrez notre gamme complète de produits agricoles"
+    },
+    "why": {
+      "title": "Pourquoi choisir Agristep ?",
+      "expertise": {
+        "title": "Expertise",
+        "text": "Plus de 5 ans d'expérience dans le domaine agricole"
+      },
+      "quality": {
+        "title": "Qualité",
+        "text": "Produits biologiques de haute qualité pour des résultats optimaux"
+      },
+      "innovation": {
+        "title": "Innovation",
+        "text": "Production d'auxiliaires pour une lutte biologique efficace"
+      },
+      "planet": {
+        "title": "Durabilité",
+        "text": "Engagés pour la préservation de la planète et l'agriculture durable"
+      }
+    },
+    "contact": {
+      "title": "Contactez-nous",
+      "name": "Nom",
+      "email": "Email",
+      "message": "Message",
+      "submit": "Envoyer",
+      "phone": "+212 5 28 81 52 07",
+      "phoneLabel": "Numéro",
+      "emailAddr": "ste.agristep@gmail.com"
+    }
+  },
+  "products": {
+    "title": "Nos Produits",
+    "subtitle": "Agristep vous propose une gamme complète de solutions pour l'agriculture : biostimulants, amendements organiques, correcteurs de carences, et plus encore.",
+    "viewAll": "Voir les produits",
+    "viewProduct": "Voir le produit",
+    "order": "Commander via WhatsApp",
+    "orderPrefix": "Bonjour, je souhaite commander",
+    "composition": "Composition",
+    "application": "Application",
+    "crops": "Cultures cibles",
+    "related": "Produits associés",
+    "notFound": "Produit non trouvé",
+    "backToProducts": "Retour aux produits",
+    "backToCategory": "Retour à la catégorie",
+    "categories": {
+      "inducteur-resistance": "Inducteur de Résistance",
+      "amendements-organiques": "Amendements Organiques",
+      "correcteur-ph": "Correcteur de PH",
+      "biostimulants": "Biostimulants",
+      "correcteur-carences": "Correcteur de Carences",
+      "qualite-fruits": "Qualité des Fruits"
+    },
+    "desc": {
+      "inducteur-resistance": "Solutions pour renforcer les défenses naturelles des plantes",
+      "amendements-organiques": "Amendements riches en matière organique pour améliorer la fertilité des sols",
+      "correcteur-ph": "Régulateur de pH pour optimiser l'absorption des nutriments",
+      "biostimulants": "Biostimulants pour stimuler la croissance et le développement des cultures",
+      "correcteur-carences": "Correcteurs de carences en oligo-éléments essentiels",
+      "qualite-fruits": "Solutions pour améliorer la qualité et le calibre des fruits"
+    }
+  },
+  "about": {
+    "title": "À propos d'Agristep",
+    "history": {
+      "title": "Notre Histoire",
+      "p1": "Après des années d'expérience dans son domaine, Rachid Fadel a décidé de franchir une nouvelle étape ; d'où l'idée de fonder la société Agristep en juin 2020.",
+      "p2": "AGRISTEP est une entreprise spécialisée dans la commercialisation d'insectes auxiliaires pour la lutte intégrée et biologique, des bourdons pollinisateurs, du matériel pour Monitoring et des biostimulants.",
+      "p3": "En janvier 2023, M. Hassan Elbouhyaoui a rejoint l'entreprise en tant qu'associé. Grâce à son expérience dans le domaine de la production d'insectes auxiliaires, nous avons commencé à produire l'acarien prédateur Phytoseiulus persimilis.",
+      "p4": "L'entreprise travaille actuellement sur la production d'autres espèces, son objectif étant d'élargir sa gamme en auxiliaires afin de mieux servir ses clients, les aider à protéger leurs plantes grâce à des solutions biologiques et surtout Contribuer à la préservation de la planète."
+    },
+    "info": {
+      "title": "Informations légales",
+      "address": "LOCALE COMMERCIALE RDC, ROUTE NATIONALE N°1, DOUAR DRAID, CHTOUKA-AIT BAHA, Maroc",
+      "sector": "Vente de produits phytosanitaires, Production / Commercialisation / Import / Export d'auxiliaires pour la lutte intégrée et biologique, Bourdons pollinisateurs et autres produits biologiques"
+    },
+    "values": {
+      "title": "Nos Valeurs",
+      "quality": {
+        "title": "Qualité",
+        "text": "Des produits biologiques de haute qualité pour des résultats optimaux"
+      },
+      "innovation": {
+        "title": "Innovation",
+        "text": "Production locale d'auxiliaires pour une agriculture moderne"
+      },
+      "sustainability": {
+        "title": "Durabilité",
+        "text": "Engagement pour la préservation de la planète"
+      },
+      "proximity": {
+        "title": "Proximité",
+        "text": "Un accompagnement personnalisé pour chaque agriculteur"
+      }
+    },
+    "convince": {
+      "title": "Transformez vos cultures avec Agristep",
+      "point1_title": "Rendement Maximisé",
+      "point1_text": "Nos solutions biologiques augmentent vos rendements jusqu'à +30% dès la première saison d'application",
+      "point2_title": "Qualité Biologique",
+      "point2_text": "Des produits certifiés qui améliorent la qualité gustative et la conservation de vos récoltes",
+      "point3_title": "Accompagnement Expert",
+      "point3_text": "Un ingénieur agronome à vos côtés pour un suivi personnalisé de vos cultures",
+      "point4_title": "Résultats Durable",
+      "point4_text": "Des solutions qui améliorent la santé de vos sols sur le long terme pour des rendements stables",
+      "cta": "Découvrir notre gamme"
+    },
+    "testimonial": {
+      "text": "« Grâce à Agristep, j'ai augmenté ma production de tomates de 40% tout en réduisant mes intrants chimiques de moitié. Un vrai partenaire pour mon exploitation. »"
+    }
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "subtitle": "Nous sommes à votre écoute pour tous vos besoins agricoles",
+    "form": {
+      "firstName": "Prénom",
+      "lastName": "Nom",
+      "phone": "Numéro",
+      "email": "Email",
+      "message": "Message",
+      "submit": "Envoyer",
+      "success": "Message envoyé avec succès !"
+    },
+    "info": {
+      "address": "LOCALE COMMERCIALE RDC, ROUTE NATIONALE N°1, DOUAR DRAID, CHTOUKA-AIT BAHA",
+      "phone": "+212 5 28 81 52 07",
+      "email": "ste.agristep@gmail.com"
+    },
+    "whatsapp": "Contactez-nous sur WhatsApp"
+  },
+  "footer": {
+    "description": "Votre partenaire en solutions agricoles biologiques — Nous accompagnons les agriculteurs marocains vers une agriculture plus productive et durable.",
+    "navigation": "Navigation",
+    "home": "Accueil",
+    "products": "Nos Produits",
+    "contact": "Contact",
+    "rights": "Tous droits réservés.",
+    "linkedin": "LinkedIn"
+  }
+}

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300">
+  <rect width="300" height="300" fill="#e8f5e9"/>
+  <text x="150" y="140" text-anchor="middle" font-family="Arial" font-size="48" font-weight="bold" fill="#30a03f">PIR</text>
+  <text x="150" y="180" text-anchor="middle" font-family="Arial" font-size="16" fill="#636e72">PIROSTEP</text>
+</svg>
