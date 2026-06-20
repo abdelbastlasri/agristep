@@ -15,7 +15,6 @@ export default function HeroSection() {
       {/* Golden hour glow — warm sun from upper-right */}
       <div className="absolute inset-0">
         <div className="absolute -top-1/4 -right-1/4 w-[80%] h-[80%] rounded-full bg-gradient-to-br from-premium-gold/30 via-premium-gold/10 to-transparent blur-[100px]" />
-        <div className="absolute -bottom-1/4 left-1/4 w-[60%] h-[40%] rounded-full bg-gradient-to-t from-premium-green/15 to-transparent blur-[80px]" />
       </div>
 
       {/* Cinematic dust particles — golden specks floating up */}
