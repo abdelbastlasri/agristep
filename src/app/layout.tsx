@@ -18,7 +18,7 @@ const outfit = Outfit({
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#1e6b3a",
+  themeColor: "#3D2B1F",
 };
 
 export const metadata: Metadata = {
@@ -84,7 +84,7 @@ export default function RootLayout({
       >
         <a
           href="#main-content"
-          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-premium-green focus:text-white focus:rounded-lg focus:text-sm focus:font-semibold"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-premium-warm focus:text-white focus:rounded-lg focus:text-sm focus:font-semibold"
         >
           Aller au contenu principal
         </a>

@@ -78,7 +78,7 @@ export default function PresentationSection() {
                 key={stat.label}
                 className="card-premium p-4 sm:p-6 md:p-8 text-center"
               >
-                <div className="font-heading text-3xl md:text-4xl text-gradient-green mb-2">
+                <div className="font-heading text-3xl md:text-4xl text-gradient-gold mb-2">
                   {isVisible ? <AnimatedNumber value={stat.number} /> : "0"}
                 </div>
                 <div className="text-xs uppercase tracking-[0.15em] text-premium-muted">

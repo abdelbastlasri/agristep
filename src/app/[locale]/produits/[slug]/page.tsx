@@ -53,20 +53,20 @@ export default async function ProductDetailPage({
     <div className="section-padding bg-premium-warm">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center gap-2 text-xs text-premium-muted/60 mb-12 uppercase tracking-wider">
-          <Link href="/" className="hover:text-premium-green transition-colors">
+          <Link href="/" className="hover:text-premium-gold transition-colors">
             Accueil
           </Link>
           <span>/</span>
           <Link
             href="/produits"
-            className="hover:text-premium-green transition-colors"
+            className="hover:text-premium-gold transition-colors"
           >
             Produits
           </Link>
           <span>/</span>
           <Link
             href={`/produits/categorie/${product.category}`}
-            className="hover:text-premium-green transition-colors"
+            className="hover:text-premium-gold transition-colors"
           >
             {ct(product.category)}
           </Link>
@@ -101,7 +101,7 @@ export default async function ProductDetailPage({
               {product.targetCrops.map((crop) => (
                 <span
                   key={crop}
-                  className="px-3 py-1 bg-premium-green/5 border border-premium-green/10 rounded-full text-xs text-premium-green font-medium"
+                  className="px-3 py-1 bg-premium-gold/10 border border-premium-gold/20 rounded-full text-xs text-premium-gold font-medium"
                 >
                   {crop}
                 </span>

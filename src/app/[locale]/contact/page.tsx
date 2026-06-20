@@ -45,13 +45,13 @@ export default async function ContactPage({
           <ContactForm />
 
           <div className="space-y-6">
-            <div className="bg-premium-green-bg border border-premium-border rounded-2xl p-5 sm:p-6">
+            <div className="bg-premium-warm border border-premium-border rounded-2xl p-5 sm:p-6">
               <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-6">
                 Nos coordonnées
               </h3>
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-full bg-premium-green/10 flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 rounded-full bg-premium-gold/10 flex items-center justify-center flex-shrink-0">
                     📍
                   </div>
                   <div>
@@ -64,7 +64,7 @@ export default async function ContactPage({
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-full bg-premium-green/10 flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 rounded-full bg-premium-gold/10 flex items-center justify-center flex-shrink-0">
                     📞
                   </div>
                   <div>
@@ -75,7 +75,7 @@ export default async function ContactPage({
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-full bg-premium-green/10 flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 rounded-full bg-premium-gold/10 flex items-center justify-center flex-shrink-0">
                     ✉️
                   </div>
                   <div>
@@ -92,7 +92,7 @@ export default async function ContactPage({
               href={`https://wa.me/212528815207?text=${whatsappMessage}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-premium-green-bg border border-premium-border rounded-2xl p-5 sm:p-6 flex items-center gap-4 hover:border-premium-gold/30 hover:shadow-[0_0_30px_rgba(201,168,76,0.08)] group transition-all duration-300"
+              className="bg-premium-warm border border-premium-border rounded-2xl p-5 sm:p-6 flex items-center gap-4 hover:border-premium-gold/30 hover:shadow-[0_0_30px_rgba(212,168,83,0.08)] group transition-all duration-300"
             >
               <div className="w-12 h-12 rounded-full bg-premium-gold/10 flex items-center justify-center flex-shrink-0 group-hover:bg-premium-gold/20 transition-colors group-hover:scale-110 transition-all duration-300">
                 <svg
@@ -107,7 +107,7 @@ export default async function ContactPage({
                 </svg>
               </div>
               <div>
-                <h4 className="text-sm font-semibold text-white group-hover:text-premium-gold transition-colors">
+                <h4 className="text-sm font-semibold text-premium-gold">
                   {t("whatsapp")}
                 </h4>
                 <p className="text-xs text-premium-muted/60 mt-1">
@@ -119,7 +119,7 @@ export default async function ContactPage({
               </span>
             </a>
 
-            <div className="bg-premium-green-bg border border-premium-border rounded-2xl overflow-hidden">
+            <div className="bg-premium-warm border border-premium-border rounded-2xl overflow-hidden">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4044.361990643596!2d-9.53378!3d30.2195696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdb3eb9200f7e08f%3A0xb6218764cb1186ff!2sSte%20AGRISTEP%20sarl!5e1!3m2!1sfr!2sma!4v1"
                 width="100%"

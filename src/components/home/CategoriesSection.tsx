@@ -50,14 +50,14 @@ export default function CategoriesSection() {
                 className="card-premium p-5 sm:p-6 md:p-8 group"
               >
                 <div className="text-3xl mb-6">{categoryIcons[cat.id]}</div>
-                <h3 className="font-heading text-xl text-white mb-3 group-hover:text-premium-green transition-colors">
+                <h3 className="font-heading text-xl text-white mb-3 group-hover:text-premium-gold transition-colors">
                   {ct(cat.id)}
                 </h3>
                 <p className="text-sm text-premium-muted mb-6 leading-relaxed">
                   {cd(cat.id)}
                 </p>
                 <div className="flex items-center justify-between">
-                  <span className="text-xs text-premium-green font-medium">
+                  <span className="text-xs text-premium-gold font-medium">
                     {productCount} produit{productCount > 1 ? "s" : ""}
                   </span>
                   <span className="text-premium-gold group-hover:translate-x-1 transition-transform">

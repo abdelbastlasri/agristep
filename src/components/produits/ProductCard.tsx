@@ -56,7 +56,7 @@ export default function ProductCard({
         {/* Composition */}
         {product.composition.length > 0 && (
           <div className="mb-4">
-            <h4 className="text-xs font-semibold text-premium-green uppercase tracking-wider mb-2">
+            <h4 className="text-xs font-semibold text-premium-gold uppercase tracking-wider mb-2">
               {t("composition")}
             </h4>
             <ul className="space-y-1">
@@ -73,7 +73,7 @@ export default function ProductCard({
         {/* Application */}
         {product.application.length > 0 && (
           <div className="mb-4">
-            <h4 className="text-xs font-semibold text-premium-green uppercase tracking-wider mb-2">
+            <h4 className="text-xs font-semibold text-premium-gold uppercase tracking-wider mb-2">
               {t("application")}
             </h4>
             <ul className="space-y-1">
@@ -93,7 +93,7 @@ export default function ProductCard({
             {product.targetCrops.map((crop) => (
               <span
                 key={crop}
-                className="px-2.5 py-1 bg-premium-green/5 border border-premium-green/10 rounded text-xs text-premium-green"
+                className="px-2.5 py-1 bg-premium-gold/10 border border-premium-gold/20 rounded text-xs text-premium-gold"
               >
                 {crop}
               </span>

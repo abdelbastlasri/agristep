@@ -96,8 +96,8 @@ export default function Header() {
                   href={link.href}
                   className={`text-sm tracking-wide transition-all duration-300 relative py-1 group ${
                     active
-                      ? "text-premium-green font-medium"
-                      : "text-premium-dark hover:text-premium-green"
+                      ? "text-premium-gold font-medium"
+                      : "text-premium-dark hover:text-premium-gold"
                   }`}
                 >
                   {link.label}
@@ -137,8 +137,8 @@ export default function Header() {
                 onClick={() => setMenuOpen(false)}
                 className={`text-sm tracking-wide py-2 transition-all duration-200 hover:translate-x-1 ${
                   pathname === link.href
-                    ? "text-premium-green font-medium"
-                    : "text-premium-dark hover:text-premium-green"
+                    ? "text-premium-gold font-medium"
+                    : "text-premium-dark hover:text-premium-gold"
                 }`}
               >
                 {link.label}

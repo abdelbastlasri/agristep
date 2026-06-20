@@ -36,7 +36,7 @@ export default async function AboutPage({
     <div>
       {/* Hero */}
       <section className="relative bg-premium-dark py-16 sm:py-24 lg:py-32">
-        <div className="absolute inset-0 bg-gradient-to-br from-premium-dark via-premium-dark to-premium-green/40" />
+        <div className="absolute inset-0 bg-gradient-to-br from-premium-dark via-premium-dark to-premium-dark" />
         <div className="absolute inset-0 opacity-[0.03]" style={{
           backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
         }} />
@@ -72,7 +72,7 @@ export default async function AboutPage({
             <div className="w-12 h-0.5 bg-premium-gold mx-auto" />
           </div>
 
-          <div className="bg-premium-green-bg border border-premium-border rounded-2xl p-5 sm:p-6 md:p-12">
+          <div className="bg-premium-warm border border-premium-border rounded-2xl p-5 sm:p-6 md:p-12">
             <div className="space-y-6 text-premium-muted leading-relaxed">
               <p className="text-lg">{t("history.p1")}</p>
               <p className="text-lg">{t("history.p2")}</p>
@@ -100,7 +100,7 @@ export default async function AboutPage({
             <div className="w-12 h-0.5 bg-premium-gold mx-auto" />
           </div>
 
-          <div className="bg-premium-green-bg border border-premium-border rounded-2xl p-5 sm:p-6 md:p-12">
+          <div className="bg-premium-warm border border-premium-border rounded-2xl p-5 sm:p-6 md:p-12">
             <div className="text-premium-muted leading-relaxed">
               <p className="text-lg">{t("societe.text")}</p>
             </div>
@@ -110,7 +110,7 @@ export default async function AboutPage({
 
       {/* Section Persuasive */}
       <section className="section-padding bg-premium-dark text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-premium-dark via-[#1a2e22] to-premium-green/30" />
+        <div className="absolute inset-0 bg-gradient-to-br from-premium-dark via-premium-dark to-premium-warm/50" />
         <div className="absolute inset-0 opacity-[0.03]" style={{
           backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c9a84c' fill-opacity='0.3'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
         }} />
@@ -135,7 +135,7 @@ export default async function AboutPage({
                 key={pt.key}
                 className="flex items-start gap-5 p-6 rounded-xl border border-white/10 hover:bg-white/[0.03] hover:border-premium-gold/20 transition-all group"
               >
-                <div className="w-14 h-14 rounded-full bg-premium-green/10 flex items-center justify-center text-2xl flex-shrink-0 group-hover:scale-110 group-hover:bg-premium-green/20 transition-all duration-300">
+                <div className="w-14 h-14 rounded-full bg-premium-gold/10 flex items-center justify-center text-2xl flex-shrink-0 group-hover:scale-110 group-hover:bg-premium-gold/20 transition-all duration-300">
                   {pt.icon}
                 </div>
                 <div>

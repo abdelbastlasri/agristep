@@ -21,7 +21,7 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="bg-premium-green-bg border border-premium-border rounded-2xl p-5 sm:p-6 lg:p-10">
+    <div className="bg-premium-warm border border-premium-border rounded-2xl p-5 sm:p-6 lg:p-10">
       <form onSubmit={handleSubmit} className="space-y-5">
           <div className="grid md:grid-cols-2 gap-4">
             <div>

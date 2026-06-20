@@ -2,24 +2,24 @@
 
 @theme {
   --color-premium-dark: #1a232e;
-  --color-premium-green: #1e6b3a;
-  --color-premium-green-light: #2d8a4a;
-  --color-premium-green-dark: #154d2b;
-  --color-premium-green-vibrant: #22c55e;
-  --color-premium-gold: #c9a84c;
-  --color-premium-gold-light: #e0c878;
-  --color-premium-gold-bright: #d4b85a;
-  --color-premium-cream: #1e2933;
-  --color-premium-warm: #1a232e;
-  --color-premium-text: #ffffff;
-  --color-premium-muted: #d8d8d8;
-  --color-premium-border: rgba(255,255,255,0.08);
-  --color-premium-sand: #222e3a;
+  --color-premium-warm: #3D2B1F;
+  --color-premium-cream: #F5F0E6;
+  --color-premium-sand: #EDE6D8;
   --color-premium-white: #ffffff;
-  --color-premium-green-bg: #1e2933;
-  --color-premium-green-pale: #1e2933;
-  --color-premium-green-mist: #1a232e;
-  --color-premium-green-soft: #2a6040;
+  --color-premium-text: #ffffff;
+  --color-premium-muted: #C8B8A8;
+  --color-premium-border: rgba(255,255,255,0.08);
+  --color-premium-green: #6B8E4E;
+  --color-premium-green-light: #8CAE6E;
+  --color-premium-green-dark: #4D6B32;
+  --color-premium-green-vibrant: #5A9E3E;
+  --color-premium-green-soft: #5A7D3A;
+  --color-premium-green-bg: #3D2B1F;
+  --color-premium-green-pale: #F5F0E6;
+  --color-premium-green-mist: #EDE6D8;
+  --color-premium-gold: #D4A853;
+  --color-premium-gold-light: #E6C67A;
+  --color-premium-gold-bright: #DDBF6E;
 }
 
 html {
@@ -28,8 +28,8 @@ html {
 
 body {
   font-family: "Outfit", sans-serif;
-  color: var(--color-premium-text);
-  background: #1a232e;
+  color: #3D2B1F;
+  background: #F5F0E6;
   background-image: url(/images/leaf-pattern.svg);
   background-repeat: repeat;
   background-size: 400px 400px;
@@ -45,7 +45,7 @@ body {
 /* ── Cards ── */
 
 .card-premium {
-  background: var(--color-premium-green-bg);
+  background: #4A382A;
   border: 1px solid var(--color-premium-border);
   border-radius: 1rem;
   transition: all 0.35s ease;
@@ -53,24 +53,24 @@ body {
 
 .card-premium:hover {
   border-color: var(--color-premium-gold-light);
-  box-shadow: 0 8px 40px rgba(201, 168, 76, 0.12), 0 0 0 1px rgba(201, 168, 76, 0.15);
+  box-shadow: 0 8px 40px rgba(212, 168, 83, 0.12), 0 0 0 1px rgba(212, 168, 83, 0.15);
   transform: translateY(-4px) scale(1.01);
 }
 
 /* ── Glass Card ── */
 
 .card-glass {
-  background: rgba(30, 41, 51, 0.55);
+  background: rgba(245, 240, 230, 0.55);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(61, 43, 31, 0.10);
   border-radius: 1rem;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .card-glass:hover {
-  border-color: rgba(201, 168, 76, 0.25);
-  box-shadow: 0 12px 48px rgba(201, 168, 76, 0.10), 0 0 0 1px rgba(201, 168, 76, 0.12);
+  border-color: rgba(212, 168, 83, 0.25);
+  box-shadow: 0 12px 48px rgba(212, 168, 83, 0.10), 0 0 0 1px rgba(212, 168, 83, 0.12);
   transform: translateY(-3px);
 }
 
@@ -139,7 +139,7 @@ body {
   background-color: var(--color-premium-green-dark);
   color: white;
   transform: translateY(-2px);
-  box-shadow: 0 8px 28px rgba(30, 107, 58, 0.4);
+  box-shadow: 0 8px 28px rgba(107, 142, 78, 0.4);
 }
 
 .btn-premium-primary:active {
@@ -155,7 +155,7 @@ body {
   background-color: #b8942e;
   color: white;
   transform: translateY(-2px);
-  box-shadow: 0 8px 28px rgba(201, 168, 76, 0.45);
+  box-shadow: 0 8px 28px rgba(212, 168, 83, 0.45);
 }
 
 .btn-premium-gold:active {
@@ -172,7 +172,7 @@ body {
   background-color: var(--color-premium-green);
   color: white;
   transform: translateY(-2px);
-  box-shadow: 0 8px 28px rgba(30, 107, 58, 0.3);
+  box-shadow: 0 8px 28px rgba(107, 142, 78, 0.3);
 }
 
 .btn-premium-outline:active {
@@ -253,14 +253,14 @@ body {
   left: 0;
   right: 0;
   height: 40px;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 40'%3E%3Cpath fill='%231a232e' d='M0,20 C240,40 480,0 720,20 C960,40 1200,0 1440,20 L1440,40 L0,40 Z'/%3E%3C/svg%3E") repeat-x top left;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 40'%3E%3Cpath fill='%23EDE6D8' d='M0,20 C240,40 480,0 720,20 C960,40 1200,0 1440,20 L1440,40 L0,40 Z'/%3E%3C/svg%3E") repeat-x top left;
   background-size: 720px 40px;
   pointer-events: none;
   z-index: 1;
 }
 
 .section-wave-dark::before {
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 40'%3E%3Cpath fill='%231e2933' d='M0,20 C240,40 480,0 720,20 C960,40 1200,0 1440,20 L1440,40 L0,40 Z'/%3E%3C/svg%3E") repeat-x top left;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 40'%3E%3Cpath fill='%233D2B1F' d='M0,20 C240,40 480,0 720,20 C960,40 1200,0 1440,20 L1440,40 L0,40 Z'/%3E%3C/svg%3E") repeat-x top left;
   background-size: 720px 40px;
 }
 
@@ -501,7 +501,7 @@ body {
 
 .input-glow:focus {
   border-color: var(--color-premium-green);
-  box-shadow: 0 0 0 3px rgba(30, 107, 58, 0.12);
+  box-shadow: 0 0 0 3px rgba(107, 142, 78, 0.12);
   outline: none;
 }
 

@@ -29,13 +29,18 @@ export default function ImageSlideshow() {
 
   useEffect(() => {
     if (paused || prefersReducedMotion()) return;
-    const timer = setInterval(next, 5000);
+    const timer = setInterval(next, 6000);
     return () => clearInterval(timer);
   }, [paused, next]);
 
   return (
     <div
-      className="relative w-full h-full"
+      className="relative w-full h-full bg-[#1a232e]"
+      style={{
+        backgroundImage: `url(/images/leaf-pattern.svg)`,
+        backgroundRepeat: "repeat",
+        backgroundSize: "400px 400px",
+      }}
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
       onFocus={() => setPaused(true)}
@@ -49,7 +54,7 @@ export default function ImageSlideshow() {
           }`}
           aria-hidden={i !== current}
         >
-          <div className="absolute inset-0" style={{
+          <div className="absolute inset-0 flex items-center justify-center" style={{
             transform: i === current ? 'scale(1.07)' : 'scale(1)',
             transition: 'transform 6s linear',
           }}>
@@ -58,12 +63,16 @@ export default function ImageSlideshow() {
               alt={slide.alt}
               fill
               sizes="100vw"
-              className="object-cover"
+              className="object-contain"
               priority={i === 0}
               loading="eager"
+              onError={(e) => {
+                const t = e.currentTarget;
+                t.style.display = "none";
+              }}
             />
           </div>
-          <div className="absolute inset-0 bg-gradient-to-r from-premium-dark/40 via-premium-dark/15 to-premium-gold/20" />
+          <div className="absolute inset-0 bg-gradient-to-r from-premium-dark/20 via-premium-dark/8 to-premium-gold/15" />
         </div>
       ))}
     </div>

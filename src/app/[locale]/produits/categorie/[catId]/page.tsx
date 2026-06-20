@@ -28,13 +28,13 @@ export default async function CategoryPage({
     <div className="section-padding bg-premium-warm">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center gap-2 text-xs text-premium-muted/60 mb-12 uppercase tracking-wider">
-          <Link href="/" className="hover:text-premium-green transition-colors">
+          <Link href="/" className="hover:text-premium-gold transition-colors">
             Accueil
           </Link>
           <span>/</span>
           <Link
             href="/produits"
-            className="hover:text-premium-green transition-colors"
+            className="hover:text-premium-gold transition-colors"
           >
             Produits
           </Link>

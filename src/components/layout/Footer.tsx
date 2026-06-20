@@ -5,8 +5,8 @@ export default function Footer() {
   const t = useTranslations("footer");
 
   return (
-    <footer className="relative bg-gradient-to-br from-premium-dark via-premium-sand to-premium-dark text-white/70">
-      <div className="absolute inset-0 opacity-[0.04]" style={{
+    <footer className="relative bg-gradient-to-br from-premium-green-soft via-premium-green to-premium-green-dark text-white/80">
+      <div className="absolute inset-0 opacity-[0.08]" style={{
         backgroundImage: `url(/images/leaf-pattern.svg)`,
         backgroundRepeat: "repeat",
         backgroundSize: "400px 400px",
