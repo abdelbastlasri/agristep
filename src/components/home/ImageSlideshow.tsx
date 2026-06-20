@@ -49,16 +49,21 @@ export default function ImageSlideshow() {
           }`}
           aria-hidden={i !== current}
         >
-          <Image
-            src={slide.src}
-            alt={slide.alt}
-            fill
-            sizes="100vw"
-            className="object-cover"
-            priority={i === 0}
-            loading="eager"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-premium-dark/70 via-premium-dark/40 to-transparent" />
+          <div className="absolute inset-0" style={{
+            transform: i === current ? 'scale(1.07)' : 'scale(1)',
+            transition: 'transform 6s linear',
+          }}>
+            <Image
+              src={slide.src}
+              alt={slide.alt}
+              fill
+              sizes="100vw"
+              className="object-cover"
+              priority={i === 0}
+              loading="eager"
+            />
+          </div>
+          <div className="absolute inset-0 bg-gradient-to-r from-premium-dark/40 via-premium-dark/15 to-premium-gold/20" />
         </div>
       ))}
     </div>

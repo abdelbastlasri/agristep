@@ -536,27 +536,13 @@ body {
   filter: brightness(1.2);
 }
 
-/* ── Mesh Gradient Drift ── */
+/* ── Cinematic Dust Particles ── */
 
-@keyframes drift {
-  0% { transform: translate(0, 0) scale(1); }
-  33% { transform: translate(35px, -25px) scale(1.05); }
-  66% { transform: translate(-20px, 15px) scale(0.95); }
-  100% { transform: translate(0, 0) scale(1); }
-}
-
-@keyframes drift-reverse {
-  0% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(-30px, 20px) scale(1.08); }
-  100% { transform: translate(0, 0) scale(1); }
-}
-
-.animate-drift {
-  animation: drift 12s ease-in-out infinite;
-}
-
-.animate-drift-reverse {
-  animation: drift-reverse 15s ease-in-out infinite;
+@keyframes dust {
+  0% { transform: translateY(0) translateX(0) scale(1); opacity: 0; }
+  10% { opacity: 1; }
+  70% { opacity: 0.6; }
+  100% { transform: translateY(-120px) translateX(20px) scale(0.6); opacity: 0; }
 }
 
 /* ── Sheen / Reflection ── */

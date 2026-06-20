@@ -12,33 +12,26 @@ export default function HeroSection() {
         <ImageSlideshow />
       </div>
 
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 -left-20 w-[45%] h-[55%] rounded-full bg-premium-green/25 blur-[120px] animate-drift" />
-        <div className="absolute bottom-1/4 -right-10 w-[35%] h-[45%] rounded-full bg-premium-gold/15 blur-[100px] animate-drift-reverse" />
-        <div className="absolute inset-0 bg-gradient-to-r from-premium-dark/80 via-premium-dark/60 to-premium-dark/30" />
+      {/* Golden hour glow — warm sun from upper-right */}
+      <div className="absolute inset-0">
+        <div className="absolute -top-1/4 -right-1/4 w-[80%] h-[80%] rounded-full bg-gradient-to-br from-premium-gold/30 via-premium-gold/10 to-transparent blur-[100px]" />
+        <div className="absolute -bottom-1/4 left-1/4 w-[60%] h-[40%] rounded-full bg-gradient-to-t from-premium-green/15 to-transparent blur-[80px]" />
       </div>
 
-      <div className="absolute inset-0 opacity-[0.04]"
-        style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-        }}
-      />
-
-      {/* Floating particles */}
-      <div className="particles">
-        <div className="particle leaf bg-premium-gold/30" style={{ top: '10%', left: '5%', '--dur': '6s', '--del': '0s' } as React.CSSProperties} />
-        <div className="particle bg-premium-green/25" style={{ top: '20%', left: '75%', '--dur': '8s', '--del': '0.8s' } as React.CSSProperties} />
-        <div className="particle leaf bg-premium-gold/20" style={{ top: '35%', left: '12%', '--dur': '7s', '--del': '1.6s' } as React.CSSProperties} />
-        <div className="particle bg-white/10" style={{ top: '45%', left: '88%', '--dur': '9s', '--del': '0.4s' } as React.CSSProperties} />
-        <div className="particle leaf bg-premium-green/15" style={{ top: '55%', left: '3%', '--dur': '5.5s', '--del': '2.2s' } as React.CSSProperties} />
-        <div className="particle bg-premium-gold/20" style={{ top: '60%', left: '80%', '--dur': '7.5s', '--del': '1.2s' } as React.CSSProperties} />
-        <div className="particle leaf bg-white/8" style={{ top: '70%', left: '15%', '--dur': '6.5s', '--del': '2.8s' } as React.CSSProperties} />
-        <div className="particle bg-premium-green/15" style={{ top: '15%', left: '55%', '--dur': '9.5s', '--del': '0.2s' } as React.CSSProperties} />
-        <div className="particle leaf bg-premium-gold/25" style={{ top: '80%', left: '70%', '--dur': '8.5s', '--del': '1.8s' } as React.CSSProperties} />
-        <div className="particle bg-white/8" style={{ top: '30%', left: '45%', '--dur': '10s', '--del': '3s' } as React.CSSProperties} />
-        <div className="particle leaf bg-premium-green/20" style={{ top: '50%', left: '60%', '--dur': '6s', '--del': '2.5s' } as React.CSSProperties} />
-        <div className="particle bg-premium-gold/15" style={{ top: '88%', left: '40%', '--dur': '7s', '--del': '0.6s' } as React.CSSProperties} />
+      {/* Cinematic dust particles — golden specks floating up */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute w-2 h-2 rounded-full bg-premium-gold/30 blur-[1px]" style={{ left: '15%', top: '70%', animation: 'dust 8s ease-in-out infinite', animationDelay: '0s' }} />
+        <div className="absolute w-3 h-3 rounded-full bg-premium-gold/25 blur-[1.5px]" style={{ left: '40%', top: '80%', animation: 'dust 10s ease-in-out infinite', animationDelay: '1.2s' }} />
+        <div className="absolute w-1.5 h-1.5 rounded-full bg-amber-300/30 blur-[1px]" style={{ left: '70%', top: '60%', animation: 'dust 7s ease-in-out infinite', animationDelay: '2.5s' }} />
+        <div className="absolute w-2.5 h-2.5 rounded-full bg-premium-gold/20 blur-[1px]" style={{ left: '25%', top: '90%', animation: 'dust 9s ease-in-out infinite', animationDelay: '0.8s' }} />
+        <div className="absolute w-1.5 h-1.5 rounded-full bg-amber-200/35 blur-[0.5px]" style={{ left: '55%', top: '75%', animation: 'dust 11s ease-in-out infinite', animationDelay: '3.5s' }} />
+        <div className="absolute w-3 h-3 rounded-full bg-premium-gold/20 blur-[1.5px]" style={{ left: '85%', top: '85%', animation: 'dust 8.5s ease-in-out infinite', animationDelay: '1.8s' }} />
+        <div className="absolute w-2 h-2 rounded-full bg-amber-300/25 blur-[1px]" style={{ left: '10%', top: '85%', animation: 'dust 7.5s ease-in-out infinite', animationDelay: '4s' }} />
+        <div className="absolute w-1 h-1 rounded-full bg-premium-gold/35 blur-[0.5px]" style={{ left: '50%', top: '65%', animation: 'dust 9.5s ease-in-out infinite', animationDelay: '0.3s' }} />
       </div>
+
+      {/* Bottom vignette for text readability */}
+      <div className="absolute inset-0 bg-gradient-to-t from-premium-dark/80 via-premium-dark/40 to-transparent" />
 
       <div className="relative z-10 w-full pt-16 md:pt-0">
         <div className="max-w-7xl mx-auto px-6">
