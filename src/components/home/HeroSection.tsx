@@ -12,7 +12,11 @@ export default function HeroSection() {
         <ImageSlideshow />
       </div>
 
-      <div className="absolute inset-0 bg-gradient-to-r from-premium-dark/80 via-premium-dark/60 to-premium-dark/30" />
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-1/4 -left-20 w-[45%] h-[55%] rounded-full bg-premium-green/25 blur-[120px] animate-drift" />
+        <div className="absolute bottom-1/4 -right-10 w-[35%] h-[45%] rounded-full bg-premium-gold/15 blur-[100px] animate-drift-reverse" />
+        <div className="absolute inset-0 bg-gradient-to-r from-premium-dark/80 via-premium-dark/60 to-premium-dark/30" />
+      </div>
 
       <div className="absolute inset-0 opacity-[0.04]"
         style={{
@@ -22,11 +26,18 @@ export default function HeroSection() {
 
       {/* Floating particles */}
       <div className="particles">
-        <div className="particle leaf bg-premium-gold/30" style={{ top: '15%', left: '8%', '--dur': '5s', '--del': '0s' } as React.CSSProperties} />
-        <div className="particle bg-premium-green/20" style={{ top: '25%', left: '85%', '--dur': '7s', '--del': '1s' } as React.CSSProperties} />
-        <div className="particle leaf bg-premium-gold/20" style={{ top: '60%', left: '5%', '--dur': '6s', '--del': '2s' } as React.CSSProperties} />
-        <div className="particle bg-white/10" style={{ top: '70%', left: '90%', '--dur': '8s', '--del': '0.5s' } as React.CSSProperties} />
-        <div className="particle leaf bg-premium-gold/25" style={{ top: '40%', left: '92%', '--dur': '5.5s', '--del': '1.5s' } as React.CSSProperties} />
+        <div className="particle leaf bg-premium-gold/30" style={{ top: '10%', left: '5%', '--dur': '6s', '--del': '0s' } as React.CSSProperties} />
+        <div className="particle bg-premium-green/25" style={{ top: '20%', left: '75%', '--dur': '8s', '--del': '0.8s' } as React.CSSProperties} />
+        <div className="particle leaf bg-premium-gold/20" style={{ top: '35%', left: '12%', '--dur': '7s', '--del': '1.6s' } as React.CSSProperties} />
+        <div className="particle bg-white/10" style={{ top: '45%', left: '88%', '--dur': '9s', '--del': '0.4s' } as React.CSSProperties} />
+        <div className="particle leaf bg-premium-green/15" style={{ top: '55%', left: '3%', '--dur': '5.5s', '--del': '2.2s' } as React.CSSProperties} />
+        <div className="particle bg-premium-gold/20" style={{ top: '60%', left: '80%', '--dur': '7.5s', '--del': '1.2s' } as React.CSSProperties} />
+        <div className="particle leaf bg-white/8" style={{ top: '70%', left: '15%', '--dur': '6.5s', '--del': '2.8s' } as React.CSSProperties} />
+        <div className="particle bg-premium-green/15" style={{ top: '15%', left: '55%', '--dur': '9.5s', '--del': '0.2s' } as React.CSSProperties} />
+        <div className="particle leaf bg-premium-gold/25" style={{ top: '80%', left: '70%', '--dur': '8.5s', '--del': '1.8s' } as React.CSSProperties} />
+        <div className="particle bg-white/8" style={{ top: '30%', left: '45%', '--dur': '10s', '--del': '3s' } as React.CSSProperties} />
+        <div className="particle leaf bg-premium-green/20" style={{ top: '50%', left: '60%', '--dur': '6s', '--del': '2.5s' } as React.CSSProperties} />
+        <div className="particle bg-premium-gold/15" style={{ top: '88%', left: '40%', '--dur': '7s', '--del': '0.6s' } as React.CSSProperties} />
       </div>
 
       <div className="relative z-10 w-full pt-16 md:pt-0">

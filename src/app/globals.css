@@ -535,3 +535,38 @@ body {
   transform: scale(1.15);
   filter: brightness(1.2);
 }
+
+/* ── Mesh Gradient Drift ── */
+
+@keyframes drift {
+  0% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(35px, -25px) scale(1.05); }
+  66% { transform: translate(-20px, 15px) scale(0.95); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+
+@keyframes drift-reverse {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-30px, 20px) scale(1.08); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+
+.animate-drift {
+  animation: drift 12s ease-in-out infinite;
+}
+
+.animate-drift-reverse {
+  animation: drift-reverse 15s ease-in-out infinite;
+}
+
+/* ── Sheen / Reflection ── */
+
+@keyframes sheen {
+  0% { transform: translateX(-100%) translateY(0) skewX(-15deg); }
+  15% { transform: translateX(300%) translateY(0) skewX(-15deg); }
+  100% { transform: translateX(300%) translateY(0) skewX(-15deg); }
+}
+
+.animate-sheen {
+  animation: sheen 6s ease-in-out infinite;
+}

@@ -5,8 +5,13 @@ export default function Footer() {
   const t = useTranslations("footer");
 
   return (
-    <footer className="bg-gradient-to-br from-premium-dark via-[#1a2e22] to-premium-green/20 text-white/70">
-      <div className="max-w-7xl mx-auto px-6 py-16">
+    <footer className="relative bg-gradient-to-br from-premium-dark via-[#1a2e22] to-premium-green/20 text-white/70">
+      <div className="absolute inset-0 opacity-[0.04]" style={{
+        backgroundImage: `url(/images/leaf-pattern.svg)`,
+        backgroundRepeat: "repeat",
+        backgroundSize: "300px 300px",
+      }} />
+      <div className="max-w-7xl mx-auto px-6 py-16 relative z-10">
         <div className="md:hidden space-y-10">
           <div className="text-center space-y-4">
             <img
