@@ -29,7 +29,7 @@ export default function HeroSection() {
         <div className="particle leaf bg-premium-gold/25" style={{ top: '40%', left: '92%', '--dur': '5.5s', '--del': '1.5s' } as React.CSSProperties} />
       </div>
 
-      <div className="relative z-10 w-full">
+      <div className="relative z-10 w-full pt-16 md:pt-0">
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-3xl">
             <div className="flex items-center gap-3 mb-10">
