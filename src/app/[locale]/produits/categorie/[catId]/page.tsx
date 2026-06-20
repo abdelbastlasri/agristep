@@ -5,11 +5,7 @@ import ProductGrid from "@/components/produits/ProductGrid";
 import { categories, getProductsByCategory } from "@/data/products";
 import type { ProductCategory } from "@/data/products";
 
-export function generateStaticParams() {
-  return categories.map((cat) => ({
-    catId: cat.id,
-  }));
-}
+export const dynamic = "force-dynamic";
 
 export default async function CategoryPage({
   params,
