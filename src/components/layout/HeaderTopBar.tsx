@@ -88,28 +88,28 @@ export default function HeaderTopBar() {
 
   return (
     <div className="bg-premium-green-soft text-white/90 text-xs md:text-sm">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between h-8 md:h-9">
-        <div className="flex items-center gap-4 md:gap-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between min-h-9 py-1 gap-x-3">
+        <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
           {weather && (
             <span className="flex items-center gap-1.5">
               <span>{getWeatherEmoji(weather.code)}</span>
-              <span className="hidden sm:inline font-medium">{weather.temp}°C</span>
-              <span className="hidden md:inline text-white/70">— Chtouka Ait Baha</span>
+              <span className="font-medium">{weather.temp}°C</span>
+              <span className="text-white/70">— Chtouka Ait Baha</span>
             </span>
           )}
           {!weather && (
-            <span className="text-white/50 text-[10px] sm:text-xs">Chargement…</span>
+            <span className="text-white/50 text-xs">Chargement…</span>
           )}
-          <span className="hidden sm:flex items-center gap-1.5">
+          <span className="flex items-center gap-1.5">
             <span>📞</span>
             <a
               href="tel:+212528815207"
-              className="hover:text-white/80 transition-colors"
+              className="hover:text-white/80 transition-colors whitespace-nowrap"
             >
               +212 5 28 81 52 07
             </a>
           </span>
-          <span className="hidden md:flex items-center gap-1.5">
+          <span className="flex items-center gap-1.5">
             <span>✉️</span>
             <a
               href="mailto:ste.agristep@gmail.com"
@@ -119,7 +119,7 @@ export default function HeaderTopBar() {
             </a>
           </span>
         </div>
-        <div className="flex items-center gap-1.5 font-medium">
+        <div className="flex items-center gap-1.5 font-medium flex-shrink-0">
           <span>🕐</span>
           <span className="tabular-nums">{time}</span>
         </div>

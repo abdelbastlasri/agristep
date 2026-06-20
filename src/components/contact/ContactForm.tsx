@@ -13,26 +13,16 @@ export default function ContactForm() {
     email: "",
     message: "",
   });
-  const [sent, setSent] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const text = `Bonjour Agristep,\n- Prénom: ${form.firstName}\n- Nom: ${form.lastName}\n- Numéro: ${form.phone}\n- Email: ${form.email}\n- Message: ${form.message}`;
-    window.open(generateWhatsAppUrl("212528815207", text), "_blank");
-    setSent(true);
+    window.location.href = generateWhatsAppUrl("212528815207", text);
   };
 
   return (
     <div className="bg-premium-green-bg border border-premium-border rounded-2xl p-5 sm:p-6 lg:p-10">
-      {sent ? (
-        <div className="text-center py-16">
-          <div className="text-5xl mb-5">✅</div>
-          <p className="font-heading text-xl text-premium-green">
-            {t("success")}
-          </p>
-        </div>
-      ) : (
-        <form onSubmit={handleSubmit} className="space-y-5">
+      <form onSubmit={handleSubmit} className="space-y-5">
           <div className="grid md:grid-cols-2 gap-4">
             <div>
               <label htmlFor="contact-firstName" className="block text-xs uppercase tracking-wider text-premium-muted mb-2">
@@ -111,7 +101,6 @@ export default function ContactForm() {
             {t("submit")}
           </button>
         </form>
-      )}
     </div>
   );
 }
