@@ -20,7 +20,7 @@ export default async function ContactPage({
   const t = await getTranslations({ locale, namespace: "contact" });
 
   const whatsappMessage = encodeURIComponent(
-    "Bonjour, J'ai besoin plus informations à propos votre produits et leur fonctionnalités"
+    "Bonjour, j'ai besoin de plus d'informations à propos de vos produits et leurs fonctionnalités"
   );
 
   return (

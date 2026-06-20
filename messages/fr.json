@@ -41,12 +41,7 @@
     },
     "contact": {
       "title": "Contactez-nous",
-      "name": "Nom",
-      "email": "Email",
-      "message": "Message",
-      "submit": "Envoyer",
       "phone": "+212 5 28 81 52 07",
-      "phoneLabel": "Numéro",
       "emailAddr": "ste.agristep@gmail.com"
     }
   },

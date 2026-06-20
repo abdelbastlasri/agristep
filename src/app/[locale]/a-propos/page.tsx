@@ -171,8 +171,44 @@ export default async function AboutPage({
         </div>
       </section>
 
-      {/* Informations légales */}
+      {/* Nos Valeurs */}
       <section className="section-padding bg-premium-warm">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <div className="flex items-center justify-center gap-3 mb-6">
+              <span className="w-8 h-px bg-premium-gold" />
+              <span className="text-xs uppercase tracking-[0.2em] text-premium-gold font-semibold">
+                {t("values.title")}
+              </span>
+              <span className="w-8 h-px bg-premium-gold" />
+            </div>
+            <h2 className="font-heading text-3xl md:text-4xl text-white mt-2 mb-4">
+              {t("values.title")}
+            </h2>
+            <div className="w-12 h-0.5 bg-premium-gold mx-auto" />
+          </div>
+
+          <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
+            {values.map((v) => (
+              <div
+                key={v.key}
+                className="card-premium p-5 sm:p-6 md:p-8 text-center hover:border-premium-gold/30"
+              >
+                <div className="text-4xl mb-5">{v.icon}</div>
+                <h3 className="font-heading text-lg text-white mb-3">
+                  {t(`values.${v.key}.title`)}
+                </h3>
+                <p className="text-sm text-premium-muted">
+                  {t(`values.${v.key}.text`)}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Informations légales */}
+      <section className="section-padding bg-premium-dark">
         <div className="max-w-4xl mx-auto px-6">
           <div className="text-center mb-12">
             <div className="flex items-center justify-center gap-3 mb-6">
@@ -211,42 +247,6 @@ export default async function AboutPage({
                 </p>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Nos Valeurs */}
-      <section className="section-padding bg-premium-warm">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <div className="flex items-center justify-center gap-3 mb-6">
-              <span className="w-8 h-px bg-premium-gold" />
-              <span className="text-xs uppercase tracking-[0.2em] text-premium-gold font-semibold">
-                {t("values.title")}
-              </span>
-              <span className="w-8 h-px bg-premium-gold" />
-            </div>
-            <h2 className="font-heading text-3xl md:text-4xl text-white mt-2 mb-4">
-              {t("values.title")}
-            </h2>
-            <div className="w-12 h-0.5 bg-premium-gold mx-auto" />
-          </div>
-
-          <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
-            {values.map((v) => (
-              <div
-                key={v.key}
-                className="card-premium p-5 sm:p-6 md:p-8 text-center hover:border-premium-gold/30"
-              >
-                <div className="text-4xl mb-5">{v.icon}</div>
-                <h3 className="font-heading text-lg text-white mb-3">
-                  {t(`values.${v.key}.title`)}
-                </h3>
-                <p className="text-sm text-premium-muted">
-                  {t(`values.${v.key}.text`)}
-                </p>
-              </div>
-            ))}
           </div>
         </div>
       </section>

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300">
+  <defs>
+    <path id="s" d="M0,0 C6,-5 11,-2.5 13,0 C11,2.5 6,5 0,0Z"/>
+    <path id="m" d="M0,0 C9,-9 18,-4.5 20,0 C18,4.5 9,9 0,0Z"/>
+    <path id="l" d="M0,0 C7,-13 15,-7.5 17,0 C15,7.5 7,13 0,0Z"/>
+    <path id="xl" d="M0,0 C11,-17 22,-9 25,0 C22,9 11,17 0,0Z"/>
+  </defs>
+  <g fill="#ffffff" fill-opacity="0.12">
+    <g transform="translate(42,52) rotate(28)"><use href="#l"/></g>
+    <g transform="translate(132,27) rotate(-42)" fill-opacity="0.08"><use href="#s"/></g>
+    <g transform="translate(235,68) rotate(73)" fill-opacity="0.15"><use href="#xl"/></g>
+    <g transform="translate(58,138) rotate(-18)"><use href="#m"/></g>
+    <g transform="translate(178,115) rotate(112)" fill-opacity="0.08"><use href="#s"/></g>
+    <g transform="translate(272,155) rotate(-62)"><use href="#l"/></g>
+    <g transform="translate(85,215) rotate(48)" fill-opacity="0.15"><use href="#xl"/></g>
+    <g transform="translate(198,228) rotate(-32)"><use href="#m"/></g>
+    <g transform="translate(38,278) rotate(-88)" fill-opacity="0.08"><use href="#s"/></g>
+    <g transform="translate(152,265) rotate(18)"><use href="#l"/></g>
+    <g transform="translate(288,258) rotate(125)" fill-opacity="0.15"><use href="#xl"/></g>
+    <g transform="translate(105,85) rotate(92)"><use href="#m"/></g>
+    <g transform="translate(245,35) rotate(-108)" fill-opacity="0.08"><use href="#s"/></g>
+    <g transform="translate(12,192) rotate(162)"><use href="#l"/></g>
+    <g transform="translate(168,175) rotate(-78)" fill-opacity="0.15"><use href="#xl"/></g>
+    <g transform="translate(290,12) rotate(38)"><use href="#m"/></g>
+  </g>
+</svg>
