@@ -26,8 +26,12 @@ export const metadata: Metadata = {
   description:
     "Agristep est spécialisée dans la commercialisation d'insectes auxiliaires, biostimulants, et produits phytosanitaires pour une agriculture durable au Maroc.",
   icons: {
-    icon: "/images/logo_agristep.png",
+    icon: [
+      { url: "/favicon.ico", type: "image/x-icon" },
+      { url: "/images/logo_agristep.png", type: "image/png" },
+    ],
     apple: "/images/logo_agristep.png",
+    shortcut: "/favicon.ico",
   },
 };
 

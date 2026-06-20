@@ -83,6 +83,31 @@ export default async function AboutPage({
         </div>
       </section>
 
+      {/* A propos notre Société */}
+      <section className="section-padding bg-premium-warm">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <div className="flex items-center justify-center gap-3 mb-6">
+              <span className="w-8 h-px bg-premium-gold" />
+              <span className="text-xs uppercase tracking-[0.2em] text-premium-gold font-semibold">
+                Agristep
+              </span>
+              <span className="w-8 h-px bg-premium-gold" />
+            </div>
+            <h2 className="font-heading text-3xl md:text-4xl text-white mt-2 mb-4">
+              {t("societe.title")}
+            </h2>
+            <div className="w-12 h-0.5 bg-premium-gold mx-auto" />
+          </div>
+
+          <div className="bg-premium-green-bg border border-premium-border rounded-2xl p-5 sm:p-6 md:p-12">
+            <div className="text-premium-muted leading-relaxed">
+              <p className="text-lg">{t("societe.text")}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Section Persuasive */}
       <section className="section-padding bg-premium-dark text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-premium-dark via-[#1a2e22] to-premium-green/30" />
