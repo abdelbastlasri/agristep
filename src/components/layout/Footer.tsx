@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="absolute inset-0 opacity-[0.04]" style={{
         backgroundImage: `url(/images/leaf-pattern.svg)`,
         backgroundRepeat: "repeat",
-        backgroundSize: "300px 300px",
+        backgroundSize: "400px 400px",
       }} />
       <div className="max-w-7xl mx-auto px-6 py-16 relative z-10">
         <div className="md:hidden space-y-10">
