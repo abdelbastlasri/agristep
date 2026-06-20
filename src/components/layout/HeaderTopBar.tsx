@@ -100,7 +100,7 @@ export default function HeaderTopBar() {
           {!weather && (
             <span className="text-white/50 text-xs">Chargement…</span>
           )}
-          <span className="flex items-center gap-1.5">
+          <span className="hidden md:flex items-center gap-1.5">
             <span>📞</span>
             <a
               href="tel:+212528815207"
@@ -109,7 +109,7 @@ export default function HeaderTopBar() {
               +212 5 28 81 52 07
             </a>
           </span>
-          <span className="flex items-center gap-1.5">
+          <span className="hidden md:flex items-center gap-1.5">
             <span>✉️</span>
             <a
               href="mailto:ste.agristep@gmail.com"
