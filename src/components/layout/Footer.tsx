@@ -7,8 +7,8 @@ export default function Footer() {
   return (
     <footer className="bg-gradient-to-br from-premium-dark via-[#1a2e22] to-premium-green/20 text-white/70">
       <div className="max-w-7xl mx-auto px-6 py-16">
-        <div className="grid md:grid-cols-3 gap-12">
-          <div className="space-y-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-12">
+          <div className="col-span-2 md:col-span-1 space-y-6">
             <img
               src="/images/logo_agristep.png"
               alt="Agristep"
