@@ -75,7 +75,7 @@ export default async function ProductDetailPage({
         </div>
 
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 mb-12 lg:mb-20">
-          <div className="relative bg-white border border-gray-200 rounded-2xl p-4 sm:p-6 lg:p-10 flex items-center justify-center min-h-[220px] sm:min-h-[350px] lg:min-h-[450px]">
+          <div className="relative bg-premium-cream border border-premium-border/20 rounded-2xl p-4 sm:p-6 lg:p-10 flex items-center justify-center min-h-[220px] sm:min-h-[350px] lg:min-h-[450px]">
             <ImageWithFallback
               src={product.image}
               alt={product.name}
@@ -113,7 +113,7 @@ export default async function ProductDetailPage({
                 <h2 className="text-xs uppercase tracking-[0.2em] text-premium-muted font-semibold mb-4">
                   {t("composition")}
                 </h2>
-                <div className="bg-gray-50 rounded-xl p-5 space-y-2">
+                <div className="bg-premium-sand/50 rounded-xl p-5 space-y-2">
                   {product.composition.map((comp, i) => (
                     <div
                       key={i}

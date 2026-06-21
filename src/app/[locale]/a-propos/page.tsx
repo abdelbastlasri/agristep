@@ -68,7 +68,7 @@ export default async function AboutPage({
             <div className="w-12 h-0.5 bg-premium-warm mx-auto" />
           </div>
 
-          <div className="bg-white border border-gray-100 rounded-2xl shadow-sm p-5 sm:p-6 md:p-12">
+          <div className="bg-premium-cream border border-premium-border/20 rounded-2xl shadow-sm p-5 sm:p-6 md:p-12">
             <div className="space-y-6 text-premium-muted leading-relaxed">
               <p className="text-lg">{t("history.p1")}</p>
               <p className="text-lg">{t("history.p2")}</p>
@@ -96,7 +96,7 @@ export default async function AboutPage({
             <div className="w-12 h-0.5 bg-premium-warm mx-auto" />
           </div>
 
-          <div className="bg-white border border-gray-100 rounded-2xl shadow-sm p-5 sm:p-6 md:p-12">
+          <div className="bg-premium-cream border border-premium-border/20 rounded-2xl shadow-sm p-5 sm:p-6 md:p-12">
             <div className="text-premium-muted leading-relaxed">
               <p className="text-lg">{t("societe.text")}</p>
             </div>
@@ -125,7 +125,7 @@ export default async function AboutPage({
             {convincePoints.map((pt, i) => (
               <div
                 key={pt.key}
-                className="flex items-start gap-5 p-6 rounded-xl border border-premium-warm/10 bg-white shadow-sm hover:border-premium-warm/30 transition-all group"
+                className="flex items-start gap-5 p-6 rounded-xl border border-premium-warm/10 bg-premium-cream shadow-sm hover:border-premium-warm/30 transition-all group"
               >
                 <div className="w-14 h-14 rounded-full bg-premium-warm/10 flex items-center justify-center text-2xl flex-shrink-0 group-hover:scale-110 group-hover:bg-premium-warm/20 transition-all duration-300">
                   {pt.icon}
@@ -216,7 +216,7 @@ export default async function AboutPage({
             <div className="w-12 h-0.5 bg-premium-warm mx-auto" />
           </div>
 
-          <div className="bg-white border border-gray-100 rounded-2xl shadow-sm p-5 sm:p-6 md:p-12 space-y-8">
+          <div className="bg-premium-cream border border-premium-border/20 rounded-2xl shadow-sm p-5 sm:p-6 md:p-12 space-y-8">
             <div className="flex items-start gap-5">
               <span className="text-2xl flex-shrink-0">📍</span>
               <div>

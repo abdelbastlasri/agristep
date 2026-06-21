@@ -87,7 +87,7 @@ export default function HeaderTopBar() {
   if (!mounted) return null;
 
   return (
-    <div className="relative bg-premium-dark text-white/70 text-xs md:text-sm overflow-hidden border-b border-gray-700">
+    <div className="relative bg-premium-dark text-white/70 text-xs md:text-sm overflow-hidden border-b border-white/10">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute inset-y-0 -left-1/2 w-1/2 bg-gradient-to-r from-transparent via-white/5 to-transparent animate-sheen" />
       </div>

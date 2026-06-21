@@ -3,13 +3,15 @@
 @theme {
   --color-premium-dark: #064E3B;
   --color-premium-warm: #451A03;
-  --color-premium-cream: #FFFBEB;
-  --color-premium-sand: #FFFDF0;
-  --color-premium-white: #FFFFFF;
+  --color-premium-cream: #F5F0E8;
+  --color-premium-sand: #EDE6DC;
+  --color-premium-white: #F5F0E8;
   --color-premium-text: #1A1A1A;
   --color-premium-muted: #6B7280;
-  --color-premium-border: #E8D5C4;
+  --color-premium-border: #451A03;
   --color-premium-accent: #B45309;
+  --font-sans: var(--font-inter), "Inter", sans-serif;
+  --font-heading: var(--font-fraunces), Fraunces, Georgia, serif;
 }
 
 html {
@@ -17,20 +19,20 @@ html {
 }
 
 body {
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-sans);
   color: var(--color-premium-text);
   background: var(--color-premium-cream);
   line-height: 1.7;
 }
 
 .font-heading {
-  font-family: "Fraunces", Georgia, serif;
+  font-family: var(--font-heading);
   font-weight: 600;
   letter-spacing: -0.01em;
 }
 
 .card-premium {
-  background: var(--color-premium-white);
+  background: var(--color-premium-cream);
   border: 1px solid var(--color-premium-border);
   border-radius: 1rem;
   box-shadow: 0 2px 8px rgba(69, 26, 3, 0.06);
@@ -44,7 +46,7 @@ body {
 }
 
 .card-glass {
-  background: rgba(255, 251, 235, 0.7);
+  background: rgba(245, 240, 232, 0.7);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(69, 26, 3, 0.06);
@@ -112,7 +114,6 @@ body {
 
 .btn-premium-primary {
   background-color: #064E3B;
-  border: 1.5px solid var(--color-premium-warm);
   color: white;
 }
 
@@ -215,14 +216,14 @@ body {
   left: 0;
   right: 0;
   height: 40px;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 40'%3E%3Cpath fill='%23FFFDF0' d='M0,20 C240,40 480,0 720,20 C960,40 1200,0 1440,20 L1440,40 L0,40 Z'/%3E%3C/svg%3E") repeat-x top left;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 40'%3E%3Cpath fill='%23EDE6DC' d='M0,20 C240,40 480,0 720,20 C960,40 1200,0 1440,20 L1440,40 L0,40 Z'/%3E%3C/svg%3E") repeat-x top left;
   background-size: 720px 40px;
   pointer-events: none;
   z-index: 1;
 }
 
 .section-wave-dark::before {
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 40'%3E%3Cpath fill='%23FFFBEB' d='M0,20 C240,40 480,0 720,20 C960,40 1200,0 1440,20 L1440,40 L0,40 Z'/%3E%3C/svg%3E") repeat-x top left;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 40'%3E%3Cpath fill='%23F5F0E8' d='M0,20 C240,40 480,0 720,20 C960,40 1200,0 1440,20 L1440,40 L0,40 Z'/%3E%3C/svg%3E") repeat-x top left;
   background-size: 720px 40px;
 }
 

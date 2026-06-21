@@ -5,7 +5,7 @@ export default function Footer() {
   const t = useTranslations("footer");
 
   return (
-    <footer className="relative bg-premium-warm text-white/80 overflow-hidden">
+    <footer className="relative bg-premium-dark text-white/80 overflow-hidden">
       {/* Leaf pattern overlay */}
       <div className="absolute inset-0 opacity-[0.10]" style={{
         backgroundImage: `url(/images/leaf-pattern.svg)`,

@@ -45,37 +45,42 @@ export default function PourquoiSection() {
   ];
 
   return (
-    <section className="section-padding bg-premium-cream">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="section-padding bg-premium-dark relative overflow-hidden">
+      <div className="absolute inset-0 opacity-[0.04]" style={{
+        backgroundImage: `url(/images/leaf-pattern.svg)`,
+        backgroundRepeat: "repeat",
+        backgroundSize: "400px 400px",
+      }} />
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-3 mb-6">
-              <span className="w-8 h-px bg-premium-warm" />
-            <span className="text-xs uppercase tracking-[0.2em] text-premium-warm font-semibold">
+              <span className="w-8 h-px bg-premium-accent" />
+            <span className="text-xs uppercase tracking-[0.2em] text-premium-accent font-semibold">
               Pourquoi nous
             </span>
-            <span className="w-8 h-px bg-premium-warm" />
+            <span className="w-8 h-px bg-premium-accent" />
           </div>
-          <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl text-premium-dark mt-2 mb-4">
+          <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl text-white mt-2 mb-4">
             {t("title")}
           </h2>
-          <div className="w-12 h-0.5 bg-premium-warm mx-auto" />
+          <div className="w-12 h-0.5 bg-premium-accent mx-auto" />
         </div>
 
         <div ref={ref} className={`grid sm:grid-cols-2 md:grid-cols-4 gap-6 stagger-children ${isVisible ? 'visible' : ''}`}>
           {items.map((item) => (
             <div
-              key={item.key}
-              className="card-premium p-5 sm:p-6 text-center group"
-            >
-              <div className="w-14 h-14 rounded-full bg-premium-warm/10 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:bg-premium-warm/20 transition-all duration-300">
-                {item.icon}
-              </div>
-              <h3 className="font-heading text-lg text-premium-dark mb-3">
-                {t(`${item.key}.title`)}
-              </h3>
-              <p className="text-sm text-premium-muted leading-relaxed">
-                {t(`${item.key}.text`)}
-              </p>
+          key={item.key}
+          className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-5 sm:p-6 text-center group hover:bg-white/10 hover:border-white/20 transition-all duration-300"
+        >
+          <div className="w-14 h-14 rounded-full bg-premium-accent/20 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:bg-premium-accent/30 transition-all duration-300">
+            {item.icon}
+          </div>
+          <h3 className="font-heading text-lg text-white mb-3">
+            {t(`${item.key}.title`)}
+          </h3>
+          <p className="text-sm text-white/70 leading-relaxed">
+            {t(`${item.key}.text`)}
+          </p>
             </div>
           ))}
         </div>
