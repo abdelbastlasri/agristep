@@ -3,6 +3,7 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 import { MapPin, Phone, Mail, ArrowRight } from "lucide-react";
+import Image from "next/image";
 import { Icon } from "@/components/ui/IconSvg";
 import { useState } from "react";
 
@@ -57,9 +58,11 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 py-16 relative z-10">
         <div className="md:hidden space-y-10">
           <div className="text-center space-y-4">
-            <img
+            <Image
               src="/images/logo_agristep.png"
               alt="Agristep"
+              width={160}
+              height={56}
               className="h-14 w-auto brightness-0 invert opacity-90 mx-auto"
             />
             <p className="text-sm leading-relaxed text-premium-muted max-w-sm mx-auto">
@@ -107,7 +110,7 @@ export default function Footer() {
 
         <div className="hidden md:grid md:grid-cols-4 gap-12">
           <div className="space-y-6">
-            <img src="/images/logo_agristep.png" alt="Agristep" className="h-14 w-auto brightness-0 invert opacity-90" />
+            <Image src="/images/logo_agristep.png" alt="Agristep" width={160} height={56} className="h-14 w-auto brightness-0 invert opacity-90" />
             <p className="text-sm leading-relaxed text-premium-muted max-w-sm">{t("description")}</p>
           </div>
 

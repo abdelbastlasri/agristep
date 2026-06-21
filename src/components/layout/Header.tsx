@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from "react";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 import { Link, usePathname } from "@/i18n/routing";
 import { Menu, X } from "lucide-react";
 import HeaderTopBar from "./HeaderTopBar";
@@ -92,7 +93,7 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between h-20">
           <Link href="/" className="flex-shrink-0" onClick={handleLogoClick}>
-            <img
+            <Image
               src="/images/logo_agristep.png"
               alt="Agristep"
               width={160}
