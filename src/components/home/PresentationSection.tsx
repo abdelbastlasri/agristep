@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
+import { motion } from "framer-motion";
+import { ArrowRight, Calendar, Package, Award, Leaf } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 function AnimatedNumber({ value, suffix = "" }: { value: string; suffix?: string }) {
@@ -32,6 +34,8 @@ function AnimatedNumber({ value, suffix = "" }: { value: string; suffix?: string
   return <>{display}</>;
 }
 
+const statIcons = [Calendar, Package, Award, Leaf];
+
 const stats = [
   { number: "2020", label: "Fondation" },
   { number: "16", label: "Produits" },
@@ -44,12 +48,21 @@ export default function PresentationSection() {
   const { ref, isVisible } = useScrollReveal();
 
   return (
-    <section className="section-padding bg-premium-secondary" ref={ref}>
-      <div className="max-w-7xl mx-auto px-6">
-        <div className={`grid lg:grid-cols-2 gap-10 lg:gap-24 items-center transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <div>
+    <section className="section-padding bg-premium-secondary relative overflow-hidden" ref={ref}>
+      <div className="absolute inset-0 opacity-[0.02]" style={{
+        backgroundImage: `url(/images/leaf-pattern.svg)`,
+        backgroundRepeat: "repeat",
+        backgroundSize: "400px 400px",
+      }} />
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-24 items-center">
+          <motion.div
+            initial={{ opacity: 0, x: -40 }}
+            animate={isVisible ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.7 }}
+          >
             <div className="flex items-center gap-3 mb-6">
-              <span className="w-8 h-px bg-premium-green" />
+              <span className="w-10 h-px bg-premium-green" />
               <span className="text-xs uppercase tracking-[0.2em] text-premium-green font-semibold">
                 À propos
               </span>
@@ -57,36 +70,45 @@ export default function PresentationSection() {
             <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl text-white mt-2 mb-8 leading-tight">
               {t("title")}
             </h2>
-            <div className="w-16 h-0.5 bg-premium-green mb-8" />
+            <div className="w-16 h-0.5 bg-premium-green/50 mb-8" />
             <p className="text-premium-text leading-relaxed text-lg mb-10">
               {t("text")}
             </p>
             <a
               href="/a-propos"
-              className="btn-premium btn-premium-primary btn-shine btn-lift text-sm"
+              className="btn-premium btn-premium-primary text-sm group"
             >
               {t("link")}
-              <svg aria-hidden="true" className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M5 12h14M12 5l7 7-7 7" />
-              </svg>
+              <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
             </a>
-          </div>
+          </motion.div>
 
-          <div className="grid grid-cols-2 gap-5">
-            {stats.map((stat) => (
-              <div
-                key={stat.label}
-                className="card-premium p-4 sm:p-6 md:p-8 text-center"
-              >
-                <div className="font-heading text-3xl md:text-4xl text-white mb-2">
-                  {isVisible ? <AnimatedNumber value={stat.number} /> : "0"}
+          <motion.div
+            initial={{ opacity: 0, x: 40 }}
+            animate={isVisible ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.7, delay: 0.2 }}
+            className="grid grid-cols-2 gap-4 md:gap-5"
+          >
+            {stats.map((stat, idx) => {
+              const Icon = statIcons[idx];
+              return (
+                <div
+                  key={stat.label}
+                  className="card-premium p-5 sm:p-6 md:p-8 text-center group"
+                >
+                  <div className="w-12 h-12 rounded-xl bg-premium-green/10 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 group-hover:bg-premium-green/20 transition-all duration-300">
+                    <Icon size={22} className="text-premium-green" />
+                  </div>
+                  <div className="font-heading text-3xl md:text-4xl text-white mb-2">
+                    {isVisible ? <AnimatedNumber value={stat.number} /> : "0"}
+                  </div>
+                  <div className="text-xs uppercase tracking-[0.15em] text-premium-muted">
+                    {stat.label}
+                  </div>
                 </div>
-                <div className="text-xs uppercase tracking-[0.15em] text-premium-muted">
-                  {stat.label}
-                </div>
-              </div>
-            ))}
-          </div>
+              );
+            })}
+          </motion.div>
         </div>
       </div>
     </section>

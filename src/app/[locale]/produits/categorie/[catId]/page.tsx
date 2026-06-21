@@ -4,8 +4,18 @@ import { Link } from "@/i18n/routing";
 import ProductGrid from "@/components/produits/ProductGrid";
 import { categories, getProductsByCategory } from "@/data/products";
 import type { ProductCategory } from "@/data/products";
+import { Icon } from "@/components/ui/IconSvg";
 
 export const dynamic = "force-dynamic";
+
+const catIcons: Record<string, "shield" | "sprout" | "flask" | "zap" | "droplet" | "apple"> = {
+  "inducteur-resistance": "shield",
+  "amendements-organiques": "sprout",
+  "correcteur-ph": "flask",
+  biostimulants: "zap",
+  "correcteur-carences": "droplet",
+  "qualite-fruits": "apple",
+};
 
 export default async function CategoryPage({
   params,
@@ -43,7 +53,9 @@ export default async function CategoryPage({
         </div>
 
         <div className="text-center mb-16">
-          <span className="text-4xl block mb-4">{category.icon}</span>
+          <div className="w-16 h-16 rounded-2xl bg-premium-green/10 flex items-center justify-center mx-auto mb-6">
+            <Icon name={catIcons[catId] || "leaf"} size={30} className="text-premium-green" />
+          </div>
           <h1 className="font-heading text-4xl md:text-5xl text-white mt-2 mb-4">
             {ct(catId)}
           </h1>

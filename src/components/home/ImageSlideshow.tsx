@@ -44,14 +44,14 @@ export default function ImageSlideshow() {
       {slides.map((slide, i) => (
         <div
           key={slide.src}
-          className={`absolute inset-0 transition-opacity duration-700 ${
+          className={`absolute inset-0 transition-opacity duration-1000 ${
             i === current ? "opacity-100" : "opacity-0"
           }`}
           aria-hidden={i !== current}
         >
           <div className="absolute inset-0" style={{
-            transform: i === current ? 'scale(1.07)' : 'scale(1)',
-            transition: 'transform 6s linear',
+            transform: i === current ? 'scale(1.1)' : 'scale(1)',
+            transition: 'transform 8s cubic-bezier(0.4, 0, 0.2, 1)',
           }}>
             <Image
               src={slide.src}
@@ -63,7 +63,7 @@ export default function ImageSlideshow() {
               loading="eager"
             />
           </div>
-          <div className="absolute inset-0 bg-gradient-to-br from-black/65 via-black/55 to-black/50" />
+          <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/50 to-black/45" />
         </div>
       ))}
     </div>

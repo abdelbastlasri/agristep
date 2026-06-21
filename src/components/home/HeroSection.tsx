@@ -1,81 +1,189 @@
 "use client";
 
 import { useTranslations } from "next-intl";
+import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+import { ArrowRight, FileText, ChevronRight } from "lucide-react";
 import ImageSlideshow from "./ImageSlideshow";
+
+function AnimatedNumber({ value }: { value: string }) {
+  const [display, setDisplay] = useState("0");
+  const num = parseInt(value.replace(/[^0-9]/g, ""));
+  const isNumeric = !isNaN(num);
+
+  useEffect(() => {
+    if (!isNumeric) {
+      setDisplay(value);
+      return;
+    }
+    let start = 0;
+    const duration = 1500;
+    const step = Math.ceil(num / 60);
+    const timer = setInterval(() => {
+      start += step;
+      if (start >= num) {
+        setDisplay(value);
+        clearInterval(timer);
+      } else {
+        setDisplay(String(start));
+      }
+    }, duration / 60);
+    return () => clearInterval(timer);
+  }, []);
+
+  return <>{display}</>;
+}
+
+const heroStats = [
+  { number: "2020", label: "Fondation" },
+  { number: "16", label: "Produits" },
+  { number: "5+", label: "Ans d'expérience" },
+  { number: "Bio", label: "Solutions durables" },
+];
 
 export default function HeroSection() {
   const t = useTranslations("home.hero");
+  const [countStarted, setCountStarted] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setCountStarted(true), 800);
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
-    <section className="relative min-h-[80vh] sm:min-h-[90vh] flex items-center overflow-hidden bg-premium-dark">
+    <section className="relative h-screen flex items-center overflow-hidden bg-premium-dark">
       <div className="absolute inset-0">
         <ImageSlideshow />
       </div>
 
-      {/* Subtle light glow from upper-right */}
+      {/* Subtle top-right glow */}
       <div className="absolute inset-0">
-        <div className="absolute -top-1/4 -right-1/4 w-[80%] h-[80%] rounded-full bg-gradient-to-br from-premium-green/10 via-transparent to-transparent blur-[100px]" />
+        <div className="absolute -top-1/4 -right-1/4 w-[80%] h-[80%] rounded-full bg-gradient-to-br from-premium-green/8 via-transparent to-transparent blur-[120px]" />
       </div>
 
-      {/* Dark gradient overlay at bottom */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent" />
+      {/* Floating particles */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {[...Array(6)].map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute w-1.5 h-1.5 rounded-full bg-premium-green/20"
+            style={{
+              left: `${10 + Math.random() * 80}%`,
+              top: `${20 + Math.random() * 60}%`,
+            }}
+            animate={{
+              y: [0, -30, 0],
+              opacity: [0, 0.5, 0],
+            }}
+            transition={{
+              duration: 4 + Math.random() * 4,
+              repeat: Infinity,
+              delay: Math.random() * 4,
+              ease: "easeInOut",
+            }}
+          />
+        ))}
+      </div>
 
-      <div className="relative z-10 w-full pt-16 md:pt-0">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="max-w-3xl">
-            <div className="flex items-center gap-3 mb-10">
-              <span className="w-8 h-px bg-premium-green/60" />
-              <span className="text-xs uppercase tracking-[0.25em] text-premium-green font-medium">
-                SARL Agricole — Chtouka Ait Baha
-              </span>
-            </div>
-
-            <h1 className="font-heading text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white leading-[1.05] mb-8 drop-shadow-[0_4px_20px_rgba(0,0,0,0.6)]">
-              {t("title")}
-              <span className="inline text-premium-green-light text-4xl sm:text-5xl md:text-6xl lg:text-7xl ml-4 font-sans font-light">{t("subtitle")}</span>
-            </h1>
-
-            <p className="text-base sm:text-lg text-premium-heading/80 font-light leading-relaxed mb-12 max-w-xl drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]">
-              Spécialiste en solutions agricoles biologiques : auxiliaires, biostimulants et conseil personnalisé pour une agriculture durable au Maroc.
-            </p>
-
-            <div className="flex flex-wrap gap-5">
-              <a
-                href="/produits"
-                className="btn-premium btn-premium-primary btn-shine text-sm"
+      {/* Glass panel behind text */}
+      <div className="absolute left-0 right-0 top-1/2 -translate-y-1/2 py-12 mx-6 max-w-7xl mx-auto">
+        <div className="max-w-4xl mx-auto">
+          <div className="backdrop-blur-sm bg-premium-dark/20 rounded-3xl p-8 md:p-12 border border-premium-border/30">
+            <div className="relative z-10">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="flex items-center gap-3 mb-8"
               >
-                {t("cta")}
-                <svg aria-hidden="true" className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </a>
-              <a
-                href="/catalogue-agristep-2023.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-premium btn-shine btn-lift text-sm text-white border border-white/40 hover:bg-white/10 hover:text-white"
+                <span className="w-10 h-px bg-premium-green/60" />
+                <span className="text-xs uppercase tracking-[0.25em] text-premium-green font-medium">
+                  SARL Agricole — Chtouka Ait Baha
+                </span>
+              </motion.div>
+
+              <motion.h1
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+                className="font-heading text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white leading-[1.05] mb-8"
               >
-                <svg aria-hidden="true" className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
-                  <polyline points="14 2 14 8 20 8" />
-                  <line x1="16" y1="13" x2="8" y2="13" />
-                  <line x1="16" y1="17" x2="8" y2="17" />
-                  <polyline points="10 9 9 9 8 9" />
-                </svg>
-                Notre catalogue
-              </a>
-              <a
-                href="/a-propos"
-                className="btn-premium btn-lift text-sm text-white/60 border border-white/15 hover:bg-white/10 hover:text-white"
+                {t("title")}
+                <span className="inline text-premium-green-light text-4xl sm:text-5xl md:text-6xl lg:text-7xl ml-4 font-sans font-light">{t("subtitle")}</span>
+              </motion.h1>
+
+              <motion.p
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.6 }}
+                className="text-base sm:text-lg text-premium-text/90 font-light leading-relaxed mb-10 max-w-2xl"
               >
-                Notre histoire
-              </a>
+                Spécialiste en solutions agricoles biologiques : auxiliaires, biostimulants et conseil personnalisé pour une agriculture durable au Maroc.
+              </motion.p>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.8 }}
+                className="flex flex-wrap gap-4"
+              >
+                <a
+                  href="/produits"
+                  className="btn-premium btn-premium-primary text-sm group"
+                >
+                  {t("cta")}
+                  <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                </a>
+                <a
+                  href="/catalogue-agristep-2023.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-premium btn-premium-outline text-sm group"
+                >
+                  <FileText size={16} />
+                  Notre catalogue
+                </a>
+                <a
+                  href="/a-propos"
+                  className="btn-premium btn-lift text-sm text-premium-text border border-premium-border hover:bg-white/5 hover:text-white"
+                >
+                  Notre histoire
+                  <ChevronRight size={16} />
+                </a>
+              </motion.div>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-premium-green/30 to-transparent" />
+      {/* Floating stats cards */}
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 1.2 }}
+        className="absolute bottom-8 left-0 right-0 z-20"
+      >
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 max-w-3xl mx-auto">
+            {heroStats.map((stat) => (
+              <div
+                key={stat.label}
+                className="backdrop-blur-md bg-premium-dark/40 border border-premium-border rounded-2xl p-4 text-center"
+              >
+                <div className="font-heading text-2xl md:text-3xl text-premium-green mb-1">
+                  {countStarted ? <AnimatedNumber value={stat.number} /> : "0"}
+                </div>
+                <div className="text-xs text-premium-muted uppercase tracking-wider">
+                  {stat.label}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </motion.div>
+
+      {/* Bottom gradient */}
+      <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-premium-dark via-premium-dark/60 to-transparent pointer-events-none" />
     </section>
   );
 }

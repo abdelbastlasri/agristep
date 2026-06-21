@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback } from "react";
 import { useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/routing";
+import { Menu, X } from "lucide-react";
 import HeaderTopBar from "./HeaderTopBar";
 
 export default function Header() {
@@ -81,15 +82,14 @@ export default function Header() {
   }, [menuOpen]);
 
   return (
-    <header className={`sticky top-0 z-50 transition-all duration-300 ${
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
       scrolled
-        ? "bg-premium-dark/90 backdrop-blur-lg shadow-lg shadow-black/20"
+        ? "bg-premium-dark/90 backdrop-blur-xl shadow-lg shadow-black/20"
         : "bg-transparent"
     }`}>
       <HeaderTopBar />
       <div className="h-px bg-gradient-to-r from-transparent via-premium-border to-transparent" />
-      <div className={scrolled ? "" : "bg-transparent"}>
-        <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between h-20">
           <Link href="/" className="flex-shrink-0" onClick={handleLogoClick}>
             <img
@@ -124,15 +124,14 @@ export default function Header() {
           </nav>
 
           <button
-            className="md:hidden p-2 text-2xl text-white transition-transform duration-150 active:scale-90 hover:text-premium-green"
+            className="md:hidden p-2 text-white transition-transform duration-150 active:scale-90 hover:text-premium-green"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-expanded={menuOpen}
             aria-controls="mobile-menu"
             aria-label={menuOpen ? "Fermer le menu" : "Ouvrir le menu"}
           >
-            {menuOpen ? "✕" : "☰"}
+            {menuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
-        </div>
         </div>
       </div>
 
@@ -141,7 +140,7 @@ export default function Header() {
           id="mobile-menu"
           role="dialog"
           aria-label="Navigation"
-          className="md:hidden bg-premium-secondary border-t border-premium-border transition-all duration-300"
+          className="md:hidden bg-premium-secondary/95 backdrop-blur-xl border-t border-premium-border"
         >
           <div className="flex flex-col p-6 gap-4">
             {navLinks.map((link) => (
@@ -149,7 +148,7 @@ export default function Header() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setMenuOpen(false)}
-                className={`text-sm tracking-wide py-2 transition-all duration-200 hover:translate-x-1 ${
+                className={`text-sm tracking-wide py-3 transition-all duration-200 hover:translate-x-1 ${
                   pathname === link.href
                     ? "text-premium-green font-medium"
                     : "text-premium-text hover:text-premium-green"

@@ -1,24 +1,17 @@
 import type { Metadata, Viewport } from "next";
-import { Fraunces, Inter } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 
-const fraunces = Fraunces({
+const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
-  variable: "--font-fraunces",
-  display: "swap",
-  axes: ["SOFT", "WONK"],
-});
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-plus-jakarta",
   display: "swap",
 });
 
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#0B1220",
+  themeColor: "#071A12",
 };
 
 export const metadata: Metadata = {
@@ -44,7 +37,7 @@ export default function RootLayout({
     <html
       lang="fr"
       dir="ltr"
-      className={`${fraunces.variable} ${inter.variable}`}
+      className={`${plusJakartaSans.variable}`}
       data-scroll-behavior="smooth"
       suppressHydrationWarning
     >
@@ -79,7 +72,7 @@ export default function RootLayout({
         />
       </head>
       <body
-          className="font-sans antialiased text-premium-text bg-premium-dark min-h-screen flex flex-col"
+        className="font-sans antialiased text-premium-text bg-premium-dark min-h-screen flex flex-col"
         suppressHydrationWarning
       >
         <a

@@ -2,6 +2,7 @@ import { getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
 import { categories, getProductsByCategory } from "@/data/products";
 import { Link } from "@/i18n/routing";
+import { Icon } from "@/components/ui/IconSvg";
 
 export const metadata: Metadata = {
   title: "Produits — Agristep",
@@ -10,6 +11,15 @@ export const metadata: Metadata = {
     title: "Produits — Agristep",
     description: "Découvrez notre gamme complète de produits agricoles : inducteurs de résistance, amendements organiques, biostimulants et plus.",
   },
+};
+
+const icons: Record<string, "shield" | "sprout" | "flask" | "zap" | "droplet" | "apple"> = {
+  "inducteur-resistance": "shield",
+  "amendements-organiques": "sprout",
+  "correcteur-ph": "flask",
+  biostimulants: "zap",
+  "correcteur-carences": "droplet",
+  "qualite-fruits": "apple",
 };
 
 export default async function ProductsPage({
@@ -21,15 +31,6 @@ export default async function ProductsPage({
   const t = await getTranslations({ locale, namespace: "products" });
   const ct = await getTranslations({ locale, namespace: "products.categories" });
   const cd = await getTranslations({ locale, namespace: "products.desc" });
-
-  const icons: Record<string, string> = {
-    "inducteur-resistance": "🛡️",
-    "amendements-organiques": "🌱",
-    "correcteur-ph": "⚗️",
-    biostimulants: "⚡",
-    "correcteur-carences": "💧",
-    "qualite-fruits": "🍎",
-  };
 
   return (
     <div className="section-padding bg-premium-dark">
@@ -60,7 +61,9 @@ export default async function ProductsPage({
                 href={`/produits/categorie/${cat.id}`}
                 className="card-premium p-5 sm:p-6 md:p-8 group"
               >
-                <div className="text-3xl mb-6">{icons[cat.id]}</div>
+                <div className="w-14 h-14 rounded-xl bg-premium-green/10 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-premium-green/20 transition-all duration-300">
+                  <Icon name={icons[cat.id]} size={26} className="text-premium-green" />
+                </div>
                 <h2 className="font-heading text-xl text-white mb-3 group-hover:text-premium-green transition-colors">
                   {ct(cat.id)}
                 </h2>
@@ -72,7 +75,7 @@ export default async function ProductsPage({
                     {count} produit{count > 1 ? "s" : ""}
                   </span>
                   <span className="text-premium-green group-hover:translate-x-1 transition-transform">
-                    →
+                    <Icon name="arrowRight" size={16} />
                   </span>
                 </div>
               </Link>
