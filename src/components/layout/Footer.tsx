@@ -5,12 +5,21 @@ export default function Footer() {
   const t = useTranslations("footer");
 
   return (
-    <footer className="relative bg-gradient-to-br from-premium-green-soft via-premium-green to-premium-green-dark text-white/80">
-      <div className="absolute inset-0 opacity-[0.08]" style={{
+    <footer className="relative bg-gradient-to-br from-premium-green-soft via-premium-green to-premium-green-dark text-white/80 overflow-hidden">
+      {/* Leaf pattern overlay */}
+      <div className="absolute inset-0 opacity-[0.10]" style={{
         backgroundImage: `url(/images/leaf-pattern.svg)`,
         backgroundRepeat: "repeat",
         backgroundSize: "400px 400px",
       }} />
+      {/* Wheat pattern overlay */}
+      <div className="absolute inset-0 opacity-[0.08]" style={{
+        backgroundImage: `url(/images/wheat-pattern.svg)`,
+        backgroundRepeat: "repeat",
+        backgroundSize: "400px 400px",
+      }} />
+      {/* Top divider */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-premium-gold/40 to-transparent" />
       <div className="max-w-7xl mx-auto px-6 py-16 relative z-10">
         <div className="md:hidden space-y-10">
           <div className="text-center space-y-4">
