@@ -77,8 +77,7 @@ export default async function ProductDetailPage({
 
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 mb-12 lg:mb-20">
           <div
-            className="relative rounded-2xl p-4 sm:p-6 lg:p-10 flex items-center justify-center min-h-[220px] sm:min-h-[350px] lg:min-h-[450px]"
-            style={{ background: "linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02))" }}
+            className="relative rounded-2xl p-4 sm:p-6 lg:p-10 flex items-center justify-center min-h-[220px] sm:min-h-[350px] lg:min-h-[450px] bg-white"
           >
             <ImageWithFallback
               src={product.image}
