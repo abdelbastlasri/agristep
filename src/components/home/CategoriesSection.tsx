@@ -21,7 +21,7 @@ export default function CategoriesSection() {
   const { ref, isVisible } = useScrollReveal();
 
   return (
-    <section className="section-padding bg-premium-warm">
+    <section className="section-padding bg-premium-cream">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-3 mb-6">
@@ -31,7 +31,7 @@ export default function CategoriesSection() {
             </span>
             <span className="w-8 h-px bg-premium-gold" />
           </div>
-          <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl text-white mt-2 mb-4">
+          <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl text-premium-dark mt-2 mb-4">
             {t("title")}
           </h2>
           <div className="w-12 h-0.5 bg-premium-gold mx-auto mb-6" />
@@ -50,7 +50,7 @@ export default function CategoriesSection() {
                 className="card-premium p-5 sm:p-6 md:p-8 group"
               >
                 <div className="text-3xl mb-6">{categoryIcons[cat.id]}</div>
-                <h3 className="font-heading text-xl text-white mb-3 group-hover:text-premium-gold transition-colors">
+                <h3 className="font-heading text-xl text-premium-dark mb-3 group-hover:text-premium-gold transition-colors">
                   {ct(cat.id)}
                 </h3>
                 <p className="text-sm text-premium-muted mb-6 leading-relaxed">

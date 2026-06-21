@@ -3,20 +3,20 @@
 @theme {
   --color-premium-dark: #1a1a16;
   --color-premium-warm: #242018;
-  --color-premium-cream: #2C261E;
-  --color-premium-sand: #201C16;
+  --color-premium-cream: #F5F0E6;
+  --color-premium-sand: #EDE6D8;
   --color-premium-white: #ffffff;
-  --color-premium-text: #ffffff;
-  --color-premium-muted: #B8A898;
-  --color-premium-border: rgba(255,255,255,0.07);
-  --color-premium-green: #6B8E4E;
-  --color-premium-green-light: #8CAE6E;
-  --color-premium-green-dark: #4D6B32;
-  --color-premium-green-vibrant: #5A9E3E;
+  --color-premium-text: #2C1810;
+  --color-premium-muted: #8B7D6B;
+  --color-premium-border: #E5DDD0;
+  --color-premium-green: #7A9B5A;
+  --color-premium-green-light: #9AB87A;
+  --color-premium-green-dark: #5C7A3E;
+  --color-premium-green-vibrant: #6B8E4E;
   --color-premium-green-soft: #4A6E32;
-  --color-premium-green-bg: #242018;
-  --color-premium-green-pale: #2C261E;
-  --color-premium-green-mist: #242018;
+  --color-premium-green-bg: #EDE6D8;
+  --color-premium-green-pale: #E5DDD0;
+  --color-premium-green-mist: #D5CFC0;
   --color-premium-gold: #D4A853;
   --color-premium-gold-light: #E6C67A;
   --color-premium-gold-bright: #DDBF6E;
@@ -29,7 +29,7 @@ html {
 body {
   font-family: "Outfit", sans-serif;
   color: var(--color-premium-text);
-  background: #1a1a16;
+  background: var(--color-premium-cream);
   line-height: 1.7;
 }
 
@@ -42,7 +42,7 @@ body {
 /* ── Cards ── */
 
 .card-premium {
-  background: var(--color-premium-cream);
+  background: var(--color-premium-white);
   border: 1px solid var(--color-premium-border);
   border-radius: 1rem;
   transition: all 0.35s ease;
@@ -57,10 +57,10 @@ body {
 /* ── Glass Card ── */
 
 .card-glass {
-  background: rgba(36, 32, 24, 0.55);
+  background: rgba(255, 255, 255, 0.55);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(44, 24, 16, 0.06);
   border-radius: 1rem;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -250,14 +250,14 @@ body {
   left: 0;
   right: 0;
   height: 40px;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 40'%3E%3Cpath fill='%23242018' d='M0,20 C240,40 480,0 720,20 C960,40 1200,0 1440,20 L1440,40 L0,40 Z'/%3E%3C/svg%3E") repeat-x top left;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 40'%3E%3Cpath fill='%23EDE6D8' d='M0,20 C240,40 480,0 720,20 C960,40 1200,0 1440,20 L1440,40 L0,40 Z'/%3E%3C/svg%3E") repeat-x top left;
   background-size: 720px 40px;
   pointer-events: none;
   z-index: 1;
 }
 
 .section-wave-dark::before {
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 40'%3E%3Cpath fill='%23201C16' d='M0,20 C240,40 480,0 720,20 C960,40 1200,0 1440,20 L1440,40 L0,40 Z'/%3E%3C/svg%3E") repeat-x top left;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 40'%3E%3Cpath fill='%23F5F0E6' d='M0,20 C240,40 480,0 720,20 C960,40 1200,0 1440,20 L1440,40 L0,40 Z'/%3E%3C/svg%3E") repeat-x top left;
   background-size: 720px 40px;
 }
 

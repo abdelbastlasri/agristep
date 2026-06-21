@@ -44,7 +44,7 @@ export default function PresentationSection() {
   const { ref, isVisible } = useScrollReveal();
 
   return (
-    <section className="section-padding bg-premium-warm" ref={ref}>
+    <section className="section-padding bg-premium-sand" ref={ref}>
       <div className="max-w-7xl mx-auto px-6">
         <div className={`grid lg:grid-cols-2 gap-10 lg:gap-24 items-center transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <div>
@@ -54,7 +54,7 @@ export default function PresentationSection() {
                 À propos
               </span>
             </div>
-            <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl text-white mt-2 mb-8 leading-tight">
+            <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl text-premium-dark mt-2 mb-8 leading-tight">
               {t("title")}
             </h2>
             <div className="w-16 h-0.5 bg-premium-gold mb-8" />

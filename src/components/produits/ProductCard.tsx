@@ -45,7 +45,7 @@ export default function ProductCard({
           </span>
         )}
 
-        <h3 className="font-heading text-lg text-white mb-3">
+        <h3 className="font-heading text-lg text-premium-dark mb-3">
           {product.name}
         </h3>
 

@@ -18,7 +18,7 @@ const outfit = Outfit({
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#3D2B1F",
+  themeColor: "#D4A853",
 };
 
 export const metadata: Metadata = {
@@ -79,12 +79,12 @@ export default function RootLayout({
         />
       </head>
       <body
-        className="font-sans antialiased bg-white text-premium-text min-h-screen flex flex-col"
+        className="font-sans antialiased text-premium-text min-h-screen flex flex-col"
         suppressHydrationWarning
       >
         <a
           href="#main-content"
-          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-premium-warm focus:text-white focus:rounded-lg focus:text-sm focus:font-semibold"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-premium-dark focus:text-white focus:rounded-lg focus:text-sm focus:font-semibold"
         >
           Aller au contenu principal
         </a>

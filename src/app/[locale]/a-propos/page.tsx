@@ -56,7 +56,7 @@ export default async function AboutPage({
       </section>
 
       {/* Histoire */}
-      <section className="section-padding bg-premium-warm">
+      <section className="section-padding bg-premium-sand">
         <div className="max-w-4xl mx-auto px-6">
           <div className="text-center mb-12">
             <div className="flex items-center justify-center gap-3 mb-6">
@@ -66,13 +66,13 @@ export default async function AboutPage({
               </span>
               <span className="w-8 h-px bg-premium-gold" />
             </div>
-            <h2 className="font-heading text-3xl md:text-4xl text-white mt-2 mb-4">
+            <h2 className="font-heading text-3xl md:text-4xl text-premium-dark mt-2 mb-4">
               {t("history.title")}
             </h2>
             <div className="w-12 h-0.5 bg-premium-gold mx-auto" />
           </div>
 
-          <div className="bg-premium-warm border border-premium-border rounded-2xl p-5 sm:p-6 md:p-12">
+          <div className="bg-white border border-premium-border rounded-2xl p-5 sm:p-6 md:p-12">
             <div className="space-y-6 text-premium-muted leading-relaxed">
               <p className="text-lg">{t("history.p1")}</p>
               <p className="text-lg">{t("history.p2")}</p>
@@ -84,7 +84,7 @@ export default async function AboutPage({
       </section>
 
       {/* A propos notre Société */}
-      <section className="section-padding bg-premium-warm">
+      <section className="section-padding bg-premium-cream">
         <div className="max-w-4xl mx-auto px-6">
           <div className="text-center mb-12">
             <div className="flex items-center justify-center gap-3 mb-6">
@@ -94,13 +94,13 @@ export default async function AboutPage({
               </span>
               <span className="w-8 h-px bg-premium-gold" />
             </div>
-            <h2 className="font-heading text-3xl md:text-4xl text-white mt-2 mb-4">
+            <h2 className="font-heading text-3xl md:text-4xl text-premium-dark mt-2 mb-4">
               {t("societe.title")}
             </h2>
             <div className="w-12 h-0.5 bg-premium-gold mx-auto" />
           </div>
 
-          <div className="bg-premium-warm border border-premium-border rounded-2xl p-5 sm:p-6 md:p-12">
+          <div className="bg-white border border-premium-border rounded-2xl p-5 sm:p-6 md:p-12">
             <div className="text-premium-muted leading-relaxed">
               <p className="text-lg">{t("societe.text")}</p>
             </div>
@@ -109,21 +109,20 @@ export default async function AboutPage({
       </section>
 
       {/* Section Persuasive */}
-      <section className="section-padding bg-premium-dark text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-premium-dark via-premium-dark to-premium-warm/50" />
+      <section className="section-padding bg-premium-sand relative overflow-hidden">
         <div className="absolute inset-0 opacity-[0.03]" style={{
           backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c9a84c' fill-opacity='0.3'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
         }} />
         <div className="relative z-10 max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <div className="flex items-center justify-center gap-3 mb-6">
-              <span className="w-8 h-px bg-premium-gold/60" />
+              <span className="w-8 h-px bg-premium-gold" />
               <span className="text-xs uppercase tracking-[0.2em] text-premium-gold font-semibold">
                 Performance
               </span>
-              <span className="w-8 h-px bg-premium-gold/60" />
+              <span className="w-8 h-px bg-premium-gold" />
             </div>
-            <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl text-white mt-2 mb-4">
+            <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl text-premium-dark mt-2 mb-4">
               {t("convince.title")}
             </h2>
             <div className="w-12 h-0.5 bg-premium-gold mx-auto" />
@@ -133,16 +132,16 @@ export default async function AboutPage({
             {convincePoints.map((pt, i) => (
               <div
                 key={pt.key}
-                className="flex items-start gap-5 p-6 rounded-xl border border-white/10 hover:bg-white/[0.03] hover:border-premium-gold/20 transition-all group"
+                className="flex items-start gap-5 p-6 rounded-xl border border-premium-border bg-white hover:border-premium-gold/30 transition-all group"
               >
                 <div className="w-14 h-14 rounded-full bg-premium-gold/10 flex items-center justify-center text-2xl flex-shrink-0 group-hover:scale-110 group-hover:bg-premium-gold/20 transition-all duration-300">
                   {pt.icon}
                 </div>
                 <div>
-                  <h3 className="font-heading text-lg text-white mb-2">
+                  <h3 className="font-heading text-lg text-premium-dark mb-2">
                     {t(`convince.${pt.key}_title`)}
                   </h3>
-                  <p className="text-sm text-white/60 leading-relaxed">
+                  <p className="text-sm text-premium-muted leading-relaxed">
                     {t(`convince.${pt.key}_text`)}
                   </p>
                 </div>
@@ -152,7 +151,7 @@ export default async function AboutPage({
 
           {/* Testimonial */}
           <div className="max-w-3xl mx-auto text-center mb-12">
-            <p className="text-lg text-white/70 italic leading-relaxed font-light">
+            <p className="text-lg text-premium-muted italic leading-relaxed font-light">
               {t("testimonial.text")}
             </p>
           </div>
@@ -172,7 +171,7 @@ export default async function AboutPage({
       </section>
 
       {/* Nos Valeurs */}
-      <section className="section-padding bg-premium-warm">
+      <section className="section-padding bg-premium-cream">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-12">
             <div className="flex items-center justify-center gap-3 mb-6">
@@ -182,7 +181,7 @@ export default async function AboutPage({
               </span>
               <span className="w-8 h-px bg-premium-gold" />
             </div>
-            <h2 className="font-heading text-3xl md:text-4xl text-white mt-2 mb-4">
+            <h2 className="font-heading text-3xl md:text-4xl text-premium-dark mt-2 mb-4">
               {t("values.title")}
             </h2>
             <div className="w-12 h-0.5 bg-premium-gold mx-auto" />
@@ -195,7 +194,7 @@ export default async function AboutPage({
                 className="card-premium p-5 sm:p-6 md:p-8 text-center hover:border-premium-gold/30"
               >
                 <div className="text-4xl mb-5">{v.icon}</div>
-                <h3 className="font-heading text-lg text-white mb-3">
+                <h3 className="font-heading text-lg text-premium-dark mb-3">
                   {t(`values.${v.key}.title`)}
                 </h3>
                 <p className="text-sm text-premium-muted">
@@ -208,7 +207,7 @@ export default async function AboutPage({
       </section>
 
       {/* Informations légales */}
-      <section className="section-padding bg-premium-dark">
+      <section className="section-padding bg-premium-sand">
         <div className="max-w-4xl mx-auto px-6">
           <div className="text-center mb-12">
             <div className="flex items-center justify-center gap-3 mb-6">
@@ -218,17 +217,17 @@ export default async function AboutPage({
               </span>
               <span className="w-8 h-px bg-premium-gold" />
             </div>
-            <h2 className="font-heading text-3xl md:text-4xl text-white mt-2 mb-4">
+            <h2 className="font-heading text-3xl md:text-4xl text-premium-dark mt-2 mb-4">
               {t("info.title")}
             </h2>
             <div className="w-12 h-0.5 bg-premium-gold mx-auto" />
           </div>
 
-          <div className="bg-premium-warm border border-premium-border rounded-2xl p-5 sm:p-6 md:p-12 space-y-8">
+          <div className="bg-white border border-premium-border rounded-2xl p-5 sm:p-6 md:p-12 space-y-8">
             <div className="flex items-start gap-5">
               <span className="text-2xl flex-shrink-0">📍</span>
               <div>
-                <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-2">
+                <h3 className="text-sm font-semibold text-premium-dark uppercase tracking-wider mb-2">
                   Adresse
                 </h3>
                 <p className="text-sm text-premium-muted leading-relaxed">
@@ -239,7 +238,7 @@ export default async function AboutPage({
             <div className="flex items-start gap-5">
               <span className="text-2xl flex-shrink-0">🏢</span>
               <div>
-                <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-2">
+                <h3 className="text-sm font-semibold text-premium-dark uppercase tracking-wider mb-2">
                   Secteur d&apos;activité
                 </h3>
                 <p className="text-sm text-premium-muted leading-relaxed">

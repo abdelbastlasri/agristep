@@ -8,7 +8,7 @@ export default function ContactRapide() {
   const { ref, isVisible } = useScrollReveal();
 
   return (
-    <section className="section-padding bg-premium-warm">
+    <section className="section-padding bg-premium-cream">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-3 mb-6">
@@ -18,7 +18,7 @@ export default function ContactRapide() {
             </span>
             <span className="w-8 h-px bg-premium-gold" />
           </div>
-          <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl text-white mt-2 mb-4">
+          <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl text-premium-dark mt-2 mb-4">
             Notre Emplacement sur la Carte
           </h2>
           <div className="w-12 h-0.5 bg-premium-gold mx-auto" />
@@ -30,7 +30,7 @@ export default function ContactRapide() {
               <div className="w-10 h-10 rounded-full bg-premium-gold/10 flex items-center justify-center text-lg mx-auto mb-3 group-hover:scale-110 group-hover:bg-premium-gold/20 transition-all duration-300">
                 📍
               </div>
-              <h4 className="text-xs font-semibold text-white uppercase tracking-wider mb-1">
+              <h4 className="text-xs font-semibold text-premium-dark uppercase tracking-wider mb-1">
                 Adresse
               </h4>
               <p className="text-xs text-premium-muted leading-relaxed">
@@ -41,7 +41,7 @@ export default function ContactRapide() {
               <div className="w-10 h-10 rounded-full bg-premium-gold/10 flex items-center justify-center text-lg mx-auto mb-3 group-hover:scale-110 group-hover:bg-premium-gold/20 transition-all duration-300">
                 📞
               </div>
-              <h4 className="text-xs font-semibold text-white uppercase tracking-wider mb-1">
+              <h4 className="text-xs font-semibold text-premium-dark uppercase tracking-wider mb-1">
                 Téléphone
               </h4>
               <p className="text-xs text-premium-muted">{t("phone")}</p>
@@ -50,7 +50,7 @@ export default function ContactRapide() {
               <div className="w-10 h-10 rounded-full bg-premium-gold/10 flex items-center justify-center text-lg mx-auto mb-3 group-hover:scale-110 group-hover:bg-premium-gold/20 transition-all duration-300">
                 ✉️
               </div>
-              <h4 className="text-xs font-semibold text-white uppercase tracking-wider mb-1">
+              <h4 className="text-xs font-semibold text-premium-dark uppercase tracking-wider mb-1">
                 Email
               </h4>
               <p className="text-xs text-premium-muted">{t("emailAddr")}</p>

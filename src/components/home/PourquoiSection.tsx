@@ -45,17 +45,17 @@ export default function PourquoiSection() {
   ];
 
   return (
-    <section className="section-padding bg-premium-dark text-white">
+    <section className="section-padding bg-premium-sand">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-3 mb-6">
-            <span className="w-8 h-px bg-premium-gold/60" />
+            <span className="w-8 h-px bg-premium-gold" />
             <span className="text-xs uppercase tracking-[0.2em] text-premium-gold font-semibold">
               Pourquoi nous
             </span>
-            <span className="w-8 h-px bg-premium-gold/60" />
+            <span className="w-8 h-px bg-premium-gold" />
           </div>
-          <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl text-white mt-2 mb-4">
+          <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl text-premium-dark mt-2 mb-4">
             {t("title")}
           </h2>
           <div className="w-12 h-0.5 bg-premium-gold mx-auto" />
@@ -70,10 +70,10 @@ export default function PourquoiSection() {
               <div className="w-14 h-14 rounded-full bg-premium-gold/10 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:bg-premium-gold/20 transition-all duration-300">
                 {item.icon}
               </div>
-              <h3 className="font-heading text-lg text-white mb-3">
+              <h3 className="font-heading text-lg text-premium-dark mb-3">
                 {t(`${item.key}.title`)}
               </h3>
-              <p className="text-sm text-white/50 leading-relaxed">
+              <p className="text-sm text-premium-muted leading-relaxed">
                 {t(`${item.key}.text`)}
               </p>
             </div>
