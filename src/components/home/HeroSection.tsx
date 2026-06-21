@@ -60,39 +60,36 @@ export default function HeroSection() {
       <div className="absolute inset-x-4 md:inset-x-8 top-1/2 -translate-y-1/2 z-20">
         <div className="max-w-7xl mx-auto">
           <div className="max-w-4xl">
-            {/* Transparent rectangle around text */}
-            <div className="bg-premium-dark/50 backdrop-blur-lg border border-white/10 rounded-2xl p-6 sm:p-10 md:p-14">
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                className="flex items-center gap-3 mb-6 sm:mb-8"
-              >
-                <span className="w-10 h-px bg-premium-green/60" />
-                <span className="text-[10px] sm:text-xs uppercase tracking-[0.25em] text-black font-bold bg-white/90 px-3 py-1.5 rounded-full">
-                  {t("tagline")}
-                </span>
-              </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="flex items-center gap-3 mb-6 sm:mb-8"
+            >
+              <span className="w-10 h-px bg-premium-green/60" />
+              <span className="text-[10px] sm:text-xs uppercase tracking-[0.25em] text-black font-bold bg-white/90 px-3 py-1.5 rounded-full">
+                {t("tagline")}
+              </span>
+            </motion.div>
 
-              <motion.h1
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-                className="font-heading text-4xl sm:text-6xl md:text-7xl lg:text-8xl text-white leading-[1.1] sm:leading-[1.05] mb-4 sm:mb-6"
-              >
-                {t("title")}
-                <span className="block sm:inline text-premium-green-light text-3xl sm:text-5xl md:text-6xl lg:text-7xl mt-2 sm:mt-0 sm:ml-4 font-sans font-light">{t("subtitle")}</span>
-              </motion.h1>
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="font-heading text-4xl sm:text-6xl md:text-7xl lg:text-8xl text-white leading-[1.1] sm:leading-[1.05] mb-4 sm:mb-6"
+            >
+              {t("title")}
+              <span className="block sm:inline text-premium-green-light text-3xl sm:text-5xl md:text-6xl lg:text-7xl mt-2 sm:mt-0 sm:ml-4 font-sans font-light">{t("subtitle")}</span>
+            </motion.h1>
 
-              <motion.p
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.6 }}
-                className="text-base sm:text-lg text-white font-light leading-relaxed max-w-2xl"
-              >
-                {t("description")}
-              </motion.p>
-            </div>
+            <motion.p
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              className="text-base sm:text-lg text-white font-light leading-relaxed max-w-2xl"
+            >
+              {t("description")}
+            </motion.p>
 
             {/* Buttons below rectangle */}
             <motion.div
@@ -103,7 +100,7 @@ export default function HeroSection() {
             >
               <Link
                 href="/produits"
-                className="btn-premium btn-premium-primary text-sm sm:text-base group"
+                className="btn-premium text-sm sm:text-base text-white bg-[#011806] hover:brightness-125 border-0 group"
               >
                 {t("cta")}
                 <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
@@ -112,14 +109,14 @@ export default function HeroSection() {
                 href="/catalogue-agristep-2023.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-premium text-sm sm:text-base text-white bg-premium-green hover:bg-premium-green-hover border-0 group"
+                className="btn-premium text-sm sm:text-base text-white bg-[#011806] hover:brightness-125 border-0 group"
               >
                 <FileText size={16} />
                 Notre catalogue
               </a>
               <Link
                 href="/a-propos"
-                className="btn-premium text-sm sm:text-base text-white bg-premium-green hover:bg-premium-green-hover border-0"
+                className="btn-premium text-sm sm:text-base text-white bg-[#011806] hover:brightness-125 border-0"
               >
                 Notre histoire
                 <ChevronRight size={16} />
