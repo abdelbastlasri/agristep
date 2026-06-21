@@ -25,7 +25,7 @@ export default function ProductCard({
   );
 
   return (
-    <div className="card-premium overflow-hidden group flex flex-col h-full">
+    <div className="bg-premium-secondary/60 backdrop-blur-sm border border-premium-border rounded-2xl overflow-hidden group flex flex-col h-full hover:border-premium-green/30 hover:shadow-lg hover:shadow-black/10 transition-all duration-300">
       <Link href={`/produits/${product.slug}`}>
         <div className="relative h-36 sm:h-44 lg:h-52 flex items-center justify-center p-4 sm:p-6 lg:p-8"
           style={{ background: "linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02))" }}>

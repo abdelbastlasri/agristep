@@ -63,7 +63,7 @@ export default function ImageSlideshow() {
               loading="eager"
             />
           </div>
-          <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/50 to-black/45" />
+          
         </div>
       ))}
     </div>

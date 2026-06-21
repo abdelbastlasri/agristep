@@ -1,43 +1,11 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, FileText, ChevronRight } from "lucide-react";
 import { Link } from "@/i18n/routing";
 import ImageSlideshow from "./ImageSlideshow";
-
-function AnimatedNumber({ value }: { value: string }) {
-  const num = parseInt(value.replace(/[^0-9]/g, ""));
-  const isNumeric = !isNaN(num);
-  const [display, setDisplay] = useState(isNumeric ? "0" : value);
-
-  useEffect(() => {
-    if (!isNumeric || num === 0) return;
-    let start = 0;
-    const duration = 1500;
-    const step = Math.ceil(num / 60);
-    const timer = setInterval(() => {
-      start += step;
-      if (start >= num) {
-        setDisplay(value);
-        clearInterval(timer);
-      } else {
-        setDisplay(String(start));
-      }
-    }, duration / 60);
-    return () => clearInterval(timer);
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
-
-  return <>{display}</>;
-}
-
-const heroStats = [
-  { number: "2020", label: "Fondation" },
-  { number: "16", label: "Produits" },
-  { number: "5+", label: "Ans d'expérience" },
-  { number: "Bio", label: "Solutions durables" },
-];
 
 function generateParticles() {
   return Array.from({ length: 6 }, (_, i) => ({
@@ -51,13 +19,7 @@ function generateParticles() {
 
 export default function HeroSection() {
   const t = useTranslations("home.hero");
-  const [countStarted, setCountStarted] = useState(false);
   const [particles] = useState(generateParticles);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setCountStarted(true), 800);
-    return () => clearTimeout(timer);
-  }, []);
 
   return (
     <section className="relative h-screen flex items-center overflow-hidden bg-premium-dark">
@@ -166,32 +128,6 @@ export default function HeroSection() {
         </div>
       </div>
       </div>
-
-      {/* Floating stats cards */}
-      <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 1.2 }}
-        className="absolute bottom-8 left-0 right-0 z-20"
-      >
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 max-w-3xl mx-auto">
-            {heroStats.map((stat) => (
-              <div
-                key={stat.label}
-                className="backdrop-blur-md bg-premium-dark/40 border border-premium-border rounded-2xl p-4 text-center"
-              >
-                <div className="font-heading text-2xl md:text-3xl text-premium-green mb-1">
-                  {countStarted ? <AnimatedNumber value={stat.number} /> : "0"}
-                </div>
-                <div className="text-xs text-premium-muted uppercase tracking-wider">
-                  {stat.label}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </motion.div>
 
       {/* Bottom gradient */}
       <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-premium-dark via-premium-dark/60 to-transparent pointer-events-none" />

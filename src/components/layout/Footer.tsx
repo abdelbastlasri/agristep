@@ -2,20 +2,12 @@
 
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
-import { MapPin, Phone, Mail, ArrowRight } from "lucide-react";
+import { MapPin, Phone, Mail } from "lucide-react";
 import Image from "next/image";
 import { Icon } from "@/components/ui/IconSvg";
-import { useState } from "react";
 
 export default function Footer() {
   const t = useTranslations("footer");
-  const [email, setEmail] = useState("");
-
-  const handleNewsletter = (e: React.FormEvent) => {
-    e.preventDefault();
-    window.open(`mailto:ste.agristep@gmail.com?subject=Newsletter&body=${encodeURIComponent(email)}`);
-    setEmail("");
-  };
 
   return (
     <footer className="relative bg-premium-charcoal text-premium-text overflow-hidden">
@@ -25,35 +17,6 @@ export default function Footer() {
         backgroundSize: "400px 400px",
       }} />
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-premium-green/30 to-transparent" />
-
-      {/* Newsletter */}
-      <div className="relative z-10 border-b border-premium-border">
-        <div className="max-w-7xl mx-auto px-6 py-12">
-          <div className="max-w-xl mx-auto text-center">
-            <h3 className="text-lg font-heading text-white mb-2">Restez informé</h3>
-            <p className="text-sm text-premium-muted mb-6">
-              Recevez nos dernières actualités et innovations agricoles.
-            </p>
-            <form onSubmit={handleNewsletter} className="flex gap-3 max-w-md mx-auto">
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Votre email"
-                required
-                className="flex-1 px-4 py-3 bg-premium-dark/60 border border-premium-border rounded-xl text-sm text-white placeholder-premium-muted/50 focus:outline-none focus:border-premium-green transition-colors"
-              />
-              <button
-                type="submit"
-                className="px-5 py-3 bg-premium-green text-premium-dark font-semibold rounded-xl hover:bg-premium-green-hover transition-colors flex items-center gap-2 text-sm"
-              >
-                <span>S&apos;inscrire</span>
-                <ArrowRight size={14} />
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
 
       <div className="max-w-7xl mx-auto px-6 py-16 relative z-10">
         <div className="md:hidden space-y-10">
