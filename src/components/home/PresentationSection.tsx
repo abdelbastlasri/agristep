@@ -61,9 +61,9 @@ export default function PresentationSection() {
           >
             <div className="flex items-center gap-3 mb-6">
               <span className="w-10 h-px bg-premium-green" />
-              <span className="text-xs uppercase tracking-[0.2em] text-premium-green font-semibold">
-                À propos
-              </span>
+                <span className="text-xs uppercase tracking-[0.2em] text-premium-green font-semibold">
+                  {t("label")}
+                </span>
             </div>
             <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl text-white mt-2 mb-8 leading-tight">
               {t("title")}

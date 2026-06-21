@@ -19,6 +19,7 @@ export default async function ContactPage({
 }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "contact" });
+  const pt = await getTranslations({ locale, namespace: "pages" });
 
   const whatsappMessage = encodeURIComponent(
     "Bonjour, j'ai besoin de plus d'informations à propos de vos produits et leurs fonctionnalités"
@@ -31,7 +32,7 @@ export default async function ContactPage({
           <div className="flex items-center justify-center gap-3 mb-6">
             <span className="w-8 h-px bg-premium-green" />
             <span className="text-xs uppercase tracking-[0.2em] text-premium-green font-semibold">
-              Contact
+              {pt("hero.contactLabel")}
             </span>
             <span className="w-8 h-px bg-premium-green" />
           </div>
@@ -48,7 +49,7 @@ export default async function ContactPage({
           <div className="space-y-6">
             <div className="bg-premium-card/60 backdrop-blur-sm border border-premium-border rounded-2xl p-5 sm:p-6">
               <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-6">
-                Nos coordonnées
+                {pt("contact.coord")}
               </h3>
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
@@ -57,7 +58,7 @@ export default async function ContactPage({
                   </div>
                   <div>
                     <h4 className="text-xs font-semibold text-white uppercase tracking-wider mb-1">
-                      Adresse
+                      {pt("contact.address")}
                     </h4>
                     <p className="text-sm text-premium-text leading-relaxed">
                       {t("info.address")}
@@ -70,7 +71,7 @@ export default async function ContactPage({
                   </div>
                   <div>
                     <h4 className="text-xs font-semibold text-white uppercase tracking-wider mb-1">
-                      Téléphone / Fax
+                      {pt("contact.phone")}
                     </h4>
                     <p className="text-sm text-premium-text">{t("info.phone")}</p>
                   </div>
@@ -81,7 +82,7 @@ export default async function ContactPage({
                   </div>
                   <div>
                     <h4 className="text-xs font-semibold text-white uppercase tracking-wider mb-1">
-                      Email
+                      {pt("contact.email")}
                     </h4>
                     <p className="text-sm text-premium-text">{t("info.email")}</p>
                   </div>
@@ -102,9 +103,9 @@ export default async function ContactPage({
                 <h4 className="text-sm font-semibold text-white">
                   {t("whatsapp")}
                 </h4>
-                <p className="text-xs text-premium-muted mt-1">
-                  Réponse sous 24h
-                </p>
+                  <p className="text-xs text-premium-muted mt-1">
+                    {pt("contact.responseTime")}
+                  </p>
               </div>
               <span className="ml-auto text-premium-green group-hover:translate-x-1 transition-transform">
                 <Icon name="arrowRight" size={18} />

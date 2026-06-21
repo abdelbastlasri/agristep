@@ -41,7 +41,7 @@ export default function Footer() {
               <ul className="space-y-3">
                 <li><Link href="/" className="text-sm text-premium-muted hover:text-white transition-colors">{t("home")}</Link></li>
                 <li><Link href="/produits" className="text-sm text-premium-muted hover:text-white transition-colors">{t("products")}</Link></li>
-                <li><Link href="/a-propos" className="text-sm text-premium-muted hover:text-white transition-colors">À propos</Link></li>
+                <li><Link href="/a-propos" className="text-sm text-premium-muted hover:text-white transition-colors">{t("about")}</Link></li>
                 <li><Link href="/contact" className="text-sm text-premium-muted hover:text-white transition-colors">{t("contact")}</Link></li>
               </ul>
             </div>
@@ -82,7 +82,7 @@ export default function Footer() {
             <ul className="space-y-3">
               <li><Link href="/" className="underline-link text-sm text-premium-muted hover:text-white transition-colors">{t("home")}</Link></li>
               <li><Link href="/produits" className="underline-link text-sm text-premium-muted hover:text-white transition-colors">{t("products")}</Link></li>
-              <li><Link href="/a-propos" className="underline-link text-sm text-premium-muted hover:text-white transition-colors">À propos</Link></li>
+              <li><Link href="/a-propos" className="underline-link text-sm text-premium-muted hover:text-white transition-colors">{t("about")}</Link></li>
               <li><Link href="/contact" className="underline-link text-sm text-premium-muted hover:text-white transition-colors">{t("contact")}</Link></li>
             </ul>
           </div>
@@ -110,7 +110,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-xs uppercase tracking-[0.2em] text-premium-green font-semibold mb-6">Suivez-nous</h3>
+            <h3 className="text-xs uppercase tracking-[0.2em] text-premium-green font-semibold mb-6">{t("followUs")}</h3>
             <div className="flex gap-3">
               <a href="https://www.linkedin.com/in/ste-agristep-69b1931b5/?locale=en" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-xl bg-premium-green/10 flex items-center justify-center hover:bg-premium-green/20 transition-all duration-300 hover:scale-110">
                 <Icon name="linkedin" size={18} className="text-premium-green" />

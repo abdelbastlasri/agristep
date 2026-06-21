@@ -20,12 +20,12 @@ export default function ContactRapide() {
           <div className="flex items-center justify-center gap-3 mb-6">
             <span className="w-10 h-px bg-premium-green" />
             <span className="text-xs uppercase tracking-[0.2em] text-premium-green font-semibold">
-              Notre Emplacement
+              {t("label")}
             </span>
             <span className="w-10 h-px bg-premium-green" />
           </div>
           <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl text-white mt-2 mb-4">
-            Notre Emplacement sur la Carte
+            {t("mapTitle")}
           </h2>
           <div className="w-16 h-0.5 bg-premium-green/50 mx-auto" />
         </motion.div>
@@ -49,10 +49,10 @@ export default function ContactRapide() {
                 <MapPin size={22} className="text-premium-green" />
               </div>
               <h4 className="text-xs font-semibold text-white uppercase tracking-wider mb-2">
-                Adresse
+                {t("addressLabel")}
               </h4>
               <p className="text-xs text-premium-muted leading-relaxed">
-                LOCALE COMMERCIALE RDC, ROUTE NATIONALE N°1, DOUAR DRAID, CHTOUKA-AIT BAHA
+                {t("address")}
               </p>
             </motion.div>
             <motion.div
@@ -66,7 +66,7 @@ export default function ContactRapide() {
                 <Phone size={22} className="text-premium-green" />
               </div>
               <h4 className="text-xs font-semibold text-white uppercase tracking-wider mb-2">
-                Téléphone
+                {t("phoneLabel")}
               </h4>
               <p className="text-xs text-premium-muted">{t("phone")}</p>
             </motion.div>
@@ -81,7 +81,7 @@ export default function ContactRapide() {
                 <Mail size={22} className="text-premium-green" />
               </div>
               <h4 className="text-xs font-semibold text-white uppercase tracking-wider mb-2">
-                Email
+                {t("emailLabel")}
               </h4>
               <p className="text-xs text-premium-muted">{t("emailAddr")}</p>
             </motion.div>

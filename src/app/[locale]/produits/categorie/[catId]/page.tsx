@@ -26,6 +26,7 @@ export default async function CategoryPage({
   const t = await getTranslations({ locale, namespace: "products" });
   const ct = await getTranslations({ locale, namespace: "products.categories" });
   const cd = await getTranslations({ locale, namespace: "products.desc" });
+  const pt = await getTranslations({ locale, namespace: "pages" });
 
   const category = categories.find((c) => c.id === catId) as
     | { id: ProductCategory; icon: string }
@@ -39,14 +40,14 @@ export default async function CategoryPage({
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center gap-2 text-xs text-premium-muted mb-12 uppercase tracking-wider">
           <Link href="/" className="hover:text-white transition-colors">
-            Accueil
+            {pt("breadcrumb.home")}
           </Link>
           <span>/</span>
           <Link
             href="/produits"
             className="hover:text-white transition-colors"
           >
-            Produits
+            {pt("breadcrumb.products")}
           </Link>
           <span>/</span>
           <span className="text-white">{ct(catId)}</span>

@@ -33,6 +33,7 @@ export default async function AboutPage({
 }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "about" });
+  const pt = await getTranslations({ locale, namespace: "pages" });
 
   return (
     <div>
@@ -58,7 +59,7 @@ export default async function AboutPage({
             <div className="flex items-center justify-center gap-3 mb-6">
             <span className="w-8 h-px bg-premium-green" />
             <span className="text-xs uppercase tracking-[0.2em] text-premium-green font-semibold">
-              Notre parcours
+              {pt("about.journey")}
             </span>
             <span className="w-8 h-px bg-premium-green" />
             </div>
@@ -109,7 +110,7 @@ export default async function AboutPage({
             <div className="flex items-center justify-center gap-3 mb-6">
             <span className="w-8 h-px bg-premium-green" />
             <span className="text-xs uppercase tracking-[0.2em] text-premium-green font-semibold">
-              Performance
+              {pt("about.performance")}
             </span>
             <span className="w-8 h-px bg-premium-green" />
             </div>
@@ -202,7 +203,7 @@ export default async function AboutPage({
             <div className="flex items-center justify-center gap-3 mb-6">
             <span className="w-8 h-px bg-premium-green" />
             <span className="text-xs uppercase tracking-[0.2em] text-premium-green font-semibold">
-              Légal
+              {pt("about.legal")}
             </span>
             <span className="w-8 h-px bg-premium-green" />
             </div>
@@ -218,12 +219,12 @@ export default async function AboutPage({
                 <Icon name="mapPin" size={20} className="text-premium-green" />
               </div>
               <div>
-                <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-2">
-                  Adresse
-                </h3>
-                <p className="text-sm text-premium-text leading-relaxed">
-                  {t("info.address")}
-                </p>
+                  <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-2">
+                    {pt("about.address")}
+                  </h3>
+                  <p className="text-sm text-premium-text leading-relaxed">
+                    {t("info.address")}
+                  </p>
               </div>
             </div>
             <div className="flex items-start gap-5">
@@ -231,9 +232,9 @@ export default async function AboutPage({
                 <Icon name="building2" size={20} className="text-premium-green" />
               </div>
               <div>
-                <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-2">
-                  Secteur d&apos;activité
-                </h3>
+                  <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-2">
+                    {pt("about.sector")}
+                  </h3>
                 <p className="text-sm text-premium-text leading-relaxed">
                   {t("info.sector")}
                 </p>

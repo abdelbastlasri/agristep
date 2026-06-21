@@ -31,6 +31,7 @@ export default async function ProductsPage({
   const t = await getTranslations({ locale, namespace: "products" });
   const ct = await getTranslations({ locale, namespace: "products.categories" });
   const cd = await getTranslations({ locale, namespace: "products.desc" });
+  const pt = await getTranslations({ locale, namespace: "pages" });
 
   return (
     <div className="section-padding bg-premium-dark">
@@ -39,7 +40,7 @@ export default async function ProductsPage({
           <div className="flex items-center justify-center gap-3 mb-6">
             <span className="w-8 h-px bg-premium-green" />
             <span className="text-xs uppercase tracking-[0.2em] text-premium-green font-semibold">
-              Catalogue
+              {pt("hero.label")}
             </span>
             <span className="w-8 h-px bg-premium-green" />
           </div>

@@ -68,7 +68,7 @@ export default function HeroSection() {
             >
               <span className="w-10 h-px bg-premium-green/60" />
               <span className="text-xs uppercase tracking-[0.25em] text-premium-green font-medium">
-                SARL Agricole — Chtouka Ait Baha
+                {t("tagline")}
               </span>
             </motion.div>
 
@@ -82,14 +82,14 @@ export default function HeroSection() {
               <span className="inline text-premium-green-light text-4xl sm:text-5xl md:text-6xl lg:text-7xl ml-4 font-sans font-light">{t("subtitle")}</span>
             </motion.h1>
 
-            <motion.p
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-              className="text-base sm:text-lg text-premium-text/90 font-light leading-relaxed mb-10 max-w-2xl"
-            >
-              Spécialiste en solutions agricoles biologiques : auxiliaires, biostimulants et conseil personnalisé pour une agriculture durable au Maroc.
-            </motion.p>
+              <motion.p
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.6 }}
+                className="text-base sm:text-lg text-premium-text/90 font-light leading-relaxed mb-10 max-w-2xl"
+              >
+                {t("description")}
+              </motion.p>
 
             <motion.div
               initial={{ opacity: 0, y: 30 }}

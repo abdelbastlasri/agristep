@@ -3,7 +3,7 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 import { motion } from "framer-motion";
-import { Shield, Sprout, FlaskConical, Zap, Droplets, Apple } from "lucide-react";
+import { Shield, Sprout, FlaskConical, Zap, Droplets, Apple, ArrowRight } from "lucide-react";
 import { categories, getProductsByCategory } from "@/data/products";
 
 const categoryIcons: Record<string, typeof Shield> = {
@@ -46,7 +46,7 @@ export default function CategoriesSection() {
           <div className="flex items-center justify-center gap-3 mb-6">
             <span className="w-10 h-px bg-premium-green" />
             <span className="text-xs uppercase tracking-[0.2em] text-premium-green font-semibold">
-              Catalogue
+              {t("title")}
             </span>
             <span className="w-10 h-px bg-premium-green" />
           </div>
@@ -88,9 +88,7 @@ export default function CategoriesSection() {
                     <span className="text-xs text-premium-green font-medium">
                       {productCount} produit{productCount > 1 ? "s" : ""}
                     </span>
-                    <span className="text-premium-green group-hover:translate-x-1 transition-transform">
-                      →
-                    </span>
+                    <ArrowRight size={14} className="text-premium-green group-hover:translate-x-1 transition-transform" />
                   </div>
                 </Link>
               </motion.div>

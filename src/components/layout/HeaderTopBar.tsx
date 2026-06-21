@@ -1,41 +1,19 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { Phone, Mail, Clock } from "lucide-react";
+import { useState, useEffect, type ElementType } from "react";
+import { Phone, Mail, Clock, Sun, CloudSun, CloudRain, CloudSnow, CloudFog, CloudLightning } from "lucide-react";
 
-const WEATHER_CODES: Record<number, string> = {
-  0: "☀️",
-  1: "🌤️",
-  2: "⛅",
-  3: "☁️",
-  45: "🌫️",
-  48: "🌫️",
-  51: "🌦️",
-  53: "🌦️",
-  55: "🌦️",
-  56: "🌦️",
-  57: "🌦️",
-  61: "🌧️",
-  63: "🌧️",
-  65: "🌧️",
-  66: "🌧️",
-  67: "🌧️",
-  71: "❄️",
-  73: "❄️",
-  75: "❄️",
-  77: "❄️",
-  80: "🌦️",
-  81: "🌦️",
-  82: "🌦️",
-  85: "❄️",
-  86: "❄️",
-  95: "⛈️",
-  96: "⛈️",
-  99: "⛈️",
-};
-
-function getWeatherEmoji(code: number): string {
-  return WEATHER_CODES[code] || "🌤️";
+function getWeatherIcon(code: number): { icon: ElementType; label: string } {
+  if (code === 0) return { icon: Sun, label: "Ensoleillé" };
+  if (code <= 3) return { icon: CloudSun, label: "Partiellement nuageux" };
+  if (code <= 48) return { icon: CloudFog, label: "Brumeux" };
+  if (code <= 57) return { icon: CloudRain, label: "Bruine" };
+  if (code <= 67) return { icon: CloudRain, label: "Pluie" };
+  if (code <= 77) return { icon: CloudSnow, label: "Neige" };
+  if (code <= 82) return { icon: CloudRain, label: "Averses" };
+  if (code <= 86) return { icon: CloudSnow, label: "Neige" };
+  if (code >= 95) return { icon: CloudLightning, label: "Orage" };
+  return { icon: CloudSun, label: "Nuageux" };
 }
 
 function getTime(): string {
@@ -94,15 +72,18 @@ export default function HeaderTopBar() {
     <div className="relative bg-premium-dark/80 text-premium-muted text-xs md:text-sm overflow-hidden border-b border-premium-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between min-h-9 py-1 gap-x-3 relative z-10">
         <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
-          {weather && (
-            <span className="flex items-center gap-1.5">
-              <span>{getWeatherEmoji(weather.code)}</span>
-              <span className="font-medium text-premium-text">{weather.temp}°C</span>
-              <span className="text-premium-muted/60">— Chtouka Ait Baha</span>
-            </span>
-          )}
+          {weather && (() => {
+            const { icon: WeatherIcon, label } = getWeatherIcon(weather.code);
+            return (
+              <span className="flex items-center gap-1.5">
+                <WeatherIcon size={14} className="text-premium-green" aria-label={label} />
+                <span className="font-medium text-premium-text">{weather.temp}°C</span>
+                <span className="text-premium-muted/60">— Chtouka Ait Baha</span>
+              </span>
+            );
+          })()}
           {!weather && (
-            <span className="text-premium-muted/50 text-xs">Chargement…</span>
+            <span className="text-premium-muted/50 text-xs italic">Météo…</span>
           )}
           <span className="hidden md:flex items-center gap-1.5">
             <Phone size={12} className="text-premium-green" />

@@ -9,9 +9,12 @@
     "hero": {
       "title": "AGRISTEP",
       "subtitle": "Le résultat qui vous satisfait",
-      "cta": "Découvrir nos produits"
+      "cta": "Découvrir nos produits",
+      "description": "Spécialiste en solutions agricoles biologiques : auxiliaires, biostimulants et conseil personnalisé pour une agriculture durable au Maroc.",
+      "tagline": "SARL Agricole — Chtouka Ait Baha"
     },
     "presentation": {
+      "label": "À propos",
       "title": "Qui sommes-nous ?",
       "text": "AGRISTEP est une entreprise spécialisée dans la commercialisation d'insectes auxiliaires pour la lutte intégrée et biologique, des bourdons pollinisateurs, du matériel pour Monitoring et des biostimulants. Basée à Chtouka-Ait Baha, nous œuvrons pour une agriculture durable et respectueuse de l'environnement.",
       "link": "En savoir plus"
@@ -41,6 +44,12 @@
     },
     "contact": {
       "title": "Contactez-nous",
+      "label": "Notre Emplacement",
+      "mapTitle": "Notre Emplacement sur la Carte",
+      "addressLabel": "Adresse",
+      "phoneLabel": "Téléphone",
+      "emailLabel": "Email",
+      "address": "LOCALE COMMERCIALE RDC, ROUTE NATIONALE N°1, DOUAR DRAID, CHTOUKA-AIT BAHA",
       "phone": "+212 5 28 81 52 07",
       "emailAddr": "ste.agristep@gmail.com"
     }
@@ -153,8 +162,34 @@
     "navigation": "Navigation",
     "home": "Accueil",
     "products": "Nos Produits",
+    "about": "À propos",
     "contact": "Contact",
     "rights": "Tous droits réservés.",
-    "linkedin": "LinkedIn"
+    "linkedin": "LinkedIn",
+    "followUs": "Suivez-nous"
+  },
+  "pages": {
+    "hero": {
+      "label": "Catalogue",
+      "contactLabel": "Contact"
+    },
+    "about": {
+      "journey": "Notre parcours",
+      "performance": "Performance",
+      "legal": "Légal",
+      "address": "Adresse",
+      "sector": "Secteur d'activité"
+    },
+    "contact": {
+      "coord": "Nos coordonnées",
+      "address": "Adresse",
+      "phone": "Téléphone / Fax",
+      "email": "Email",
+      "responseTime": "Réponse sous 24h"
+    },
+    "breadcrumb": {
+      "home": "Accueil",
+      "products": "Produits"
+    }
   }
 }
