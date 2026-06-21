@@ -21,9 +21,7 @@ export default async function ContactPage({
   const t = await getTranslations({ locale, namespace: "contact" });
   const pt = await getTranslations({ locale, namespace: "pages" });
 
-  const whatsappMessage = encodeURIComponent(
-    "Bonjour, j'ai besoin de plus d'informations à propos de vos produits et leurs fonctionnalités"
-  );
+  const whatsappMessage = encodeURIComponent(t("whatsappMessage"));
 
   return (
     <div className="section-padding bg-premium-dark">

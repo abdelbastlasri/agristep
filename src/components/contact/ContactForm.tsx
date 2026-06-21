@@ -16,7 +16,13 @@ export default function ContactForm() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const text = `Bonjour Agristep,\n- Prénom: ${form.firstName}\n- Nom: ${form.lastName}\n- Numéro: ${form.phone}\n- Email: ${form.email}\n- Message: ${form.message}`;
+    const text = t("whatsappBody", {
+      firstName: form.firstName,
+      lastName: form.lastName,
+      phone: form.phone,
+      email: form.email,
+      message: form.message,
+    });
     window.location.href = generateWhatsAppUrl("212528815207", text);
   };
 

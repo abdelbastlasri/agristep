@@ -65,6 +65,7 @@
     "application": "Application",
     "crops": "Cultures cibles",
     "related": "Produits associés",
+    "productCount": "{count} produit",
     "notFound": "Produit non trouvé",
     "backToProducts": "Retour aux produits",
     "backToCategory": "Retour à la catégorie",
@@ -148,14 +149,16 @@
       "email": "Email",
       "message": "Message",
       "submit": "Envoyer",
-      "success": "Message envoyé avec succès !"
+      "success": "Message envoyé avec succès !",
+      "whatsappBody": "Bonjour Agristep,\n- Prénom: {firstName}\n- Nom: {lastName}\n- Numéro: {phone}\n- Email: {email}\n- Message: {message}"
     },
     "info": {
       "address": "LOCALE COMMERCIALE RDC, ROUTE NATIONALE N°1, DOUAR DRAID, CHTOUKA-AIT BAHA",
       "phone": "+212 5 28 81 52 07",
       "email": "ste.agristep@gmail.com"
     },
-    "whatsapp": "Contactez-nous sur WhatsApp"
+    "whatsapp": "Contactez-nous sur WhatsApp",
+    "whatsappMessage": "Bonjour, j'ai besoin de plus d'informations à propos de vos produits et leurs fonctionnalités"
   },
   "footer": {
     "description": "Votre partenaire en solutions agricoles biologiques — Nous accompagnons les agriculteurs marocains vers une agriculture plus productive et durable.",
@@ -166,7 +169,19 @@
     "contact": "Contact",
     "rights": "Tous droits réservés.",
     "linkedin": "LinkedIn",
-    "followUs": "Suivez-nous"
+    "followUs": "Suivez-nous",
+    "address": "Route National N°1, Draid Sidi Bibi, Chtouka Ait Baha",
+    "phone": "+212 5 28 81 52 07",
+    "email": "ste.agristep@gmail.com"
+  },
+  "header": {
+    "loading": "Météo…",
+    "location": "Chtouka Ait Baha"
+  },
+  "notFound": {
+    "title": "Page non trouvée",
+    "text": "La page que vous recherchez n'existe pas.",
+    "cta": "Retour à l'accueil"
   },
   "pages": {
     "hero": {

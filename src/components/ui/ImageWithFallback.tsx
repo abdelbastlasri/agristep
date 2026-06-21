@@ -34,7 +34,7 @@ export default function ImageWithFallback({
 
   if (error) {
     return (
-      <div className={`flex items-center justify-center ${containerClassName || className}`}>
+      <div className={`flex items-center justify-center ${fill ? "absolute inset-0" : ""} ${containerClassName || className}`}>
         <span className="text-4xl font-bold text-premium-muted/50">
           {initials}
         </span>

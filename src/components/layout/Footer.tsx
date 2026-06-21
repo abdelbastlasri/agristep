@@ -52,15 +52,15 @@ export default function Footer() {
               <ul className="space-y-3 text-sm">
                 <li className="flex items-start gap-2">
                   <MapPin size={14} className="text-premium-green flex-shrink-0 mt-0.5" />
-                  <span className="text-premium-muted text-xs leading-relaxed">Route National N°1, Draid Sidi Bibi, Chtouka Ait Baha</span>
+                  <span className="text-premium-muted text-xs leading-relaxed">{t("address")}</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <Phone size={14} className="text-premium-green flex-shrink-0" />
-                  <a href="tel:+212528815207" className="text-premium-muted text-xs hover:text-white transition-colors">+212 5 28 81 52 07</a>
+                  <a href="tel:+212528815207" className="text-premium-muted text-xs hover:text-white transition-colors">{t("phone")}</a>
                 </li>
                 <li className="flex items-center gap-2">
                   <Mail size={14} className="text-premium-green flex-shrink-0" />
-                  <a href="mailto:ste.agristep@gmail.com" className="text-premium-muted text-xs hover:text-white transition-colors">ste.agristep@gmail.com</a>
+                  <a href="mailto:ste.agristep@gmail.com" className="text-premium-muted text-xs hover:text-white transition-colors">{t("email")}</a>
                 </li>
                 <li className="flex items-center gap-2">
                   <Icon name="linkedin" size={14} className="text-premium-green flex-shrink-0" />
@@ -92,15 +92,15 @@ export default function Footer() {
             <ul className="space-y-4 text-sm">
               <li className="flex items-start gap-3">
                 <MapPin size={16} className="text-premium-green flex-shrink-0 mt-0.5" />
-                <span className="text-premium-muted leading-relaxed">Route National N°1, Draid Sidi Bibi, Chtouka Ait Baha</span>
+                <span className="text-premium-muted leading-relaxed">{t("address")}</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={16} className="text-premium-green flex-shrink-0" />
-                <a href="tel:+212528815207" className="text-premium-muted hover:text-white transition-colors">+212 5 28 81 52 07</a>
+                <a href="tel:+212528815207" className="text-premium-muted hover:text-white transition-colors">{t("phone")}</a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail size={16} className="text-premium-green flex-shrink-0" />
-                <a href="mailto:ste.agristep@gmail.com" className="text-premium-muted hover:text-white transition-colors">ste.agristep@gmail.com</a>
+                <a href="mailto:ste.agristep@gmail.com" className="text-premium-muted hover:text-white transition-colors">{t("email")}</a>
               </li>
               <li className="flex items-center gap-3 group">
                 <Icon name="linkedin" size={16} className="text-premium-green flex-shrink-0" />

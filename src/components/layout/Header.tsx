@@ -86,7 +86,7 @@ export default function Header() {
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
       scrolled
         ? "bg-premium-dark/90 backdrop-blur-xl shadow-lg shadow-black/20"
-        : "bg-premium-dark/10 backdrop-blur-sm"
+        : "bg-premium-dark"
     }`}>
       <HeaderTopBar />
       <div className="h-px bg-gradient-to-r from-transparent via-premium-border to-transparent" />

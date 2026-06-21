@@ -1,5 +1,4 @@
 import { Link } from "@/i18n/routing";
-import Button from "@/components/ui/Button";
 import { Icon } from "@/components/ui/IconSvg";
 
 export default function NotFound() {
@@ -15,8 +14,8 @@ export default function NotFound() {
         <p className="text-premium-text mb-8">
           La page que vous recherchez n&apos;existe pas.
         </p>
-        <Link href="/">
-          <Button variant="primary">Retour à l&apos;accueil</Button>
+        <Link href="/" className="btn-premium btn-premium-primary">
+          Retour à l&apos;accueil
         </Link>
       </div>
     </div>

@@ -56,7 +56,10 @@ export default function HeroSection() {
         ))}
       </div>
 
-      {/* Hero text content - centered over slideshow with text shadow */}
+      {/* Dark overlay strip for text readability */}
+      <div className="absolute inset-x-0 top-[25%] bottom-[25%] z-10 bg-gradient-to-r from-premium-dark/70 via-premium-dark/50 to-premium-dark/70 pointer-events-none" />
+
+      {/* Hero text content */}
       <div className="absolute inset-x-4 md:inset-x-8 top-1/2 -translate-y-1/2 z-20">
         <div className="max-w-7xl mx-auto">
           <div className="max-w-4xl">
@@ -67,7 +70,7 @@ export default function HeroSection() {
               className="flex items-center gap-3 mb-8"
             >
               <span className="w-10 h-px bg-premium-green/60" />
-              <span className="text-xs uppercase tracking-[0.25em] text-premium-green font-medium drop-shadow-[0_1px_4px_rgba(0,0,0,0.5)]">
+              <span className="text-xs uppercase tracking-[0.25em] text-premium-green font-medium">
                 {t("tagline")}
               </span>
             </motion.div>
@@ -76,17 +79,17 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="font-heading text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white leading-[1.05] mb-8 drop-shadow-[0_2px_12px_rgba(0,0,0,0.6)]"
+              className="font-heading text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white leading-[1.05] mb-8"
             >
               {t("title")}
-              <span className="inline text-premium-green-light text-4xl sm:text-5xl md:text-6xl lg:text-7xl ml-4 font-sans font-light drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)]">{t("subtitle")}</span>
+              <span className="inline text-premium-green-light text-4xl sm:text-5xl md:text-6xl lg:text-7xl ml-4 font-sans font-light">{t("subtitle")}</span>
             </motion.h1>
 
               <motion.p
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
-                className="text-base sm:text-lg text-white/90 font-light leading-relaxed mb-10 max-w-2xl drop-shadow-[0_1px_6px_rgba(0,0,0,0.5)]"
+                className="text-base sm:text-lg text-premium-text/90 font-light leading-relaxed mb-10 max-w-2xl"
               >
                 {t("description")}
               </motion.p>
@@ -115,7 +118,7 @@ export default function HeroSection() {
               </a>
               <Link
                 href="/a-propos"
-                className="btn-premium btn-lift text-sm text-white/80 border border-white/30 hover:bg-white/10 hover:text-white"
+                className="btn-premium btn-lift text-sm text-premium-text border border-premium-border hover:bg-white/5 hover:text-white"
               >
                 Notre histoire
                 <ChevronRight size={16} />

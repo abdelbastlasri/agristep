@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, type ElementType } from "react";
+import { useTranslations } from "next-intl";
 import { Phone, Mail, Clock, Sun, CloudSun, CloudRain, CloudSnow, CloudFog, CloudLightning } from "lucide-react";
 
 function getWeatherIcon(code: number): { icon: ElementType; label: string } {
@@ -25,6 +26,7 @@ function getTime(): string {
 }
 
 export default function HeaderTopBar() {
+  const t = useTranslations("header");
   const [time, setTime] = useState("");
   const [weather, setWeather] = useState<{ temp: number; code: number } | null>(null);
   const [mounted, setMounted] = useState(false);
@@ -78,12 +80,12 @@ export default function HeaderTopBar() {
               <span className="flex items-center gap-1.5">
                 <WeatherIcon size={14} className="text-premium-green" aria-label={label} />
                 <span className="font-medium text-premium-text">{weather.temp}°C</span>
-                <span className="text-premium-muted/60">— Chtouka Ait Baha</span>
+                <span className="text-premium-muted/60">— {t("location")}</span>
               </span>
             );
           })()}
           {!weather && (
-            <span className="text-premium-muted/50 text-xs italic">Météo…</span>
+            <span className="text-premium-muted/50 text-xs italic">{t("loading")}</span>
           )}
           <span className="hidden md:flex items-center gap-1.5">
             <Phone size={12} className="text-premium-green" />
