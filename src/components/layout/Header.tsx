@@ -27,7 +27,7 @@ export default function Header() {
   const handleLogoClick = (e: React.MouseEvent) => {
     if (isHome) {
       e.preventDefault();
-      window.location.reload();
+      window.scrollTo(0, 0);
     }
   };
 

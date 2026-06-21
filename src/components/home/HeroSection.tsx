@@ -67,7 +67,7 @@ export default function HeroSection() {
               className="flex items-center gap-3 mb-6 sm:mb-8"
             >
               <span className="w-10 h-px bg-premium-green/60" />
-              <span className="text-[10px] sm:text-xs uppercase tracking-[0.25em] text-black font-bold bg-white/90 px-3 py-1.5 rounded-full">
+              <span className="text-[10px] sm:text-xs uppercase tracking-[0.25em] text-[#011806] font-bold bg-white/90 px-3 py-1.5 rounded-full">
                 {t("tagline")}
               </span>
             </motion.div>
@@ -86,7 +86,7 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
-              className="text-base sm:text-lg text-white font-light leading-relaxed max-w-2xl"
+              className="text-base sm:text-lg text-[#EDEADE] font-light leading-relaxed max-w-2xl"
             >
               {t("description")}
             </motion.p>
