@@ -3,8 +3,8 @@
 @theme {
   --color-premium-dark: #064E3B;
   --color-premium-warm: #451A03;
-  --color-premium-cream: #F5F0E8;
-  --color-premium-sand: #EDE6DC;
+  --color-premium-cream: #EDE6DC;
+  --color-premium-sand: #E0D8CC;
   --color-premium-white: #F5F0E8;
   --color-premium-text: #1A1A1A;
   --color-premium-muted: #6B7280;
@@ -216,14 +216,14 @@ body {
   left: 0;
   right: 0;
   height: 40px;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 40'%3E%3Cpath fill='%23EDE6DC' d='M0,20 C240,40 480,0 720,20 C960,40 1200,0 1440,20 L1440,40 L0,40 Z'/%3E%3C/svg%3E") repeat-x top left;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 40'%3E%3Cpath fill='%23E0D8CC' d='M0,20 C240,40 480,0 720,20 C960,40 1200,0 1440,20 L1440,40 L0,40 Z'/%3E%3C/svg%3E") repeat-x top left;
   background-size: 720px 40px;
   pointer-events: none;
   z-index: 1;
 }
 
 .section-wave-dark::before {
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 40'%3E%3Cpath fill='%23F5F0E8' d='M0,20 C240,40 480,0 720,20 C960,40 1200,0 1440,20 L1440,40 L0,40 Z'/%3E%3C/svg%3E") repeat-x top left;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 40'%3E%3Cpath fill='%23EDE6DC' d='M0,20 C240,40 480,0 720,20 C960,40 1200,0 1440,20 L1440,40 L0,40 Z'/%3E%3C/svg%3E") repeat-x top left;
   background-size: 720px 40px;
 }
 

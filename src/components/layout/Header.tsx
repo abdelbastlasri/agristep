@@ -74,7 +74,7 @@ export default function Header() {
     <header className="sticky top-0 z-50">
       <HeaderTopBar />
       <div className="h-px bg-gradient-to-r from-transparent via-premium-warm/30 to-transparent" />
-      <div className="bg-white border-b border-premium-border/20">
+      <div className="bg-premium-cream border-b border-premium-border/20">
         <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between h-20">
           <Link href="/" className="flex-shrink-0" onClick={handleLogoClick}>
@@ -127,7 +127,7 @@ export default function Header() {
           id="mobile-menu"
           role="dialog"
           aria-label="Navigation"
-          className="md:hidden bg-white border-t border-premium-border/20 transition-all duration-300"
+          className="md:hidden bg-premium-cream border-t border-premium-border/20 transition-all duration-300"
         >
           <div className="flex flex-col p-6 gap-4">
             {navLinks.map((link) => (
