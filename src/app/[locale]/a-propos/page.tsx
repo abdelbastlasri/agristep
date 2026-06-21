@@ -38,17 +38,17 @@ export default async function AboutPage({
       <section className="relative bg-premium-cream py-16 sm:py-24 lg:py-32">
         <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
           <div className="flex items-center justify-center gap-3 mb-6">
-            <span className="w-8 h-px bg-premium-green" />
-            <span className="text-xs uppercase tracking-[0.2em] text-premium-green font-semibold">
+            <span className="w-8 h-px bg-premium-warm" />
+            <span className="text-xs uppercase tracking-[0.2em] text-premium-warm font-semibold">
               Agristep
             </span>
-            <span className="w-8 h-px bg-premium-green" />
+            <span className="w-8 h-px bg-premium-warm" />
           </div>
           <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl text-premium-dark mt-2">
             {t("title")}
           </h1>
         </div>
-        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-premium-green/30 to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-premium-warm/30 to-transparent" />
       </section>
 
       {/* Histoire */}
@@ -56,16 +56,16 @@ export default async function AboutPage({
         <div className="max-w-4xl mx-auto px-6">
           <div className="text-center mb-12">
             <div className="flex items-center justify-center gap-3 mb-6">
-              <span className="w-8 h-px bg-premium-green" />
-              <span className="text-xs uppercase tracking-[0.2em] text-premium-green font-semibold">
-                Notre parcours
-              </span>
-              <span className="w-8 h-px bg-premium-green" />
+            <span className="w-8 h-px bg-premium-warm" />
+            <span className="text-xs uppercase tracking-[0.2em] text-premium-warm font-semibold">
+              Notre parcours
+            </span>
+            <span className="w-8 h-px bg-premium-warm" />
             </div>
             <h2 className="font-heading text-3xl md:text-4xl text-premium-dark mt-2 mb-4">
               {t("history.title")}
             </h2>
-            <div className="w-12 h-0.5 bg-premium-green mx-auto" />
+            <div className="w-12 h-0.5 bg-premium-warm mx-auto" />
           </div>
 
           <div className="bg-white border border-gray-100 rounded-2xl shadow-sm p-5 sm:p-6 md:p-12">
@@ -84,16 +84,16 @@ export default async function AboutPage({
         <div className="max-w-4xl mx-auto px-6">
           <div className="text-center mb-12">
             <div className="flex items-center justify-center gap-3 mb-6">
-              <span className="w-8 h-px bg-premium-green" />
-              <span className="text-xs uppercase tracking-[0.2em] text-premium-green font-semibold">
-                Agristep
-              </span>
-              <span className="w-8 h-px bg-premium-green" />
+            <span className="w-8 h-px bg-premium-warm" />
+            <span className="text-xs uppercase tracking-[0.2em] text-premium-warm font-semibold">
+              Agristep
+            </span>
+            <span className="w-8 h-px bg-premium-warm" />
             </div>
             <h2 className="font-heading text-3xl md:text-4xl text-premium-dark mt-2 mb-4">
               {t("societe.title")}
             </h2>
-            <div className="w-12 h-0.5 bg-premium-green mx-auto" />
+            <div className="w-12 h-0.5 bg-premium-warm mx-auto" />
           </div>
 
           <div className="bg-white border border-gray-100 rounded-2xl shadow-sm p-5 sm:p-6 md:p-12">
@@ -109,25 +109,25 @@ export default async function AboutPage({
         <div className="relative z-10 max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <div className="flex items-center justify-center gap-3 mb-6">
-              <span className="w-8 h-px bg-premium-green" />
-              <span className="text-xs uppercase tracking-[0.2em] text-premium-green font-semibold">
-                Performance
-              </span>
-              <span className="w-8 h-px bg-premium-green" />
+            <span className="w-8 h-px bg-premium-warm" />
+            <span className="text-xs uppercase tracking-[0.2em] text-premium-warm font-semibold">
+              Performance
+            </span>
+            <span className="w-8 h-px bg-premium-warm" />
             </div>
             <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl text-premium-dark mt-2 mb-4">
               {t("convince.title")}
             </h2>
-            <div className="w-12 h-0.5 bg-premium-green mx-auto" />
+            <div className="w-12 h-0.5 bg-premium-warm mx-auto" />
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 mb-16">
             {convincePoints.map((pt, i) => (
               <div
                 key={pt.key}
-                className="flex items-start gap-5 p-6 rounded-xl border border-gray-100 bg-white shadow-sm hover:border-premium-green/30 transition-all group"
+                className="flex items-start gap-5 p-6 rounded-xl border border-premium-warm/10 bg-white shadow-sm hover:border-premium-warm/30 transition-all group"
               >
-                <div className="w-14 h-14 rounded-full bg-premium-green/10 flex items-center justify-center text-2xl flex-shrink-0 group-hover:scale-110 group-hover:bg-premium-green/20 transition-all duration-300">
+                <div className="w-14 h-14 rounded-full bg-premium-warm/10 flex items-center justify-center text-2xl flex-shrink-0 group-hover:scale-110 group-hover:bg-premium-warm/20 transition-all duration-300">
                   {pt.icon}
                 </div>
                 <div>
@@ -168,16 +168,16 @@ export default async function AboutPage({
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-12">
             <div className="flex items-center justify-center gap-3 mb-6">
-              <span className="w-8 h-px bg-premium-green" />
-              <span className="text-xs uppercase tracking-[0.2em] text-premium-green font-semibold">
-                {t("values.title")}
-              </span>
-              <span className="w-8 h-px bg-premium-green" />
+            <span className="w-8 h-px bg-premium-warm" />
+            <span className="text-xs uppercase tracking-[0.2em] text-premium-warm font-semibold">
+              {t("values.title")}
+            </span>
+            <span className="w-8 h-px bg-premium-warm" />
             </div>
             <h2 className="font-heading text-3xl md:text-4xl text-premium-dark mt-2 mb-4">
               {t("values.title")}
             </h2>
-            <div className="w-12 h-0.5 bg-premium-green mx-auto" />
+            <div className="w-12 h-0.5 bg-premium-warm mx-auto" />
           </div>
 
           <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
@@ -204,16 +204,16 @@ export default async function AboutPage({
         <div className="max-w-4xl mx-auto px-6">
           <div className="text-center mb-12">
             <div className="flex items-center justify-center gap-3 mb-6">
-              <span className="w-8 h-px bg-premium-green" />
-              <span className="text-xs uppercase tracking-[0.2em] text-premium-green font-semibold">
-                Légal
-              </span>
-              <span className="w-8 h-px bg-premium-green" />
+            <span className="w-8 h-px bg-premium-warm" />
+            <span className="text-xs uppercase tracking-[0.2em] text-premium-warm font-semibold">
+              Légal
+            </span>
+            <span className="w-8 h-px bg-premium-warm" />
             </div>
             <h2 className="font-heading text-3xl md:text-4xl text-premium-dark mt-2 mb-4">
               {t("info.title")}
             </h2>
-            <div className="w-12 h-0.5 bg-premium-green mx-auto" />
+            <div className="w-12 h-0.5 bg-premium-warm mx-auto" />
           </div>
 
           <div className="bg-white border border-gray-100 rounded-2xl shadow-sm p-5 sm:p-6 md:p-12 space-y-8">

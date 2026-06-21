@@ -40,7 +40,7 @@ export default function ProductCard({
 
       <div className="p-6 flex flex-col flex-1">
         {showCategory && (
-          <span className="inline-block text-xs uppercase tracking-wider text-premium-green font-semibold mb-3">
+          <span className="inline-block text-xs uppercase tracking-wider text-premium-warm font-semibold mb-3">
             {ct(product.category)}
           </span>
         )}
@@ -56,13 +56,13 @@ export default function ProductCard({
         {/* Composition */}
         {product.composition.length > 0 && (
           <div className="mb-4">
-            <h4 className="text-xs font-semibold text-premium-green uppercase tracking-wider mb-2">
+            <h4 className="text-xs font-semibold text-premium-warm uppercase tracking-wider mb-2">
               {t("composition")}
             </h4>
             <ul className="space-y-1">
               {product.composition.map((item, i) => (
                 <li key={i} className="text-xs text-premium-muted flex items-start gap-2">
-                  <span className="text-premium-green mt-1">•</span>
+                  <span className="text-premium-warm mt-1">•</span>
                   {item}
                 </li>
               ))}
@@ -73,13 +73,13 @@ export default function ProductCard({
         {/* Application */}
         {product.application.length > 0 && (
           <div className="mb-4">
-            <h4 className="text-xs font-semibold text-premium-green uppercase tracking-wider mb-2">
+            <h4 className="text-xs font-semibold text-premium-warm uppercase tracking-wider mb-2">
               {t("application")}
             </h4>
             <ul className="space-y-1">
               {product.application.map((item, i) => (
                 <li key={i} className="text-xs text-premium-muted flex items-start gap-2">
-                  <span className="text-premium-green mt-1">•</span>
+                  <span className="text-premium-warm mt-1">•</span>
                   {item}
                 </li>
               ))}
@@ -93,7 +93,7 @@ export default function ProductCard({
             {product.targetCrops.map((crop) => (
               <span
                 key={crop}
-                className="px-2.5 py-1 bg-premium-green/10 border border-premium-green/20 rounded text-xs text-premium-green"
+                className="px-2.5 py-1 bg-premium-warm/10 border border-premium-warm/20 rounded text-xs text-premium-warm"
               >
                 {crop}
               </span>

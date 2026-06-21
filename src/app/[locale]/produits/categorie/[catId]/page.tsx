@@ -28,13 +28,13 @@ export default async function CategoryPage({
     <div className="section-padding bg-premium-cream">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center gap-2 text-xs text-premium-muted/60 mb-12 uppercase tracking-wider">
-          <Link href="/" className="hover:text-premium-green transition-colors">
+          <Link href="/" className="hover:text-premium-dark transition-colors">
             Accueil
           </Link>
           <span>/</span>
           <Link
             href="/produits"
-            className="hover:text-premium-green transition-colors"
+            className="hover:text-premium-dark transition-colors"
           >
             Produits
           </Link>
@@ -47,7 +47,7 @@ export default async function CategoryPage({
           <h1 className="font-heading text-4xl md:text-5xl text-premium-dark mt-2 mb-4">
             {ct(catId)}
           </h1>
-          <div className="w-12 h-0.5 bg-premium-green mx-auto mb-6" />
+          <div className="w-12 h-0.5 bg-premium-warm mx-auto mb-6" />
           <p className="text-premium-muted max-w-2xl mx-auto">
             {cd(catId)}
           </p>

@@ -53,20 +53,20 @@ export default async function ProductDetailPage({
     <div className="section-padding bg-premium-cream">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center gap-2 text-xs text-premium-muted/60 mb-12 uppercase tracking-wider">
-          <Link href="/" className="hover:text-premium-green transition-colors">
+          <Link href="/" className="hover:text-premium-dark transition-colors">
             Accueil
           </Link>
           <span>/</span>
           <Link
             href="/produits"
-            className="hover:text-premium-green transition-colors"
+            className="hover:text-premium-dark transition-colors"
           >
             Produits
           </Link>
           <span>/</span>
           <Link
             href={`/produits/categorie/${product.category}`}
-            className="hover:text-premium-green transition-colors"
+            className="hover:text-premium-dark transition-colors"
           >
             {ct(product.category)}
           </Link>
@@ -85,7 +85,7 @@ export default async function ProductDetailPage({
           </div>
 
           <div>
-            <span className="text-xs uppercase tracking-[0.15em] text-premium-green font-semibold">
+            <span className="text-xs uppercase tracking-[0.15em] text-premium-warm font-semibold">
               {ct(product.category)}
             </span>
 
@@ -101,7 +101,7 @@ export default async function ProductDetailPage({
               {product.targetCrops.map((crop) => (
                 <span
                   key={crop}
-                  className="px-3 py-1 bg-premium-green/10 border border-premium-green/20 rounded-full text-xs text-premium-green font-medium"
+                  className="px-3 py-1 bg-premium-warm/10 border border-premium-warm/20 rounded-full text-xs text-premium-warm font-medium"
                 >
                   {crop}
                 </span>
@@ -133,7 +133,7 @@ export default async function ProductDetailPage({
                   {product.application.map((app, i) => (
                     <li
                       key={i}
-                      className="text-sm text-premium-muted pl-4 border-l-2 border-premium-green/30 py-1"
+                      className="text-sm text-premium-muted pl-4 border-l-2 border-premium-warm/30 py-1"
                     >
                       {app}
                     </li>
@@ -169,11 +169,11 @@ export default async function ProductDetailPage({
           <div className="border-t border-premium-border pt-16">
             <div className="text-center mb-12">
               <div className="flex items-center justify-center gap-3 mb-4">
-                <span className="w-8 h-px bg-premium-green" />
+                <span className="w-8 h-px bg-premium-warm" />
                 <h2 className="font-heading text-2xl text-premium-dark">
                   {t("related")}
                 </h2>
-                <span className="w-8 h-px bg-premium-green" />
+                <span className="w-8 h-px bg-premium-warm" />
               </div>
             </div>
             <ProductGrid products={related} showCategory={false} />

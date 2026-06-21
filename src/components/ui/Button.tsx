@@ -15,13 +15,13 @@ interface ButtonProps {
 
 const variants = {
   primary:
-    "bg-premium-green hover:bg-premium-green-dark text-white",
+    "bg-premium-dark hover:bg-premium-dark/90 text-white",
   secondary:
-    "bg-premium-gold hover:bg-premium-gold-bright text-white",
+    "bg-premium-accent hover:bg-premium-accent/90 text-white",
   accent:
-    "bg-premium-green-vibrant hover:bg-premium-green-light text-white",
+    "bg-premium-warm hover:bg-premium-warm/90 text-white",
   outline:
-    "border-2 border-premium-green text-premium-green hover:bg-premium-green hover:text-white",
+    "border-2 border-premium-dark text-premium-dark hover:bg-premium-dark hover:text-white",
 };
 
 const sizes = {

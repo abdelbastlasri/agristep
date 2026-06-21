@@ -7,44 +7,44 @@ export default function HeroSection() {
   const t = useTranslations("home.hero");
 
   return (
-    <section className="relative min-h-[80vh] sm:min-h-[90vh] flex items-center overflow-hidden">
+    <section className="relative min-h-[80vh] sm:min-h-[90vh] flex items-center overflow-hidden bg-premium-dark">
       <div className="absolute inset-0">
         <ImageSlideshow />
       </div>
 
       {/* Golden hour glow — warm sun from upper-right */}
       <div className="absolute inset-0">
-        <div className="absolute -top-1/4 -right-1/4 w-[80%] h-[80%] rounded-full bg-gradient-to-br from-premium-gold/30 via-premium-gold/10 to-transparent blur-[100px]" />
+        <div className="absolute -top-1/4 -right-1/4 w-[80%] h-[80%] rounded-full bg-gradient-to-br from-premium-warm/20 via-premium-warm/10 to-transparent blur-[100px]" />
       </div>
 
       {/* Cinematic dust particles — golden specks floating up */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute w-2 h-2 rounded-full bg-premium-gold/30 blur-[1px]" style={{ left: '15%', top: '70%', animation: 'dust 8s ease-in-out infinite', animationDelay: '0s' }} />
-        <div className="absolute w-3 h-3 rounded-full bg-premium-gold/25 blur-[1.5px]" style={{ left: '40%', top: '80%', animation: 'dust 10s ease-in-out infinite', animationDelay: '1.2s' }} />
-        <div className="absolute w-1.5 h-1.5 rounded-full bg-amber-300/30 blur-[1px]" style={{ left: '70%', top: '60%', animation: 'dust 7s ease-in-out infinite', animationDelay: '2.5s' }} />
-        <div className="absolute w-2.5 h-2.5 rounded-full bg-premium-gold/20 blur-[1px]" style={{ left: '25%', top: '90%', animation: 'dust 9s ease-in-out infinite', animationDelay: '0.8s' }} />
-        <div className="absolute w-1.5 h-1.5 rounded-full bg-amber-200/35 blur-[0.5px]" style={{ left: '55%', top: '75%', animation: 'dust 11s ease-in-out infinite', animationDelay: '3.5s' }} />
-        <div className="absolute w-3 h-3 rounded-full bg-premium-gold/20 blur-[1.5px]" style={{ left: '85%', top: '85%', animation: 'dust 8.5s ease-in-out infinite', animationDelay: '1.8s' }} />
-        <div className="absolute w-2 h-2 rounded-full bg-amber-300/25 blur-[1px]" style={{ left: '10%', top: '85%', animation: 'dust 7.5s ease-in-out infinite', animationDelay: '4s' }} />
-        <div className="absolute w-1 h-1 rounded-full bg-premium-gold/35 blur-[0.5px]" style={{ left: '50%', top: '65%', animation: 'dust 9.5s ease-in-out infinite', animationDelay: '0.3s' }} />
+        <div className="absolute w-2 h-2 rounded-full bg-premium-warm/20 blur-[1px]" style={{ left: '15%', top: '70%', animation: 'dust 8s ease-in-out infinite', animationDelay: '0s' }} />
+        <div className="absolute w-3 h-3 rounded-full bg-premium-warm/20 blur-[1.5px]" style={{ left: '40%', top: '80%', animation: 'dust 10s ease-in-out infinite', animationDelay: '1.2s' }} />
+        <div className="absolute w-1.5 h-1.5 rounded-full bg-premium-accent/15 blur-[1px]" style={{ left: '70%', top: '60%', animation: 'dust 7s ease-in-out infinite', animationDelay: '2.5s' }} />
+        <div className="absolute w-2.5 h-2.5 rounded-full bg-premium-warm/15 blur-[1px]" style={{ left: '25%', top: '90%', animation: 'dust 9s ease-in-out infinite', animationDelay: '0.8s' }} />
+        <div className="absolute w-1.5 h-1.5 rounded-full bg-premium-accent/20 blur-[0.5px]" style={{ left: '55%', top: '75%', animation: 'dust 11s ease-in-out infinite', animationDelay: '3.5s' }} />
+        <div className="absolute w-3 h-3 rounded-full bg-premium-warm/15 blur-[1.5px]" style={{ left: '85%', top: '85%', animation: 'dust 8.5s ease-in-out infinite', animationDelay: '1.8s' }} />
+        <div className="absolute w-2 h-2 rounded-full bg-premium-accent/15 blur-[1px]" style={{ left: '10%', top: '85%', animation: 'dust 7.5s ease-in-out infinite', animationDelay: '4s' }} />
+        <div className="absolute w-1 h-1 rounded-full bg-premium-warm/25 blur-[0.5px]" style={{ left: '50%', top: '65%', animation: 'dust 9.5s ease-in-out infinite', animationDelay: '0.3s' }} />
       </div>
 
-      {/* Dark overlay for text readability */}
-      <div className="absolute inset-0 bg-black/50" />
+      {/* Earth Brown gradient at bottom */}
+      <div className="absolute inset-0 bg-gradient-to-t from-premium-warm/60 via-premium-dark/30 to-transparent" />
 
       <div className="relative z-10 w-full pt-16 md:pt-0">
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-3xl">
             <div className="flex items-center gap-3 mb-10">
-              <span className="w-8 h-px bg-premium-gold/60" />
-              <span className="text-xs uppercase tracking-[0.25em] text-premium-gold font-medium">
+              <span className="w-8 h-px bg-premium-warm/60" />
+              <span className="text-xs uppercase tracking-[0.25em] text-premium-warm font-medium">
                 SARL Agricole — Chtouka Ait Baha
               </span>
             </div>
 
             <h1 className="font-heading text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white leading-[1.05] mb-8">
               {t("title")}
-              <span className="inline text-gradient-gold text-4xl sm:text-5xl md:text-6xl lg:text-7xl ml-4 font-sans font-light">
+              <span className="inline text-premium-warm text-4xl sm:text-5xl md:text-6xl lg:text-7xl ml-4 font-sans font-light">
                 {t("subtitle")}
               </span>
             </h1>
@@ -56,7 +56,7 @@ export default function HeroSection() {
             <div className="flex flex-wrap gap-5">
               <a
                 href="/produits"
-                className="btn-premium btn-premium-gold btn-shine text-sm"
+                className="btn-premium btn-premium-primary btn-shine text-sm"
               >
                 {t("cta")}
                 <svg aria-hidden="true" className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -89,7 +89,7 @@ export default function HeroSection() {
         </div>
       </div>
 
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-premium-gold/30 to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-premium-warm/30 to-transparent" />
     </section>
   );
 }

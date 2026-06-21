@@ -73,7 +73,7 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50">
       <HeaderTopBar />
-      <div className="h-px bg-gradient-to-r from-transparent via-premium-green/30 to-transparent" />
+      <div className="h-px bg-gradient-to-r from-transparent via-premium-warm/30 to-transparent" />
       <div className="bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between h-20">
@@ -96,12 +96,12 @@ export default function Header() {
                   href={link.href}
                   className={`text-sm tracking-wide transition-all duration-300 relative py-1 group ${
                     active
-                      ? "text-premium-green font-medium"
-                      : "text-premium-dark hover:text-premium-green"
+                      ? "text-premium-dark font-medium"
+                      : "text-premium-text hover:text-premium-dark"
                   }`}
                 >
                   {link.label}
-                  <span className={`absolute -bottom-1 left-0 h-0.5 bg-premium-green transition-all duration-300 ${
+                  <span className={`absolute -bottom-1 left-0 h-0.5 bg-premium-dark transition-all duration-300 ${
                     active ? "right-0" : "right-full group-hover:right-0"
                   }`} />
                 </Link>
@@ -110,7 +110,7 @@ export default function Header() {
           </nav>
 
           <button
-            className="md:hidden p-2 text-2xl text-premium-dark transition-transform duration-150 active:scale-90 hover:text-premium-green"
+            className="md:hidden p-2 text-2xl text-premium-dark transition-transform duration-150 active:scale-90 hover:text-premium-warm"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-expanded={menuOpen}
             aria-controls="mobile-menu"
@@ -137,8 +137,8 @@ export default function Header() {
                 onClick={() => setMenuOpen(false)}
                 className={`text-sm tracking-wide py-2 transition-all duration-200 hover:translate-x-1 ${
                   pathname === link.href
-                    ? "text-premium-green font-medium"
-                    : "text-premium-dark hover:text-premium-green"
+                    ? "text-premium-dark font-medium"
+                    : "text-premium-text hover:text-premium-dark"
                 }`}
               >
                 {link.label}
