@@ -79,14 +79,14 @@ export default function HeroSection() {
               className="font-heading text-4xl sm:text-6xl md:text-7xl lg:text-8xl text-white leading-[1.1] sm:leading-[1.05] mb-4 sm:mb-6"
             >
               {t("title")}
-              <span className="block sm:inline text-[#0D0D0D] text-3xl sm:text-5xl md:text-6xl lg:text-7xl mt-2 sm:mt-0 sm:ml-4 font-sans font-light">{t("subtitle")}</span>
+              <span className="block sm:inline text-[#0D0D0D] text-3xl sm:text-5xl md:text-6xl lg:text-7xl mt-2 sm:mt-0 sm:ml-4 font-sans font-bold">{t("subtitle")}</span>
             </motion.h1>
 
             <motion.p
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
-              className="text-base sm:text-lg text-[#EDEADE] font-light leading-relaxed max-w-2xl"
+              className="text-base sm:text-lg text-[#EDEADE] font-bold leading-relaxed max-w-2xl"
             >
               {t("description")}
             </motion.p>
