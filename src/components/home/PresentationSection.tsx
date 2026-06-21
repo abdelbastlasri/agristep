@@ -44,20 +44,20 @@ export default function PresentationSection() {
   const { ref, isVisible } = useScrollReveal();
 
   return (
-    <section className="section-padding bg-premium-sand" ref={ref}>
+    <section className="section-padding bg-premium-cream" ref={ref}>
       <div className="max-w-7xl mx-auto px-6">
         <div className={`grid lg:grid-cols-2 gap-10 lg:gap-24 items-center transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <div>
             <div className="flex items-center gap-3 mb-6">
-              <span className="w-8 h-px bg-premium-gold" />
-              <span className="text-xs uppercase tracking-[0.2em] text-premium-gold font-semibold">
+              <span className="w-8 h-px bg-premium-green" />
+              <span className="text-xs uppercase tracking-[0.2em] text-premium-green font-semibold">
                 À propos
               </span>
             </div>
             <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl text-premium-dark mt-2 mb-8 leading-tight">
               {t("title")}
             </h2>
-            <div className="w-16 h-0.5 bg-premium-gold mb-8" />
+            <div className="w-16 h-0.5 bg-premium-green mb-8" />
             <p className="text-premium-muted leading-relaxed text-lg mb-10">
               {t("text")}
             </p>
@@ -78,7 +78,7 @@ export default function PresentationSection() {
                 key={stat.label}
                 className="card-premium p-4 sm:p-6 md:p-8 text-center"
               >
-                <div className="font-heading text-3xl md:text-4xl text-gradient-gold mb-2">
+                <div className="font-heading text-3xl md:text-4xl text-premium-green mb-2">
                   {isVisible ? <AnimatedNumber value={stat.number} /> : "0"}
                 </div>
                 <div className="text-xs uppercase tracking-[0.15em] text-premium-muted">

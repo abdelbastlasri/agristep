@@ -8,26 +8,26 @@ export default function ContactRapide() {
   const { ref, isVisible } = useScrollReveal();
 
   return (
-    <section className="section-padding bg-premium-cream">
+    <section className="section-padding bg-premium-sand">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-3 mb-6">
-            <span className="w-8 h-px bg-premium-gold" />
-            <span className="text-xs uppercase tracking-[0.2em] text-premium-gold font-semibold">
+            <span className="w-8 h-px bg-premium-green" />
+            <span className="text-xs uppercase tracking-[0.2em] text-premium-green font-semibold">
               Notre Emplacement
             </span>
-            <span className="w-8 h-px bg-premium-gold" />
+            <span className="w-8 h-px bg-premium-green" />
           </div>
           <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl text-premium-dark mt-2 mb-4">
             Notre Emplacement sur la Carte
           </h2>
-          <div className="w-12 h-0.5 bg-premium-gold mx-auto" />
+          <div className="w-12 h-0.5 bg-premium-green mx-auto" />
         </div>
 
         <div ref={ref} className={`max-w-3xl mx-auto transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <div className="grid sm:grid-cols-3 gap-6 mb-10">
             <div className="card-premium p-5 text-center group">
-              <div className="w-10 h-10 rounded-full bg-premium-gold/10 flex items-center justify-center text-lg mx-auto mb-3 group-hover:scale-110 group-hover:bg-premium-gold/20 transition-all duration-300">
+              <div className="w-10 h-10 rounded-full bg-premium-green/10 flex items-center justify-center text-lg mx-auto mb-3 group-hover:scale-110 group-hover:bg-premium-green/20 transition-all duration-300">
                 📍
               </div>
               <h4 className="text-xs font-semibold text-premium-dark uppercase tracking-wider mb-1">
@@ -38,7 +38,7 @@ export default function ContactRapide() {
               </p>
             </div>
             <div className="card-premium p-5 text-center group">
-              <div className="w-10 h-10 rounded-full bg-premium-gold/10 flex items-center justify-center text-lg mx-auto mb-3 group-hover:scale-110 group-hover:bg-premium-gold/20 transition-all duration-300">
+              <div className="w-10 h-10 rounded-full bg-premium-green/10 flex items-center justify-center text-lg mx-auto mb-3 group-hover:scale-110 group-hover:bg-premium-green/20 transition-all duration-300">
                 📞
               </div>
               <h4 className="text-xs font-semibold text-premium-dark uppercase tracking-wider mb-1">
@@ -47,7 +47,7 @@ export default function ContactRapide() {
               <p className="text-xs text-premium-muted">{t("phone")}</p>
             </div>
             <div className="card-premium p-5 text-center group">
-              <div className="w-10 h-10 rounded-full bg-premium-gold/10 flex items-center justify-center text-lg mx-auto mb-3 group-hover:scale-110 group-hover:bg-premium-gold/20 transition-all duration-300">
+              <div className="w-10 h-10 rounded-full bg-premium-green/10 flex items-center justify-center text-lg mx-auto mb-3 group-hover:scale-110 group-hover:bg-premium-green/20 transition-all duration-300">
                 ✉️
               </div>
               <h4 className="text-xs font-semibold text-premium-dark uppercase tracking-wider mb-1">

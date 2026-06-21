@@ -7,7 +7,7 @@ export default function HeroSection() {
   const t = useTranslations("home.hero");
 
   return (
-    <section className="relative min-h-[80vh] sm:min-h-[90vh] flex items-center overflow-hidden bg-premium-cream">
+    <section className="relative min-h-[80vh] sm:min-h-[90vh] flex items-center overflow-hidden">
       <div className="absolute inset-0">
         <ImageSlideshow />
       </div>
@@ -29,8 +29,8 @@ export default function HeroSection() {
         <div className="absolute w-1 h-1 rounded-full bg-premium-gold/35 blur-[0.5px]" style={{ left: '50%', top: '65%', animation: 'dust 9.5s ease-in-out infinite', animationDelay: '0.3s' }} />
       </div>
 
-      {/* Warm bottom vignette for text readability */}
-      <div className="absolute inset-0 bg-gradient-to-t from-premium-cream/80 via-premium-cream/30 to-transparent" />
+      {/* Dark overlay for text readability */}
+      <div className="absolute inset-0 bg-black/50" />
 
       <div className="relative z-10 w-full pt-16 md:pt-0">
         <div className="max-w-7xl mx-auto px-6">
@@ -42,14 +42,14 @@ export default function HeroSection() {
               </span>
             </div>
 
-            <h1 className="font-heading text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-premium-dark leading-[1.05] mb-8">
+            <h1 className="font-heading text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white leading-[1.05] mb-8">
               {t("title")}
               <span className="inline text-gradient-gold text-4xl sm:text-5xl md:text-6xl lg:text-7xl ml-4 font-sans font-light">
                 {t("subtitle")}
               </span>
             </h1>
 
-            <p className="text-base sm:text-lg text-premium-muted font-light leading-relaxed mb-12 max-w-xl">
+            <p className="text-base sm:text-lg text-white/70 font-light leading-relaxed mb-12 max-w-xl">
               Spécialiste en solutions agricoles biologiques : auxiliaires, biostimulants et conseil personnalisé pour une agriculture durable au Maroc.
             </p>
 
@@ -67,7 +67,7 @@ export default function HeroSection() {
                 href="/catalogue-agristep-2023.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-premium btn-shine btn-lift text-sm text-premium-muted border border-premium-border hover:bg-premium-sand hover:text-premium-dark"
+                className="btn-premium btn-shine btn-lift text-sm text-white/70 border border-white/20 hover:bg-white/10 hover:text-white"
               >
                 <svg aria-hidden="true" className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
@@ -80,7 +80,7 @@ export default function HeroSection() {
               </a>
               <a
                 href="/a-propos"
-                className="btn-premium btn-lift text-sm text-premium-muted border border-premium-border hover:bg-premium-sand hover:text-premium-dark"
+                className="btn-premium btn-lift text-sm text-white/60 border border-white/15 hover:bg-white/10 hover:text-white"
               >
                 Notre histoire
               </a>

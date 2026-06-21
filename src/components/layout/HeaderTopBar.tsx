@@ -87,9 +87,9 @@ export default function HeaderTopBar() {
   if (!mounted) return null;
 
   return (
-    <div className="relative bg-premium-sand text-premium-muted text-xs md:text-sm overflow-hidden border-b border-premium-border">
+    <div className="relative bg-premium-dark text-white/70 text-xs md:text-sm overflow-hidden border-b border-gray-700">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute inset-y-0 -left-1/2 w-1/2 bg-gradient-to-r from-transparent via-premium-gold/10 to-transparent animate-sheen" />
+        <div className="absolute inset-y-0 -left-1/2 w-1/2 bg-gradient-to-r from-transparent via-white/5 to-transparent animate-sheen" />
       </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between min-h-9 py-1 gap-x-3 relative z-10">
         <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
@@ -97,17 +97,17 @@ export default function HeaderTopBar() {
             <span className="flex items-center gap-1.5">
               <span>{getWeatherEmoji(weather.code)}</span>
               <span className="font-medium">{weather.temp}°C</span>
-              <span className="text-premium-muted">— Chtouka Ait Baha</span>
+              <span className="text-white/50">— Chtouka Ait Baha</span>
             </span>
           )}
           {!weather && (
-            <span className="text-premium-muted text-xs">Chargement…</span>
+            <span className="text-white/40 text-xs">Chargement…</span>
           )}
           <span className="hidden md:flex items-center gap-1.5">
             <span>📞</span>
             <a
               href="tel:+212528815207"
-              className="hover:text-premium-dark transition-colors whitespace-nowrap"
+              className="hover:text-white/90 transition-colors whitespace-nowrap"
             >
               +212 5 28 81 52 07
             </a>
@@ -116,7 +116,7 @@ export default function HeaderTopBar() {
             <span>✉️</span>
             <a
               href="mailto:ste.agristep@gmail.com"
-              className="hover:text-premium-dark transition-colors"
+              className="hover:text-white/90 transition-colors"
             >
               ste.agristep@gmail.com
             </a>

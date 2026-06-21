@@ -53,20 +53,20 @@ export default async function ProductDetailPage({
     <div className="section-padding bg-premium-cream">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center gap-2 text-xs text-premium-muted/60 mb-12 uppercase tracking-wider">
-          <Link href="/" className="hover:text-premium-gold transition-colors">
+          <Link href="/" className="hover:text-premium-green transition-colors">
             Accueil
           </Link>
           <span>/</span>
           <Link
             href="/produits"
-            className="hover:text-premium-gold transition-colors"
+            className="hover:text-premium-green transition-colors"
           >
             Produits
           </Link>
           <span>/</span>
           <Link
             href={`/produits/categorie/${product.category}`}
-            className="hover:text-premium-gold transition-colors"
+            className="hover:text-premium-green transition-colors"
           >
             {ct(product.category)}
           </Link>
@@ -85,7 +85,7 @@ export default async function ProductDetailPage({
           </div>
 
           <div>
-            <span className="text-xs uppercase tracking-[0.15em] text-premium-gold font-semibold">
+            <span className="text-xs uppercase tracking-[0.15em] text-premium-green font-semibold">
               {ct(product.category)}
             </span>
 
@@ -101,7 +101,7 @@ export default async function ProductDetailPage({
               {product.targetCrops.map((crop) => (
                 <span
                   key={crop}
-                  className="px-3 py-1 bg-premium-gold/10 border border-premium-gold/20 rounded-full text-xs text-premium-gold font-medium"
+                  className="px-3 py-1 bg-premium-green/10 border border-premium-green/20 rounded-full text-xs text-premium-green font-medium"
                 >
                   {crop}
                 </span>
@@ -113,7 +113,7 @@ export default async function ProductDetailPage({
                 <h2 className="text-xs uppercase tracking-[0.2em] text-premium-muted font-semibold mb-4">
                   {t("composition")}
                 </h2>
-                <div className="bg-premium-cream rounded-xl p-5 space-y-2">
+                <div className="bg-gray-50 rounded-xl p-5 space-y-2">
                   {product.composition.map((comp, i) => (
                     <div
                       key={i}
@@ -133,7 +133,7 @@ export default async function ProductDetailPage({
                   {product.application.map((app, i) => (
                     <li
                       key={i}
-                      className="text-sm text-premium-muted pl-4 border-l-2 border-premium-gold/30 py-1"
+                      className="text-sm text-premium-muted pl-4 border-l-2 border-premium-green/30 py-1"
                     >
                       {app}
                     </li>
@@ -147,7 +147,7 @@ export default async function ProductDetailPage({
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-premium btn-premium-gold btn-shine btn-lift"
+                className="btn-premium btn-premium-primary btn-shine btn-lift"
               >
                 <svg
                   aria-hidden="true"
@@ -169,11 +169,11 @@ export default async function ProductDetailPage({
           <div className="border-t border-premium-border pt-16">
             <div className="text-center mb-12">
               <div className="flex items-center justify-center gap-3 mb-4">
-                <span className="w-8 h-px bg-premium-gold" />
+                <span className="w-8 h-px bg-premium-green" />
                 <h2 className="font-heading text-2xl text-premium-dark">
                   {t("related")}
                 </h2>
-                <span className="w-8 h-px bg-premium-gold" />
+                <span className="w-8 h-px bg-premium-green" />
               </div>
             </div>
             <ProductGrid products={related} showCategory={false} />

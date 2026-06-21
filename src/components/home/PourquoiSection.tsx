@@ -45,20 +45,20 @@ export default function PourquoiSection() {
   ];
 
   return (
-    <section className="section-padding bg-premium-sand">
+    <section className="section-padding bg-premium-cream">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-3 mb-6">
-            <span className="w-8 h-px bg-premium-gold" />
-            <span className="text-xs uppercase tracking-[0.2em] text-premium-gold font-semibold">
+              <span className="w-8 h-px bg-premium-green" />
+            <span className="text-xs uppercase tracking-[0.2em] text-premium-green font-semibold">
               Pourquoi nous
             </span>
-            <span className="w-8 h-px bg-premium-gold" />
+            <span className="w-8 h-px bg-premium-green" />
           </div>
           <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl text-premium-dark mt-2 mb-4">
             {t("title")}
           </h2>
-          <div className="w-12 h-0.5 bg-premium-gold mx-auto" />
+          <div className="w-12 h-0.5 bg-premium-green mx-auto" />
         </div>
 
         <div ref={ref} className={`grid sm:grid-cols-2 md:grid-cols-4 gap-6 stagger-children ${isVisible ? 'visible' : ''}`}>
@@ -67,7 +67,7 @@ export default function PourquoiSection() {
               key={item.key}
               className="card-premium p-5 sm:p-6 text-center group"
             >
-              <div className="w-14 h-14 rounded-full bg-premium-gold/10 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:bg-premium-gold/20 transition-all duration-300">
+              <div className="w-14 h-14 rounded-full bg-premium-green/10 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:bg-premium-green/20 transition-all duration-300">
                 {item.icon}
               </div>
               <h3 className="font-heading text-lg text-premium-dark mb-3">

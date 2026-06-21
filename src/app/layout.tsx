@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Fraunces, Outfit } from "next/font/google";
+import { Fraunces, Inter } from "next/font/google";
 import "./globals.css";
 
 const fraunces = Fraunces({
@@ -9,16 +9,16 @@ const fraunces = Fraunces({
   axes: ["SOFT", "WONK"],
 });
 
-const outfit = Outfit({
+const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-outfit",
+  variable: "--font-inter",
   display: "swap",
 });
 
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#D4A853",
+  themeColor: "#065F46",
 };
 
 export const metadata: Metadata = {
@@ -44,7 +44,7 @@ export default function RootLayout({
     <html
       lang="fr"
       dir="ltr"
-      className={`${fraunces.variable} ${outfit.variable}`}
+      className={`${fraunces.variable} ${inter.variable}`}
       data-scroll-behavior="smooth"
       suppressHydrationWarning
     >
