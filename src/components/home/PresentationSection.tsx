@@ -2,34 +2,32 @@
 
 import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/routing";
 import { motion } from "framer-motion";
 import { ArrowRight, Calendar, Package, Award, Leaf } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 function AnimatedNumber({ value, suffix = "" }: { value: string; suffix?: string }) {
-  const [display, setDisplay] = useState("");
   const num = parseInt(value.replace(/[^0-9]/g, ""));
   const isNumeric = !isNaN(num);
+  const [display, setDisplay] = useState(isNumeric ? "0" : value);
 
   useEffect(() => {
-    if (!isNumeric) {
-      setDisplay(value);
-      return;
-    }
-    let start = 0;
+    if (!isNumeric || num === 0) return;
+    let i = 0;
     const duration = 1500;
-    const step = Math.ceil(num / 60);
+    const step = Math.max(1, Math.ceil(num / 60));
     const timer = setInterval(() => {
-      start += step;
-      if (start >= num) {
+      i += step;
+      if (i >= num) {
         setDisplay(value);
         clearInterval(timer);
       } else {
-        setDisplay(String(start) + suffix);
+        setDisplay(String(i) + suffix);
       }
     }, duration / 60);
     return () => clearInterval(timer);
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   return <>{display}</>;
 }
@@ -74,13 +72,13 @@ export default function PresentationSection() {
             <p className="text-premium-text leading-relaxed text-lg mb-10">
               {t("text")}
             </p>
-            <a
+            <Link
               href="/a-propos"
               className="btn-premium btn-premium-primary text-sm group"
             >
               {t("link")}
               <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-            </a>
+            </Link>
           </motion.div>
 
           <motion.div

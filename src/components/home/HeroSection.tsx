@@ -4,18 +4,16 @@ import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, FileText, ChevronRight } from "lucide-react";
+import { Link } from "@/i18n/routing";
 import ImageSlideshow from "./ImageSlideshow";
 
 function AnimatedNumber({ value }: { value: string }) {
-  const [display, setDisplay] = useState("0");
   const num = parseInt(value.replace(/[^0-9]/g, ""));
   const isNumeric = !isNaN(num);
+  const [display, setDisplay] = useState(isNumeric ? "0" : value);
 
   useEffect(() => {
-    if (!isNumeric) {
-      setDisplay(value);
-      return;
-    }
+    if (!isNumeric || num === 0) return;
     let start = 0;
     const duration = 1500;
     const step = Math.ceil(num / 60);
@@ -29,7 +27,7 @@ function AnimatedNumber({ value }: { value: string }) {
       }
     }, duration / 60);
     return () => clearInterval(timer);
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   return <>{display}</>;
 }
@@ -41,9 +39,20 @@ const heroStats = [
   { number: "Bio", label: "Solutions durables" },
 ];
 
+function generateParticles() {
+  return Array.from({ length: 6 }, (_, i) => ({
+    id: i,
+    left: `${10 + Math.random() * 80}%`,
+    top: `${20 + Math.random() * 60}%`,
+    duration: 4 + Math.random() * 4,
+    delay: Math.random() * 4,
+  }));
+}
+
 export default function HeroSection() {
   const t = useTranslations("home.hero");
   const [countStarted, setCountStarted] = useState(false);
+  const [particles] = useState(generateParticles);
 
   useEffect(() => {
     const timer = setTimeout(() => setCountStarted(true), 800);
@@ -63,22 +72,22 @@ export default function HeroSection() {
 
       {/* Floating particles */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(6)].map((_, i) => (
+        {particles.map((p) => (
           <motion.div
-            key={i}
+            key={p.id}
             className="absolute w-1.5 h-1.5 rounded-full bg-premium-green/20"
             style={{
-              left: `${10 + Math.random() * 80}%`,
-              top: `${20 + Math.random() * 60}%`,
+              left: p.left,
+              top: p.top,
             }}
             animate={{
               y: [0, -30, 0],
               opacity: [0, 0.5, 0],
             }}
             transition={{
-              duration: 4 + Math.random() * 4,
+              duration: p.duration,
               repeat: Infinity,
-              delay: Math.random() * 4,
+              delay: p.delay,
               ease: "easeInOut",
             }}
           />
@@ -127,13 +136,13 @@ export default function HeroSection() {
                 transition={{ duration: 0.8, delay: 0.8 }}
                 className="flex flex-wrap gap-4"
               >
-                <a
+                <Link
                   href="/produits"
                   className="btn-premium btn-premium-primary text-sm group"
                 >
                   {t("cta")}
                   <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-                </a>
+                </Link>
                 <a
                   href="/catalogue-agristep-2023.pdf"
                   target="_blank"
@@ -143,13 +152,13 @@ export default function HeroSection() {
                   <FileText size={16} />
                   Notre catalogue
                 </a>
-                <a
+                <Link
                   href="/a-propos"
                   className="btn-premium btn-lift text-sm text-premium-text border border-premium-border hover:bg-white/5 hover:text-white"
                 >
                   Notre histoire
                   <ChevronRight size={16} />
-                </a>
+                </Link>
               </motion.div>
             </div>
           </div>

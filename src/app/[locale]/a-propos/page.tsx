@@ -1,5 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
+import { Link } from "@/i18n/routing";
 import { Icon } from "@/components/ui/IconSvg";
 
 export const metadata: Metadata = {
@@ -146,14 +147,14 @@ export default async function AboutPage({
           </div>
 
           <div className="text-center">
-            <a
+            <Link
               href="/produits"
               className="btn-premium btn-premium-primary btn-shine btn-lift text-sm"
             >
               <Icon name="sparkles" size={16} />
               {t("convince.cta")}
               <Icon name="arrowRight" size={16} />
-            </a>
+            </Link>
           </div>
         </div>
       </section>

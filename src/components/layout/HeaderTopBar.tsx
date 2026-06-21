@@ -52,8 +52,10 @@ export default function HeaderTopBar() {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true);
-    setTime(getTime());
+    const mountTimer = setTimeout(() => {
+      setMounted(true);
+      setTime(getTime());
+    }, 0);
 
     const timeInterval = setInterval(() => {
       setTime(getTime());
@@ -80,6 +82,7 @@ export default function HeaderTopBar() {
     const weatherInterval = setInterval(fetchWeather, 3600000);
 
     return () => {
+      clearTimeout(mountTimer);
       clearInterval(timeInterval);
       clearInterval(weatherInterval);
     };
