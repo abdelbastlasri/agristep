@@ -86,7 +86,7 @@ export default function Header() {
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
       scrolled
         ? "bg-premium-dark/90 backdrop-blur-xl shadow-lg shadow-black/20"
-        : "bg-transparent"
+        : "bg-premium-dark/10 backdrop-blur-sm"
     }`}>
       <HeaderTopBar />
       <div className="h-px bg-gradient-to-r from-transparent via-premium-border to-transparent" />
@@ -109,10 +109,10 @@ export default function Header() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`text-sm tracking-wide transition-all duration-300 relative py-1 group ${
+                  className={`text-sm tracking-widest uppercase font-semibold transition-all duration-300 relative py-1 group ${
                     active
-                      ? "text-premium-green font-medium"
-                      : "text-premium-text hover:text-premium-green"
+                      ? "text-premium-green"
+                      : "text-white/90 hover:text-premium-green"
                   }`}
                 >
                   {link.label}
@@ -149,10 +149,10 @@ export default function Header() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setMenuOpen(false)}
-                className={`text-sm tracking-wide py-3 transition-all duration-200 hover:translate-x-1 ${
+                className={`text-sm tracking-widest uppercase font-semibold py-3 transition-all duration-200 hover:translate-x-1 ${
                   pathname === link.href
-                    ? "text-premium-green font-medium"
-                    : "text-premium-text hover:text-premium-green"
+                    ? "text-premium-green"
+                    : "text-white/90 hover:text-premium-green"
                 }`}
               >
                 {link.label}
