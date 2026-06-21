@@ -28,7 +28,7 @@ export default function PourquoiSection() {
   const t = useTranslations("home.why");
 
   return (
-    <section className="section-padding bg-premium-secondary relative overflow-hidden">
+    <section className="section-padding bg-premium-secondary relative overflow-hidden section-wave section-wave-dark">
       <div className="absolute inset-0 opacity-[0.02]" style={{
         backgroundImage: `url(/images/leaf-pattern.svg)`,
         backgroundRepeat: "repeat",

@@ -95,9 +95,10 @@ export default function HeroSection() {
       </div>
 
       {/* Glass panel behind text */}
-      <div className="absolute left-0 right-0 top-1/2 -translate-y-1/2 py-12 mx-6 max-w-7xl mx-auto">
-        <div className="max-w-4xl mx-auto">
-          <div className="backdrop-blur-sm bg-premium-dark/20 rounded-3xl p-8 md:p-12 border border-premium-border/30">
+      <div className="absolute inset-x-4 md:inset-x-8 top-1/2 -translate-y-1/2 z-20">
+        <div className="max-w-7xl mx-auto">
+          <div className="max-w-4xl">
+            <div className="backdrop-blur-sm bg-premium-dark/20 rounded-3xl p-8 md:p-12 border border-premium-border/30">
             <div className="relative z-10">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
@@ -163,6 +164,7 @@ export default function HeroSection() {
             </div>
           </div>
         </div>
+      </div>
       </div>
 
       {/* Floating stats cards */}

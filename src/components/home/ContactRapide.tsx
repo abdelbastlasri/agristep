@@ -8,7 +8,7 @@ export default function ContactRapide() {
   const t = useTranslations("home.contact");
 
   return (
-    <section className="section-padding bg-premium-dark">
+    <section className="section-padding bg-premium-dark relative section-wave">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

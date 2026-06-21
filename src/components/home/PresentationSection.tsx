@@ -46,7 +46,7 @@ export default function PresentationSection() {
   const { ref, isVisible } = useScrollReveal();
 
   return (
-    <section className="section-padding bg-premium-secondary relative overflow-hidden" ref={ref}>
+    <section className="section-padding bg-premium-secondary relative overflow-hidden section-wave section-wave-dark" ref={ref}>
       <div className="absolute inset-0 opacity-[0.02]" style={{
         backgroundImage: `url(/images/leaf-pattern.svg)`,
         backgroundRepeat: "repeat",
