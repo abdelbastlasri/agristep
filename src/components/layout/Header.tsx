@@ -9,6 +9,7 @@ export default function Header() {
   const t = useTranslations("nav");
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   const navLinks = [
     { href: "/", label: t("home") },
@@ -27,6 +28,15 @@ export default function Header() {
       window.location.reload();
     }
   };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   useEffect(() => {
     if (!menuOpen) return;
@@ -71,10 +81,14 @@ export default function Header() {
   }, [menuOpen]);
 
   return (
-    <header className="sticky top-0 z-50">
+    <header className={`sticky top-0 z-50 transition-all duration-300 ${
+      scrolled
+        ? "bg-premium-dark/90 backdrop-blur-lg shadow-lg shadow-black/20"
+        : "bg-transparent"
+    }`}>
       <HeaderTopBar />
-      <div className="h-px bg-gradient-to-r from-transparent via-premium-warm/30 to-transparent" />
-      <div className="bg-premium-cream border-b border-premium-border/20">
+      <div className="h-px bg-gradient-to-r from-transparent via-premium-border to-transparent" />
+      <div className={scrolled ? "" : "bg-transparent"}>
         <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between h-20">
           <Link href="/" className="flex-shrink-0" onClick={handleLogoClick}>
@@ -83,7 +97,7 @@ export default function Header() {
               alt="Agristep"
               width={160}
               height={56}
-              className="h-14 w-auto transition-transform duration-300 hover:scale-105 active:scale-95"
+              className="h-14 w-auto transition-transform duration-300 hover:scale-105 active:scale-95 brightness-0 invert"
             />
           </Link>
 
@@ -96,12 +110,12 @@ export default function Header() {
                   href={link.href}
                   className={`text-sm tracking-wide transition-all duration-300 relative py-1 group ${
                     active
-                      ? "text-premium-dark font-medium"
-                      : "text-premium-text hover:text-premium-dark"
+                      ? "text-premium-green font-medium"
+                      : "text-premium-text hover:text-premium-green"
                   }`}
                 >
                   {link.label}
-                  <span className={`absolute -bottom-1 left-0 h-0.5 bg-premium-dark transition-all duration-300 ${
+                  <span className={`absolute -bottom-1 left-0 h-0.5 bg-premium-green transition-all duration-300 ${
                     active ? "right-0" : "right-full group-hover:right-0"
                   }`} />
                 </Link>
@@ -110,7 +124,7 @@ export default function Header() {
           </nav>
 
           <button
-            className="md:hidden p-2 text-2xl text-premium-dark transition-transform duration-150 active:scale-90 hover:text-premium-warm"
+            className="md:hidden p-2 text-2xl text-white transition-transform duration-150 active:scale-90 hover:text-premium-green"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-expanded={menuOpen}
             aria-controls="mobile-menu"
@@ -127,7 +141,7 @@ export default function Header() {
           id="mobile-menu"
           role="dialog"
           aria-label="Navigation"
-          className="md:hidden bg-premium-cream border-t border-premium-border/20 transition-all duration-300"
+          className="md:hidden bg-premium-secondary border-t border-premium-border transition-all duration-300"
         >
           <div className="flex flex-col p-6 gap-4">
             {navLinks.map((link) => (
@@ -137,8 +151,8 @@ export default function Header() {
                 onClick={() => setMenuOpen(false)}
                 className={`text-sm tracking-wide py-2 transition-all duration-200 hover:translate-x-1 ${
                   pathname === link.href
-                    ? "text-premium-dark font-medium"
-                    : "text-premium-text hover:text-premium-dark"
+                    ? "text-premium-green font-medium"
+                    : "text-premium-text hover:text-premium-green"
                 }`}
               >
                 {link.label}

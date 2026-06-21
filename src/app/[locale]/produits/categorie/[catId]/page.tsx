@@ -25,30 +25,30 @@ export default async function CategoryPage({
   const categoryProducts = getProductsByCategory(category.id);
 
   return (
-    <div className="section-padding bg-premium-cream">
+    <div className="section-padding bg-premium-dark">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="flex items-center gap-2 text-xs text-premium-muted/60 mb-12 uppercase tracking-wider">
-          <Link href="/" className="hover:text-premium-dark transition-colors">
+        <div className="flex items-center gap-2 text-xs text-premium-muted mb-12 uppercase tracking-wider">
+          <Link href="/" className="hover:text-white transition-colors">
             Accueil
           </Link>
           <span>/</span>
           <Link
             href="/produits"
-            className="hover:text-premium-dark transition-colors"
+            className="hover:text-white transition-colors"
           >
             Produits
           </Link>
           <span>/</span>
-          <span className="text-premium-dark">{ct(catId)}</span>
+          <span className="text-white">{ct(catId)}</span>
         </div>
 
         <div className="text-center mb-16">
           <span className="text-4xl block mb-4">{category.icon}</span>
-          <h1 className="font-heading text-4xl md:text-5xl text-premium-dark mt-2 mb-4">
+          <h1 className="font-heading text-4xl md:text-5xl text-white mt-2 mb-4">
             {ct(catId)}
           </h1>
-          <div className="w-12 h-0.5 bg-premium-warm mx-auto mb-6" />
-          <p className="text-premium-muted max-w-2xl mx-auto">
+          <div className="w-12 h-0.5 bg-premium-green mx-auto mb-6" />
+          <p className="text-premium-text max-w-2xl mx-auto">
             {cd(catId)}
           </p>
         </div>
@@ -56,7 +56,7 @@ export default async function CategoryPage({
         {categoryProducts.length > 0 ? (
           <ProductGrid products={categoryProducts} showCategory={false} />
         ) : (
-          <p className="text-center text-premium-muted/60">
+          <p className="text-center text-premium-muted">
             {t("notFound")}
           </p>
         )}

@@ -26,7 +26,7 @@ export default function ProductCard({
   return (
     <div className="card-premium overflow-hidden group flex flex-col h-full">
       <Link href={`/produits/${product.slug}`}>
-        <div className="relative h-36 sm:h-44 lg:h-52 bg-gradient-to-br from-white to-gray-100 flex items-center justify-center p-4 sm:p-6 lg:p-8">
+        <div className="relative h-36 sm:h-44 lg:h-52 bg-premium-card flex items-center justify-center p-4 sm:p-6 lg:p-8">
           <Image
             src={product.image}
             alt={product.name}
@@ -40,29 +40,28 @@ export default function ProductCard({
 
       <div className="p-6 flex flex-col flex-1">
         {showCategory && (
-          <span className="inline-block text-xs uppercase tracking-wider text-premium-warm font-semibold mb-3">
+          <span className="inline-block text-xs uppercase tracking-wider text-premium-green font-semibold mb-3">
             {ct(product.category)}
           </span>
         )}
 
-        <h3 className="font-heading text-lg text-premium-dark mb-3">
+        <h3 className="font-heading text-lg text-white mb-3">
           {product.name}
         </h3>
 
-        <p className="text-sm text-premium-muted leading-relaxed mb-4">
+        <p className="text-sm text-premium-text leading-relaxed mb-4">
           {product.description}
         </p>
 
-        {/* Composition */}
         {product.composition.length > 0 && (
           <div className="mb-4">
-            <h4 className="text-xs font-semibold text-premium-warm uppercase tracking-wider mb-2">
+            <h4 className="text-xs font-semibold text-premium-green uppercase tracking-wider mb-2">
               {t("composition")}
             </h4>
             <ul className="space-y-1">
               {product.composition.map((item, i) => (
                 <li key={i} className="text-xs text-premium-muted flex items-start gap-2">
-                  <span className="text-premium-warm mt-1">•</span>
+                  <span className="text-premium-green mt-1">•</span>
                   {item}
                 </li>
               ))}
@@ -70,16 +69,15 @@ export default function ProductCard({
           </div>
         )}
 
-        {/* Application */}
         {product.application.length > 0 && (
           <div className="mb-4">
-            <h4 className="text-xs font-semibold text-premium-warm uppercase tracking-wider mb-2">
+            <h4 className="text-xs font-semibold text-premium-green uppercase tracking-wider mb-2">
               {t("application")}
             </h4>
             <ul className="space-y-1">
               {product.application.map((item, i) => (
                 <li key={i} className="text-xs text-premium-muted flex items-start gap-2">
-                  <span className="text-premium-warm mt-1">•</span>
+                  <span className="text-premium-green mt-1">•</span>
                   {item}
                 </li>
               ))}
@@ -87,13 +85,12 @@ export default function ProductCard({
           </div>
         )}
 
-        {/* Target Crops - all */}
         {product.targetCrops.length > 0 && (
           <div className="flex flex-wrap gap-1.5 mb-5">
             {product.targetCrops.map((crop) => (
               <span
                 key={crop}
-                className="px-2.5 py-1 bg-premium-warm/10 border border-premium-warm/20 rounded text-xs text-premium-warm"
+                className="px-2.5 py-1 bg-premium-green/10 border border-premium-green/20 rounded text-xs text-premium-green"
               >
                 {crop}
               </span>
