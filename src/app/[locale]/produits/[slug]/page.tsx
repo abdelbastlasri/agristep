@@ -46,7 +46,7 @@ export default async function ProductDetailPage({
 
   const related = getRelatedProducts(product);
   const whatsappUrl = generateWhatsAppUrl(
-    "212528815207",
+    "212666568879",
     `${t("orderPrefix")} ${product.name}`
   );
 

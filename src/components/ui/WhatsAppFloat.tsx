@@ -3,7 +3,7 @@
 export default function WhatsAppFloat() {
   return (
     <a
-      href="https://wa.me/212528815207?text=Bonjour%2C%20j%27ai%20besoin%20de%20plus%20d%27informations%20%C3%A0%20propos%20de%20vos%20produits%20et%20leurs%20fonctionnalit%C3%A9s"
+      href="https://wa.me/212666568879?text=Bonjour%2C%20j%27ai%20besoin%20de%20plus%20d%27informations%20%C3%A0%20propos%20de%20vos%20produits%20et%20leurs%20fonctionnalit%C3%A9s"
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#1da851] text-white rounded-full p-3.5 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:-translate-y-0.5"

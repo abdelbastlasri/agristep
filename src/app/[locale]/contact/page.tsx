@@ -89,7 +89,7 @@ export default async function ContactPage({
             </div>
 
             <a
-              href={`https://wa.me/212528815207?text=${whatsappMessage}`}
+              href={`https://wa.me/212666568879?text=${whatsappMessage}`}
               target="_blank"
               rel="noopener noreferrer"
               className="bg-premium-card/60 backdrop-blur-sm border border-premium-border rounded-2xl p-5 sm:p-6 flex items-center gap-4 hover:border-premium-green/40 group transition-all duration-300"

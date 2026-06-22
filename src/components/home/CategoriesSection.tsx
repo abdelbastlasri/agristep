@@ -3,7 +3,7 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 import { motion } from "framer-motion";
-import { Shield, Sprout, FlaskConical, Zap, Droplets, Apple, ArrowRight } from "lucide-react";
+import { Shield, Sprout, FlaskConical, Zap, Droplets, Apple, Bug, ArrowRight } from "lucide-react";
 import { categories, getProductsByCategory } from "@/data/products";
 
 const categoryIcons: Record<string, typeof Shield> = {
@@ -13,6 +13,7 @@ const categoryIcons: Record<string, typeof Shield> = {
   biostimulants: Zap,
   "correcteur-carences": Droplets,
   "qualite-fruits": Apple,
+  auxiliaires: Bug,
 };
 
 const containerVariants = {

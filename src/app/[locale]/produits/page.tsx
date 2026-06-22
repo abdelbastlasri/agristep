@@ -13,13 +13,14 @@ export const metadata: Metadata = {
   },
 };
 
-const icons: Record<string, "shield" | "sprout" | "flask" | "zap" | "droplet" | "apple"> = {
+const icons: Record<string, "shield" | "sprout" | "flask" | "zap" | "droplet" | "apple" | "bug"> = {
   "inducteur-resistance": "shield",
   "amendements-organiques": "sprout",
   "correcteur-ph": "flask",
   biostimulants: "zap",
   "correcteur-carences": "droplet",
   "qualite-fruits": "apple",
+  auxiliaires: "bug",
 };
 
 export default async function ProductsPage({

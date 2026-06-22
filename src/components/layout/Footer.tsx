@@ -56,11 +56,11 @@ export default function Footer() {
                 </li>
                 <li className="flex items-center gap-2">
                   <Phone size={14} className="text-premium-green flex-shrink-0" />
-                  <a href="tel:+212528815207" className="text-premium-muted text-xs hover:text-white transition-colors">{t("phone")}</a>
+                  <a href="tel:+212666568879" className="text-premium-muted text-xs hover:text-white transition-colors">{t("phone")}</a>
                 </li>
                 <li className="flex items-center gap-2">
                   <Mail size={14} className="text-premium-green flex-shrink-0" />
-                  <a href="mailto:ste.agristep@gmail.com" className="text-premium-muted text-xs hover:text-white transition-colors">{t("email")}</a>
+                  <a href="mailto:contact@agristep.ma" className="text-premium-muted text-xs hover:text-white transition-colors">{t("email")}</a>
                 </li>
                 <li className="flex items-center gap-2">
                   <Icon name="linkedin" size={14} className="text-premium-green flex-shrink-0" />
@@ -96,11 +96,11 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={16} className="text-premium-green flex-shrink-0" />
-                <a href="tel:+212528815207" className="text-premium-muted hover:text-white transition-colors">{t("phone")}</a>
+                <a href="tel:+212666568879" className="text-premium-muted hover:text-white transition-colors">{t("phone")}</a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail size={16} className="text-premium-green flex-shrink-0" />
-                <a href="mailto:ste.agristep@gmail.com" className="text-premium-muted hover:text-white transition-colors">{t("email")}</a>
+                <a href="mailto:contact@agristep.ma" className="text-premium-muted hover:text-white transition-colors">{t("email")}</a>
               </li>
               <li className="flex items-center gap-3 group">
                 <Icon name="linkedin" size={16} className="text-premium-green flex-shrink-0" />
@@ -111,7 +111,13 @@ export default function Footer() {
 
           <div>
             <h3 className="text-xs uppercase tracking-[0.2em] text-premium-green font-semibold mb-6">{t("followUs")}</h3>
-            <div className="flex gap-3">
+              <div className="flex gap-3">
+              <a href="https://www.facebook.com/agristep" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-xl bg-premium-green/10 flex items-center justify-center hover:bg-premium-green/20 transition-all duration-300 hover:scale-110">
+                <Icon name="facebook" size={18} className="text-premium-green" />
+              </a>
+              <a href="https://www.instagram.com/agristep" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-xl bg-premium-green/10 flex items-center justify-center hover:bg-premium-green/20 transition-all duration-300 hover:scale-110">
+                <Icon name="instagram" size={18} className="text-premium-green" />
+              </a>
               <a href="https://www.linkedin.com/in/ste-agristep-69b1931b5/?locale=en" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-xl bg-premium-green/10 flex items-center justify-center hover:bg-premium-green/20 transition-all duration-300 hover:scale-110">
                 <Icon name="linkedin" size={18} className="text-premium-green" />
               </a>

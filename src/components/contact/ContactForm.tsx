@@ -23,7 +23,7 @@ export default function ContactForm() {
       email: form.email,
       message: form.message,
     });
-    window.location.href = generateWhatsAppUrl("212528815207", text);
+    window.location.href = generateWhatsAppUrl("212666568879", text);
   };
 
   return (

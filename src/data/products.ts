@@ -4,7 +4,8 @@ export type ProductCategory =
   | "correcteur-ph"
   | "biostimulants"
   | "correcteur-carences"
-  | "qualite-fruits";
+  | "qualite-fruits"
+  | "auxiliaires";
 
 export interface Product {
   id: string;
@@ -352,6 +353,27 @@ export const products: Product[] = [
     ],
     image: "/images/produits/page2_img15_521x700.png",
   },
+
+  // ── 7. AUXILIAIRES DE CULTURE ──
+  {
+    id: "phytostep",
+    slug: "phytostep",
+    name: "PHYTOSTEP",
+    category: "auxiliaires",
+    description:
+      "Produit PHYTOSTEP Contre les Acariens tétranyques et Rouges. Acarien prédateur Phytoseiulus persimilis utilisé en lutte biologique contre Tetranychus urticae (acarien jaune).",
+    composition: [
+      "PHYTOSTEP/10000 : 10 000 individus par emballage",
+      "PHYTOSTEP/2000 : 2 000 individus par emballage",
+    ],
+    targetCrops: ["Framboise", "Poivron", "Concombre", "Fraise", "Culture sous serre"],
+    application: [
+      "Lâcher préventif : 10 à 20 individus/m²",
+      "Lâcher curatif : 30 à 50 individus/m²",
+      "Introduire dès les premiers foyers d'acariens",
+    ],
+    image: "/images/produits/phytostep.png",
+  },
 ];
 
 export const categories: {
@@ -364,6 +386,7 @@ export const categories: {
   { id: "biostimulants", icon: "⚡" },
   { id: "correcteur-carences", icon: "💧" },
   { id: "qualite-fruits", icon: "🍎" },
+  { id: "auxiliaires", icon: "🐞" },
 ];
 
 export function getProductsByCategory(

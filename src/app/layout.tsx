@@ -59,7 +59,7 @@ export default function RootLayout({
               },
               contactPoint: {
                 "@type": "ContactPoint",
-                telephone: "+212-528-815-207",
+                telephone: "+212-666-568-879",
                 contactType: "sales",
               },
             }),

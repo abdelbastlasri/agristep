@@ -50,8 +50,8 @@
       "phoneLabel": "Téléphone",
       "emailLabel": "Email",
       "address": "LOCALE COMMERCIALE RDC, ROUTE NATIONALE N°1, DOUAR DRAID, CHTOUKA-AIT BAHA",
-      "phone": "+212 5 28 81 52 07",
-      "emailAddr": "ste.agristep@gmail.com"
+      "phone": "+212 6 66 56 88 79",
+      "emailAddr": "contact@agristep.ma"
     }
   },
   "products": {
@@ -75,7 +75,8 @@
       "correcteur-ph": "Correcteur de PH",
       "biostimulants": "Biostimulants",
       "correcteur-carences": "Correcteur de Carences",
-      "qualite-fruits": "Qualité des Fruits"
+      "qualite-fruits": "Qualité des Fruits",
+      "auxiliaires": "Auxiliaires de Culture"
     },
     "desc": {
       "inducteur-resistance": "Solutions pour renforcer les défenses naturelles des plantes",
@@ -83,7 +84,8 @@
       "correcteur-ph": "Régulateur de pH pour optimiser l'absorption des nutriments",
       "biostimulants": "Biostimulants pour stimuler la croissance et le développement des cultures",
       "correcteur-carences": "Correcteurs de carences en oligo-éléments essentiels",
-      "qualite-fruits": "Solutions pour améliorer la qualité et le calibre des fruits"
+      "qualite-fruits": "Solutions pour améliorer la qualité et le calibre des fruits",
+      "auxiliaires": "Solutions de lutte biologique avec des acariens prédateurs"
     }
   },
   "about": {
@@ -154,8 +156,8 @@
     },
     "info": {
       "address": "LOCALE COMMERCIALE RDC, ROUTE NATIONALE N°1, DOUAR DRAID, CHTOUKA-AIT BAHA",
-      "phone": "+212 5 28 81 52 07",
-      "email": "ste.agristep@gmail.com"
+      "phone": "+212 6 66 56 88 79",
+      "email": "contact@agristep.ma"
     },
     "whatsapp": "Contactez-nous sur WhatsApp",
     "whatsappMessage": "Bonjour, j'ai besoin de plus d'informations à propos de vos produits et leurs fonctionnalités"
@@ -171,8 +173,8 @@
     "linkedin": "LinkedIn",
     "followUs": "Suivez-nous",
     "address": "Route National N°1, Draid Sidi Bibi, Chtouka Ait Baha",
-    "phone": "+212 5 28 81 52 07",
-    "email": "ste.agristep@gmail.com"
+    "phone": "+212 6 66 56 88 79",
+    "email": "contact@agristep.ma"
   },
   "header": {
     "loading": "Météo…",

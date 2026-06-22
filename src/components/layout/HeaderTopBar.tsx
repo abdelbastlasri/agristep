@@ -90,7 +90,7 @@ export default function HeaderTopBar() {
           <span className="hidden md:flex items-center gap-1.5">
             <Phone size={12} className="text-premium-green" />
             <a
-              href="tel:+212528815207"
+              href="tel:+212666568879"
               className="hover:text-white transition-colors whitespace-nowrap"
             >
               +212 5 28 81 52 07
@@ -102,7 +102,7 @@ export default function HeaderTopBar() {
               href="mailto:ste.agristep@gmail.com"
               className="hover:text-white transition-colors"
             >
-              ste.agristep@gmail.com
+contact@agristep.ma
             </a>
           </span>
         </div>
