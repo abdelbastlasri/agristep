@@ -36,6 +36,11 @@ yarn-error.log*
 # vercel
 .vercel
 
+# source asset folders (copied to public/)
+first slideshow homepage/
+new image slideshow/
+new product/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
