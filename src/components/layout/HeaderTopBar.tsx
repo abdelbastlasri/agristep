@@ -93,13 +93,13 @@ export default function HeaderTopBar() {
               href="tel:+212666568879"
               className="hover:text-white transition-colors whitespace-nowrap"
             >
-              +212 5 28 81 52 07
+              +212 6 66 56 88 79
             </a>
           </span>
           <span className="hidden md:flex items-center gap-1.5">
             <Mail size={12} className="text-premium-green" />
             <a
-              href="mailto:ste.agristep@gmail.com"
+              href="mailto:contact@agristep.ma"
               className="hover:text-white transition-colors"
             >
 contact@agristep.ma

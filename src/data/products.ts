@@ -380,13 +380,13 @@ export const categories: {
   id: ProductCategory;
   icon: string;
 }[] = [
+  { id: "auxiliaires", icon: "🐞" },
   { id: "inducteur-resistance", icon: "🛡️" },
   { id: "amendements-organiques", icon: "🌱" },
   { id: "correcteur-ph", icon: "⚗️" },
   { id: "biostimulants", icon: "⚡" },
   { id: "correcteur-carences", icon: "💧" },
   { id: "qualite-fruits", icon: "🍎" },
-  { id: "auxiliaires", icon: "🐞" },
 ];
 
 export function getProductsByCategory(

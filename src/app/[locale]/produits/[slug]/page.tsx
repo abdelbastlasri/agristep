@@ -1,7 +1,7 @@
 import { getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { Link } from "@/i18n/routing";
-import ImageWithFallback from "@/components/ui/ImageWithFallback";
+import ProductImageGallery from "@/components/produits/ProductImageGallery";
 import ProductGrid from "@/components/produits/ProductGrid";
 import {
   getProductBySlug,
@@ -79,11 +79,10 @@ export default async function ProductDetailPage({
           <div
             className="relative rounded-2xl p-4 sm:p-6 lg:p-10 flex items-center justify-center min-h-[220px] sm:min-h-[350px] lg:min-h-[450px] bg-white"
           >
-            <ImageWithFallback
-              src={product.image}
-              alt={product.name}
-              className="object-contain"
-              sizes="(max-width: 768px) 100vw, 50vw"
+            <ProductImageGallery
+              productId={product.id}
+              productName={product.name}
+              defaultImage={product.image}
             />
           </div>
 
