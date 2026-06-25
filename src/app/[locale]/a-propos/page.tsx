@@ -141,12 +141,6 @@ export default async function AboutPage({
             ))}
           </div>
 
-          <div className="max-w-3xl mx-auto text-center mb-12">
-            <p className="text-lg text-premium-text italic leading-relaxed font-light">
-              {t("testimonial.text")}
-            </p>
-          </div>
-
           <div className="text-center">
             <Link
               href="/produits"

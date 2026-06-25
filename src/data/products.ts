@@ -361,16 +361,15 @@ export const products: Product[] = [
     name: "PHYTOSTEP",
     category: "auxiliaires",
     description:
-      "Produit PHYTOSTEP Contre les Acariens tétranyques et Rouges. Acarien prédateur Phytoseiulus persimilis utilisé en lutte biologique contre Tetranychus urticae (acarien jaune).",
+      "PHYTOSTEP est un acarien prédateur utilisé en lutte biologique et intégrée contre les acariens tétranyques (acariens rouges)",
     composition: [
       "PHYTOSTEP/10000 : 10 000 individus par emballage",
       "PHYTOSTEP/2000 : 2 000 individus par emballage",
     ],
     targetCrops: ["Framboise", "Poivron", "Concombre", "Fraise", "Culture sous serre"],
     application: [
-      "Lâcher préventif : 10 à 20 individus/m²",
-      "Lâcher curatif : 30 à 50 individus/m²",
-      "Introduire dès les premiers foyers d'acariens",
+      "Introduire dès l'apparition des premiers foyers",
+      "La dose d'auxiliaire à introduire dépend de l'attaque de ravageurs",
     ],
     image: "/images/produits/phytostep.png",
   },

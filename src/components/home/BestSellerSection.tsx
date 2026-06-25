@@ -85,8 +85,7 @@ export default function BestSellerSection() {
                 Phytoseiulus persimilis
               </h3>
               <p className="text-sm sm:text-base text-premium-text leading-relaxed">
-                Produit PHYTOSTEP Contre les Acariens tétranyques et Rouges. Acarien prédateur utilisé en lutte biologique contre{" "}
-                <span className="italic">Tetranychus urticae</span> (acarien jaune).
+                PHYTOSTEP est un acarien prédateur utilisé en lutte biologique et intégrée contre les acariens tétranyques (acariens rouges)
               </p>
 
               <div className="bg-premium-dark/40 rounded-xl p-4 space-y-2">
